@@ -1,0 +1,90 @@
+// mikdigital Global JS
+(function () {
+	// Feather icons
+	if (typeof feather !== 'undefined') {
+		feather.replace();
+	}
+
+	// Theme toggle and persistence
+	(function themeToggle() {
+		const root = document.documentElement;
+		const STORAGE_KEY = 'mik_theme';
+		const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+		const stored = localStorage.getItem(STORAGE_KEY);
+		if (stored === 'dark' || (!stored && prefersDark)) {
+			root.classList.add('dark');
+		}
+		document.querySelectorAll('[data-theme-toggle]')?.forEach(function(btn){
+			btn.addEventListener('click', function(){
+				root.classList.toggle('dark');
+				localStorage.setItem(STORAGE_KEY, root.classList.contains('dark') ? 'dark' : 'light');
+			});
+		});
+	})();
+
+	// Mobile menu toggles (supports multiple menus if present)
+	document.querySelectorAll('#mobile-menu-button').forEach(function (btn) {
+		const menu = document.getElementById('mobile-menu');
+		if (!menu) return;
+		btn.addEventListener('click', function () {
+			menu.classList.toggle('hidden');
+		});
+		document.addEventListener('click', function (e) {
+			if (!btn.contains(e.target) && !menu.contains(e.target)) {
+				menu.classList.add('hidden');
+			}
+		});
+	});
+
+	// Smooth scroll for same-page anchors
+	document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+		anchor.addEventListener('click', function (e) {
+			const target = document.querySelector(this.getAttribute('href'));
+			if (target) {
+				e.preventDefault();
+				target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			}
+		});
+	});
+
+	// Intersection Observer fade-in
+	try {
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('animate-fade-in');
+				}
+			});
+		}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+		document.querySelectorAll('section').forEach((el) => observer.observe(el));
+	} catch (e) {}
+
+	// Cookie banner logic
+	(function cookieBanner() {
+		const STORAGE_KEY = 'mik_cookie_consent_v1';
+		const banner = document.getElementById('cookie-banner');
+		if (!banner) return;
+		function getConsent() {
+			try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); } catch (e) { return null; }
+		}
+		function setConsent(value) {
+			localStorage.setItem(STORAGE_KEY, JSON.stringify(value));
+		}
+		function show() { banner.classList.remove('hidden'); }
+		function hide() { banner.classList.add('hidden'); }
+		const existing = getConsent();
+		if (!existing) show();
+		const accept = document.getElementById('cookie-accept');
+		const decline = document.getElementById('cookie-decline');
+		accept && accept.addEventListener('click', function () {
+			setConsent({ all: true, analytics: true, marketing: true, ts: Date.now() });
+			hide();
+		});
+		decline && decline.addEventListener('click', function () {
+			const analytics = document.getElementById('cookie-analytics')?.checked || false;
+			const marketing = document.getElementById('cookie-marketing')?.checked || false;
+			setConsent({ all: false, analytics, marketing, ts: Date.now() });
+			hide();
+		});
+	})();
+})();
