@@ -1,530 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mik Digital | Performance Marketing</title>
+    
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "tcwopb01sd");
+    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MZJ3FNLG');</script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FYNSL86T0J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <!-- Security Headers (note: real security headers should be sent from the server) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.tailwindcss.com https://unpkg.com https://www.googletagmanager.com https://connect.facebook.net https://www.clarity.ms https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://use.fontawesome.com https://maxcdn.bootstrapcdn.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net https://www.clarity.ms; frame-src 'self' https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
-  <meta http-equiv="X-Frame-Options" content="DENY">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+      gtag('config', 'G-FYNSL86T0J');
+    </script>
 
-  <title>mikdigital — Performance Marketing | Google Ads, Meta Ads & Lead Gen</title>
-  <meta name="description" content="mikdigital: Performance marketing focused on measurable growth with Google Ads, Meta Ads, SEO, and conversion-focused funnels across UAE & Australia." />
-  <meta name="robots" content="index, follow" />
-
-  <meta name="facebook-domain-verification" content="k6nbadzo8z7n8ahbo3bwzuaw4ebokd" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="mikdigital — Performance Marketing" />
-  <meta property="og:description" content="Data-driven Google Ads, Meta Ads & lead gen delivering ROI across UAE & Australia." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/og-image.png" />
-  <meta property="og:url" content="https://mikdigital.online/" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="mikdigital — Performance Marketing" />
-  <meta name="twitter:description" content="Data-driven Google Ads, Meta Ads & lead gen delivering ROI across UAE & Australia." />
-  <meta name="twitter:image" content="/og-image.png" />
-  
-
-  <!-- Tailwind + Icons + Styles -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              blue: '#2563EB',
-              orange: '#FF6B00',
-              dark: '#0B1220'
-            }
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(0,0,0,0.06)'
-          }
-        }
-      }
-    }
-  </script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/style.css" />
-
-  <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#2563eb" />
-
-  <style>
-    .hero-bg { background: radial-gradient(1000px 600px at 10% 10%, rgba(37,99,235,.18), transparent 60%), radial-gradient(1000px 600px at 90% 10%, rgba(255,107,0,.16), transparent 60%); }
-    .glass { backdrop-filter: saturate(140%) blur(8px); background: rgba(255,255,255,0.6); }
-  </style>
-  <style>
-    .hero-bg { background: radial-gradient(1000px 600px at 10% 10%, rgba(37,99,235,.18), transparent 60%), radial-gradient(1000px 600px at 90% 10%, rgba(255,107,0,.16), transparent 60%); }
-    .glass { backdrop-filter: saturate(140%) blur(8px); background: rgba(255,255,255,0.6); }
-    /* Reveal on scroll */
-    @keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-    .reveal { opacity: 0; transform: translateY(12px); }
-    .revealed { animation: rise 600ms ease-out forwards; }
-  </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+<body>
 
-<body class="bg-gray-50 text-gray-900">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/90 glass border-b border-gray-100">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group">
-        <img src="website-logo.png" alt="mikdigital logo" class="h-10 w-auto" loading="eager" decoding="async">
-        <span class="font-bold tracking-tight text-lg">mikdigital</span>
-      </a>
-
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100" aria-label="Open menu">
-        <i data-feather="menu" class="w-6 h-6"></i>
-      </button>
-
-      <ul class="hidden md:flex items-center gap-6 text-sm">
-        <li><a href="#home" class="hover:text-brand-blue">Home</a></li>
-        <li><a href="#overview" class="hover:text-brand-blue">Overview</a></li>
-        <li><a href="#services" class="hover:text-brand-blue">Services</a></li>
-        <li><a href="#results" class="hover:text-brand-blue">Results</a></li>
-        <li><a href="case-studies.html" class="hover:text-brand-blue">Case Studies</a></li>
-        <li><a href="contact.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white transition">Hire Me</a></li>
-      </ul>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZJ3FNLG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <nav>
+        <div class="logo">MikDigital</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="tel:+971506102836" class="btn-primary"><i class="fa-solid fa-phone"></i> Call Now</a></li>
+        </ul>
     </nav>
 
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-100 bg-white">
-      <div class="max-w-7xl mx-auto px-4 py-3 space-y-2">
-        <a href="#home" class="block py-2">Home</a>
-        <a href="#overview" class="block py-2">Overview</a>
-        <a href="#services" class="block py-2">Services</a>
-        <a href="#results" class="block py-2">Results</a>
-        <a href="case-studies.html" class="block py-2">Case Studies</a>
-        <a href="contact.html" class="block py-2 font-medium text-brand-blue">Hire Me</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="home" class="hero-bg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h1 class="text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
-          Scale with <span class="text-brand-blue">Google Ads</span>, <span class="text-brand-blue">Meta Ads</span> & <span class="text-brand-blue">Lead Generation</span>
-        </h1>
-        <p class="mt-5 text-lg text-gray-600 max-w-2xl">
-          Managing <strong>USD 125.8K+</strong> ad spend, generating <strong>93.8M+</strong> impressions and <strong>16,000+</strong> leads across UAE & Australia with <strong>5x ROAS</strong>.
-        </p>
-        <div class="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="case-studies.html" class="bg-brand-blue text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 shadow-soft text-center">View Case Studies</a>
-          <a href="contact.html" class="px-6 py-3 rounded-xl font-semibold border border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white text-center">Start Your Project</a>
-        </div>
-        <div class="mt-8 flex flex-wrap items-center gap-4 text-xs text-gray-500">
-          <span class="inline-flex items-center gap-2 bg-white border rounded-full px-3 py-1"><i class="fa-solid fa-shield"></i> GDPR-friendly tracking</span>
-          <span class="inline-flex items-center gap-2 bg-white border rounded-full px-3 py-1"><i class="fa-solid fa-chart-line"></i> Conversion-first funnels</span>
-          <span class="inline-flex items-center gap-2 bg-white border rounded-full px-3 py-1"><i class="fa-solid fa-bolt"></i> Fast iteration</span>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="absolute -inset-4 bg-gradient-to-tr from-brand-blue/20 to-brand-blue/0 rounded-3xl blur-2xl"></div>
-        <div class="relative bg-white rounded-3xl border shadow-soft p-6">
-          <!-- Simple, lightweight visual -->
-          <svg viewBox="0 0 600 320" class="w-full h-auto" role="img" aria-label="Performance dashboard illustration">
-            <rect x="20" y="20" width="560" height="280" rx="18" fill="#F8FAFC" stroke="#E5E7EB"/>
-            <rect x="40" y="50" width="200" height="14" rx="7" fill="#93C5FD"/>
-            <rect x="40" y="74" width="140" height="10" rx="5" fill="#C7D2FE"/>
-            <circle cx="520" cy="60" r="7" fill="#22C55E"/>
-            <circle cx="540" cy="60" r="7" fill="#F59E0B"/>
-            <circle cx="560" cy="60" r="7" fill="#EF4444"/>
-            <polyline points="60,230 120,200 180,210 240,150 300,160 360,120 420,130 480,90 540,110" fill="none" stroke="#2563EB" stroke-width="4"/>
-            <rect x="60" y="250" width="120" height="18" rx="9" fill="#DBEAFE"/>
-            <rect x="200" y="250" width="120" height="18" rx="9" fill="#FEE2E2"/>
-            <rect x="340" y="250" width="120" height="18" rx="9" fill="#DCFCE7"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Overview -->
-  <section id="overview" class="py-16 sm:py-20 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto">
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Overview</h2>
-        <p class="mt-4 text-lg text-gray-700 leading-relaxed">
-          I’m a digital marketing specialist focused on driving measurable growth through data-driven strategies and performance marketing. I help brands in real estate, education, and entertainment scale through lead generation, advertising, SEM, social media, and email marketing. Passionate about building funnels that convert, optimizing ROI, and crafting strategies that turn insights into action. Always exploring new ways to grow smarter.
-        </p>
-        <p class="mt-5 text-lg text-gray-700 leading-relaxed">
-          As a Digital Marketing Consultant, I specialize in delivering data-driven strategies for lead generation, campaign tracking, and performance optimization. My recent work includes managing end-to-end digital marketing campaigns and paid advertising efforts across UAE and Australia, leveraging tools like Google Ads, Meta Ads, and SEMrush for measurable results.
-        </p>
-      </div>
-
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white border rounded-2xl p-6 shadow-sm">
-          <div class="text-sm text-gray-500">Managed Ad Spend</div>
-          <div class="mt-2 text-2xl font-bold">USD 125.8K+</div>
-        </div>
-        <div class="bg-white border rounded-2xl p-6 shadow-sm">
-          <div class="text-sm text-gray-500">Total Impressions</div>
-          <div class="mt-2 text-2xl font-bold">93.8M+</div>
-        </div>
-        <div class="bg-white border rounded-2xl p-6 shadow-sm">
-          <div class="text-sm text-gray-500">Leads Generated</div>
-          <div class="mt-2 text-2xl font-bold">16,000+</div>
-        </div>
-        <div class="bg-white border rounded-2xl p-6 shadow-sm">
-          <div class="text-sm text-gray-500">Average ROAS</div>
-          <div class="mt-2 text-2xl font-bold">5x</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-16 sm:py-20 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Core Expertise</h2>
-        <p class="mt-3 text-gray-600">Full-funnel performance marketing that converts attention into revenue.</p>
-      </div>
-
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl border shadow-soft p-6">
-          <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-          <h3 class="mt-4 font-semibold text-lg">Google Ads & SEM</h3>
-          <p class="mt-2 text-gray-600">Search, Performance Max, and retargeting built on strong account structure and conversion data.</p>
-          <ul class="mt-3 space-y-1 text-sm text-gray-600 list-disc list-inside">
-            <li>Keyword & intent mapping</li>
-            <li>SKAG/Theme ad groups</li>
-            <li>Smart bidding with guardrails</li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-2xl border shadow-soft p-6">
-          <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50"><i class="fa-brands fa-facebook-f"></i></div>
-          <h3 class="mt-4 font-semibold text-lg">Meta Ads</h3>
-          <p class="mt-2 text-gray-600">Full-funnel creatives and audiences designed for conversations, leads, and sales.</p>
-          <ul class="mt-3 space-y-1 text-sm text-gray-600 list-disc list-inside">
-            <li>UGC-style ads & hooks</li>
-            <li>Broad + stacked interest testing</li>
-            <li>High-signal remarketing</li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-2xl border shadow-soft p-6">
-          <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50"><i class="fa-solid fa-bullseye"></i></div>
-          <h3 class="mt-4 font-semibold text-lg">Lead Gen & CRO</h3>
-          <p class="mt-2 text-gray-600">Landing pages and funnels engineered for speed, clarity, and conversion.</p>
-          <ul class="mt-3 space-y-1 text-sm text-gray-600 list-disc list-inside">
-            <li>Form + chat + call flows</li>
-            <li>A/B testing & heatmaps</li>
-            <li>Marketing automation & email</li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-2xl border shadow-soft p-6">
-          <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50"><i class="fa-solid fa-chart-column"></i></div>
-          <h3 class="mt-4 font-semibold text-lg">Analytics & Tracking</h3>
-          <p class="mt-2 text-gray-600">Clean events, clear attribution. Dashboards that answer business questions.</p>
-          <ul class="mt-3 space-y-1 text-sm text-gray-600 list-disc list-inside">
-            <li>GA4 + GTM + CAPI</li>
-            <li>Lead quality scoring</li>
-            <li>CRM & offline conversions</li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-2xl border shadow-soft p-6">
-          <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50"><i class="fa-solid fa-globe"></i></div>
-          <h3 class="mt-4 font-semibold text-lg">International Expansion</h3>
-          <p class="mt-2 text-gray-600">Adapting offers and creatives for UAE, Australia, and India without losing signal quality.</p>
-          <ul class="mt-3 space-y-1 text-sm text-gray-600 list-disc list-inside">
-            <li>Geo & language segmentation</li>
-            <li>Multi-currency reporting</li>
-            <li>Localized landing pages</li>
-          </ul>
-        </div>
-        <div class="bg-white rounded-2xl border shadow-soft p-6">
-          <div class="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-blue-50"><i class="fa-solid fa-magnifying-glass"></i></div>
-          <h3 class="mt-4 font-semibold text-lg">SEO & Content</h3>
-          <p class="mt-2 text-gray-600">Sustainable growth through search visibility and authority building.</p>
-          <ul class="mt-3 space-y-1 text-sm text-gray-600 list-disc list-inside">
-            <li>Topic clusters & E‑E‑A‑T</li>
-            <li>Technical fixes</li>
-            <li>Content ops & briefs</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Results / Social Proof -->
-  <section id="results" class="py-16 sm:py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Performance Highlights</h2>
-        <p class="mt-3 text-gray-600">Live-ish counters, smooth reveals, and tasty gradients. Because numbers should move like your KPIs.</p>
-      </div>
-
-      <!-- Animated Stat Cards -->
-      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Google Ads -->
-        <div class="group relative overflow-hidden rounded-3xl border bg-gradient-to-br from-blue-50 to-white p-6 shadow-soft">
-          <div class="absolute -top-10 -right-10 h-36 w-36 rounded-full bg-blue-200/40 blur-2xl transition-transform duration-700 group-hover:scale-125"></div>
-          <div class="relative flex items-center gap-3">
-            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100"><i class="fa-brands fa-google"></i></span>
-            <h3 class="font-semibold">Google Ads</h3>
-          </div>
-          <div class="mt-4 grid grid-cols-3 gap-3 text-center">
-            <div>
-              <div class="text-xs text-gray-500">Spend</div>
-              <div class="text-2xl font-bold"><span class="counter" data-target="18.3" data-prefix="$" data-suffix="K">$0</span></div>
+    <header id="home">
+        <div class="hero-content">
+            <h1>Performance Marketing Expert</h1>
+            <p>Scaling businesses through data-driven Meta Ads, Google Ads, and Technical Setup.</p>
+            <div class="cta-group">
+                <a href="#case-studies" class="btn-secondary">View Case Studies</a>
+                <a href="tel:+971506102836" class="btn-primary">Call Me Directly</a>
             </div>
-            <div>
-              <div class="text-xs text-gray-500">Impr.</div>
-              <div class="text-2xl font-bold"><span class="counter" data-target="71.7" data-suffix="M+">0</span></div>
-            </div>
-            <div>
-              <div class="text-xs text-gray-500">Clicks</div>
-              <div class="text-2xl font-bold"><span class="counter" data-target="1.71" data-suffix="M">0</span></div>
-            </div>
-          </div>
-          <p class="mt-3 text-sm text-gray-600"><span class="font-semibold">$0.01</span> CPC average across campaigns.</p>
         </div>
+    </header>
 
-        <!-- Meta Ads -->
-        <div class="group relative overflow-hidden rounded-3xl border bg-gradient-to-br from-purple-50 to-white p-6 shadow-soft">
-          <div class="absolute -bottom-10 -left-10 h-36 w-36 rounded-full bg-purple-200/40 blur-2xl transition-transform duration-700 group-hover:scale-125"></div>
-          <div class="relative flex items-center gap-3">
-            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-purple-100"><i class="fa-brands fa-facebook-f"></i></span>
-            <h3 class="font-semibold">Meta Ads</h3>
-          </div>
-          <div class="mt-4 grid grid-cols-3 gap-3 text-center">
-            <div>
-              <div class="text-xs text-gray-500">Spend</div>
-              <div class="text-2xl font-bold"><span class="counter" data-target="107.6" data-prefix="$" data-suffix="K+">$0</span></div>
+    <section id="case-studies">
+        <div class="container">
+            <h2 class="section-title">Case Studies & Results</h2>
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-item">
+                    <img src="kim.png" alt="Meta Ads Dashboard">
+                    <div class="overlay">
+                        <h3>Campaign Scaling</h3>
+                        <p>Managed high-spend campaigns with consistent optimization.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="g adss.png" alt="Google Ads Strategy">
+                    <div class="overlay">
+                        <h3>Google Ads Strategy</h3>
+                        <p>Aligned bidding strategies for Traffic, Revenue, and Visibility.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="CAPI.png" alt="CAPI Setup">
+                    <div class="overlay">
+                        <h3>Advanced Tracking</h3>
+                        <p>Full Conversion API (CAPI) and Data Layer setup.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="Screenshot 2024-06-06 222303.png" alt="Project Costing">
+                    <div class="overlay">
+                        <h3>Project Planning</h3>
+                        <p>Detailed cost analysis and resource management.</p>
+                    </div>
+                </div>
+
+                 <div class="portfolio-item">
+                    <img src="Screenshot 2024-05-02 015138.png" alt="Campaign List">
+                    <div class="overlay">
+                        <h3>Multi-Campaign Management</h3>
+                        <p>Organizing and maintaining multiple active ad sets.</p>
+                    </div>
+                </div>
+
             </div>
-            <div>
-              <div class="text-xs text-gray-500">Impr.</div>
-              <div class="text-2xl font-bold"><span class="counter" data-target="22.1" data-suffix="M+">0</span></div>
-            </div>
-            <div>
-              <div class="text-xs text-gray-500">Msgs</div>
-              <div class="text-2xl font-bold"><span class="counter" data-target="141" data-suffix="K+">0</span></div>
-            </div>
-          </div>
-          <p class="mt-3 text-sm text-gray-600">Per result <span class="font-semibold">$7.07</span>, CPM <span class="font-semibold">$4.86</span>.</p>
         </div>
+    </section>
 
-        <!-- SEO & Local -->
-        <div class="group relative overflow-hidden rounded-3xl border bg-gradient-to-br from-emerald-50 to-white p-6 shadow-soft">
-          <div class="absolute -top-10 -right-10 h-36 w-36 rounded-full bg-emerald-200/40 blur-2xl transition-transform duration-700 group-hover:scale-125"></div>
-          <div class="relative flex items-center gap-3">
-            <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100"><i class="fa-solid fa-chart-line"></i></span>
-            <h3 class="font-semibold">SEO & Local</h3>
-          </div>
-          <ul class="mt-4 space-y-2 text-sm text-gray-700">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> SEMrush visibility <span class="font-semibold">+6%</span></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> #1 for <em>Music classes in Dubai</em></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> <span class="font-semibold">20+ GMB</span> profiles ranked top 3</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> ROI lift <span class="font-semibold">+30%</span> via A/B + remarketing</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Fancy list with reveal -->
-      <div class="mt-12 grid lg:grid-cols-2 gap-8 items-start">
-        <div class="space-y-3 reveal">
-          <h3 class="text-xl font-semibold">Breakdown</h3>
-          <ul class="text-gray-700 space-y-2">
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-small"></i> Google Ads: <strong>USD 18.3K</strong>, <strong>71.7M+</strong> impressions, <strong>1.71M</strong> clicks, <strong>$0.01 CPC</strong></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-small"></i> Meta Ads: <strong>USD 107.6K+</strong>, <strong>22.1M+</strong> impressions, <strong>141K+</strong> messages, <strong>$7.07</strong> per result, CPM <strong>$4.86</strong></li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-small"></i> SEMrush SEO: <strong>+6% visibility</strong>, #1 for “Music classes in Dubai”</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-small"></i> <strong>20+ GMB</strong> profiles ranked top 3 locally</li>
-            <li class="flex items-start gap-2"><i class="fa-solid fa-circle-small"></i> <strong>+30% ROI</strong> through A/B testing & remarketing</li>
-          </ul>
-        </div>
-        <div class="reveal bg-gray-50 border rounded-3xl p-6 shadow-soft">
-          <h4 class="font-semibold">Recent Wins</h4>
-          <div class="mt-4 grid sm:grid-cols-2 gap-4">
-            <div class="bg-white border rounded-2xl p-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
-              <div class="text-sm text-gray-500">Lead Cost</div>
-              <div class="text-2xl font-bold">-32% ↓</div>
-              <p class="mt-1 text-sm text-gray-600">Audience signals & creative testing.</p>
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">My Expertise</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <h3>Meta Ads Scaling</h3>
+                    <p>High-ROAS campaign structures, audience testing, and creative strategy.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-brands fa-google"></i>
+                    <h3>Google Ads</h3>
+                    <p>Search, Display, and Performance Max campaigns optimized for conversions.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Technical Tracking</h3>
+                    <p>Server-side tracking, CAPI setup, and Pixel integration.</p>
+                </div>
             </div>
-            <div class="bg-white border rounded-2xl p-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
-              <div class="text-sm text-gray-500">CPL</div>
-              <div class="text-2xl font-bold">$5.80</div>
-              <p class="mt-1 text-sm text-gray-600">Speed + offer framing uplift.</p>
-            </div>
-            <div class="bg-white border rounded-2xl p-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
-              <div class="text-sm text-gray-500">CTR</div>
-              <div class="text-2xl font-bold">+41%</div>
-              <p class="mt-1 text-sm text-gray-600">Headline variants & dynamic assets.</p>
-            </div>
-            <div class="bg-white border rounded-2xl p-4 transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
-              <div class="text-sm text-gray-500">ROAS</div>
-              <div class="text-2xl font-bold">5.2x</div>
-              <p class="mt-1 text-sm text-gray-600">Multi-channel orchestration.</p>
-            </div>
-          </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Case Studies teaser (unchanged) -->
-      <div class="mt-14">
-        <div class="flex items-center justify-between">
-          <h3 class="text-xl font-semibold">Case Studies</h3>
-          <a href="case-studies.html" class="text-brand-blue hover:underline">View all</a>
+    <section id="contact">
+        <div class="container">
+            <h2>Ready to Scale?</h2>
+            <p>Call me directly or send an email to discuss your project.</p>
+            <br>
+            <a href="tel:+971506102836" class="btn-primary" style="margin-right: 10px;">
+                <i class="fa-solid fa-phone"></i> Call +971 50 610 2836
+            </a>
+            <a href="mailto:mikdigital@official@gmail.com" class="btn-secondary" style="border-color: #007bff; color: #007bff;">
+                <i class="fa-solid fa-envelope"></i> Email Me
+            </a>
         </div>
-        <div class="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <a href="case-studies.html#uae-edu" class="group bg-white border rounded-2xl overflow-hidden shadow-sm">
-            <div class="h-36 bg-gradient-to-r from-brand-blue/15 to-brand-blue/0"></div>
-            <div class="p-5">
-              <h4 class="font-semibold group-hover:text-brand-blue">UAE Education Brand</h4>
-              <p class="mt-1 text-sm text-gray-600">3.1x ROAS with search + Meta remarketing funnel.</p>
-            </div>
-          </a>
-          <a href="case-studies.html#real-estate" class="group bg-white border rounded-2xl overflow-hidden shadow-sm">
-            <div class="h-36 bg-gradient-to-r from-orange-100 to-transparent"></div>
-            <div class="p-5">
-              <h4 class="font-semibold group-hover:text-brand-blue">Real Estate Lead Engine</h4>
-              <p class="mt-1 text-sm text-gray-600">High-intent forms + WhatsApp automation → CPL down 28%.</p>
-            </div>
-          </a>
-          <a href="case-studies.html#music" class="group bg-white border rounded-2xl overflow-hidden shadow-sm">
-            <div class="h-36 bg-gradient-to-r from-emerald-100 to-transparent"></div>
-            <div class="p-5">
-              <h4 class="font-semibold group-hover:text-brand-blue">Music Classes in Dubai</h4>
-              <p class="mt-1 text-sm text-gray-600">#1 rankings with topic clusters & local SEO.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="py-16 sm:py-20 bg-gradient-to-tr from-brand-blue to-brand-blue/80 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Ready to grow smarter?</h2>
-        <p class="mt-3 text-white/90">Let's build a conversion-focused plan for the next 90 days—clear targets, fast iterations, and dashboards that keep you in the loop.</p>
-      </div>
-      <div class="flex gap-3 justify-start lg:justify-end">
-        <a href="contact.html" class="bg-white text-brand-blue px-6 py-3 rounded-xl font-semibold hover:opacity-90 shadow-soft">Book a Call</a>
-        <a href="case-studies.html" class="px-6 py-3 rounded-xl font-semibold border border-white/70 text-white hover:bg-white hover:text-brand-blue">See Proof</a>
-      </div>
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2025 Mik Digital. All Rights Reserved.</p>
+        <p><a href="privacy.html" style="color: #fff; text-decoration: underline;">Privacy Policy</a></p>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="md:col-span-2">
-          <h3 class="text-xl font-bold">mikdigital</h3>
-          <p class="mt-3 text-gray-400">Freelance digital marketer specializing in Google Ads, Meta Ads, and lead generation for measurable ROI across Dubai, Australia & India.</p>
-          <div class="mt-4 flex items-center gap-4 text-gray-400">
-            <a href="https://facebook.com/mikdigital101" aria-label="Facebook" class="hover:text-white"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://instagram.com/mikdigital.online" aria-label="Instagram" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://linkedin.com/in/mohamed-ibrahim-khan" aria-label="LinkedIn" class="hover:text-white"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://x.com/mik_digital" aria-label="X" class="hover:text-white"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://wa.me/919344694120" aria-label="WhatsApp" class="hover:text-white"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://youtube.com/@mikdigital" aria-label="YouTube" class="hover:text-white"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-        </div>
-        <div>
-          <h4 class="font-semibold">Quick Links</h4>
-          <ul class="mt-3 space-y-2 text-gray-400">
-            <li><a href="#home" class="hover:text-white">Home</a></li>
-            <li><a href="#overview" class="hover:text-white">Overview</a></li>
-            <li><a href="#services" class="hover:text-white">Services</a></li>
-            <li><a href="#results" class="hover:text-white">Results</a></li>
-            <li><a href="case-studies.html" class="hover:text-white">Case Studies</a></li>
-            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold">Services</h4>
-          <ul class="mt-3 space-y-2 text-gray-400">
-            <li><a href="contact.html" class="hover:text-white">Google Ads</a></li>
-            <li><a href="contact.html" class="hover:text-white">Meta Ads</a></li>
-            <li><a href="contact.html" class="hover:text-white">Lead Generation</a></li>
-            <li><a href="contact.html" class="hover:text-white">SEO</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="border-t border-white/10 mt-8 pt-8 text-center text-gray-400">© 2025 mikdigital. All Rights Reserved.</div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (typeof feather !== 'undefined') feather.replace();
-      const btn = document.getElementById('menuBtn');
-      const menu = document.getElementById('mobileMenu');
-      btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
-
-      // Intersection Observer for reveal animations
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
-      }, { threshold: 0.2 });
-      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-      // Count-up animation
-      const animateCounter = (el) => {
-        const target = parseFloat(el.dataset.target || '0');
-        const prefix = el.dataset.prefix || '';
-        const suffix = el.dataset.suffix || '';
-        const duration = 1200; // ms
-        const start = performance.now();
-        const isInt = Number.isInteger(target);
-        const decimals = isInt ? 0 : 2;
-        const step = (now) => {
-          const p = Math.min(1, (now - start) / duration);
-          const val = target * p;
-          el.textContent = prefix + val.toFixed(decimals) + suffix;
-          if (p < 1) requestAnimationFrame(step);
-        };
-        requestAnimationFrame(step);
-      };
-
-      const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.querySelectorAll('.counter').forEach(animateCounter);
-            counterObserver.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.3 });
-
-      document.querySelectorAll('#results .group').forEach(card => counterObserver.observe(card));
-    });
-  </script>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "mikdigital",
-    "url": "https://mikdigital.online/",
-    "logo": "https://mikdigital.online/website-logo.png",
-    "sameAs": [
-      "https://facebook.com/mikdigital101",
-      "https://instagram.com/mikdigital.online",
-      "https://www.linkedin.com/in/mohamed-ibrahim-khan",
-      "https://x.com/mik_digital",
-      "https://youtube.com/@mikdigital"
-    ]
-  }
-  </script>
 </body>
 </html>
-
