@@ -78,21 +78,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <h2 class="text-2xl font-semibold mb-6">Send a message</h2>
 
     <form
-      action="https://formspree.io/f/mreablaj"
-      method="POST"
-      class="space-y-4"
-    >
-      <input type="text" name="name" placeholder="Your name" required
-        class="w-full border rounded-xl p-3">
+    <form id="contactForm">
+  <input type="text" name="name" required placeholder="Your name" />
+  <input type="email" name="email" required placeholder="Your email" />
+  <textarea name="message" required placeholder="Your message"></textarea>
 
-      <input type="email" name="email" placeholder="Your email" required
-        class="w-full border rounded-xl p-3">
+  <button type="submit"
+    class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold">
+    Send Message
+  </button>
+</form>
 
-      <input type="tel" name="phone" placeholder="Phone / WhatsApp" required
-        class="w-full border rounded-xl p-3">
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-      <textarea name="message" rows="4" placeholder="Tell me about your project"
-        class="w-full border rounded-xl p-3"></textarea>
+  fetch('https://formspree.io/f/mreablaj', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: new FormData(this)
+  })
+  .then(response => {
+    if (response.ok) {
+      window.location.href = '/thank-you.html';
+    } else {
+      alert('Submission failed. Try again.');
+    }
+  })
+  .catch(() => alert('Network error.'));
+});
+</script>
 
       <!-- Redirect after submit -->
       <input type="hidden" name="_redirect" value="https://mikdigital.com/thank-you.html">
@@ -113,4 +128,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
 </body>
 </html>
+
 
