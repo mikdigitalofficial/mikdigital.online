@@ -1,279 +1,138 @@
-export default function HomePage() {
-  return (
-    <main className="min-h-screen bg-white text-black">
+<section
+  id="contact"
+  className="mx-auto max-w-6xl px-6 py-24"
+>
+  <div className="rounded-[32px] border border-zinc-200 bg-white p-10 shadow-2xl">
 
-      <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <p className="text-sm uppercase tracking-[0.3em] text-[#4f46e5]">
+      Contact
+    </p>
 
-          <div className="text-3xl font-bold tracking-tight">
-            <span className="text-indigo-700">mik</span>digital
-          </div>
+    <h2 className="mt-4 text-5xl font-bold text-black">
+      Let’s build scalable marketing systems.
+    </h2>
 
-          <div className="flex gap-6 text-sm font-medium text-zinc-600">
-            <a href="#case-studies" className="hover:text-black">
-              Case Studies
-            </a>
+    <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-600">
+      Performance marketing, paid ads, SEO, CRM workflows, analytics systems,
+      lead generation funnels, automation, and acquisition infrastructure
+      designed for businesses that want measurable growth.
+    </p>
 
-            <a href="#campaigns" className="hover:text-black">
-              Campaigns
-            </a>
-
-            <a href="#contact" className="hover:text-black">
-              Contact
-            </a>
-          </div>
-
-        </nav>
-      </header>
-
-      <section className="mx-auto max-w-7xl px-6 py-24">
-
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-600">
-          Performance Marketing Specialist
-        </p>
-
-        <h1 className="mt-6 max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
-          Revenue-focused marketing systems for education and entertainment brands.
-        </h1>
-
-        <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-600">
-          Meta Ads, Google Ads, WhatsApp funnels, SEO systems,
-          CRM workflows, analytics, and lead generation infrastructure
-          built for measurable growth.
-        </p>
-
-      </section>
-
-      <section
-        id="case-studies"
-        className="mx-auto max-w-7xl px-6 py-20"
+    <div className="mt-10">
+      <a
+        href="https://calendly.com/mikdigitalofficial/30min"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center rounded-2xl bg-[#4f46e5] px-8 py-4 text-lg font-semibold text-white transition hover:opacity-90"
       >
+        Book Free Audit
+      </a>
+    </div>
 
-        <div className="mb-12">
+    <div className="mt-14 grid gap-6 md:grid-cols-2">
 
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-600">
-            Case Studies
-          </p>
-
-          <h2 className="mt-4 text-4xl font-bold">
-            Campaign Results
-          </h2>
-
-        </div>
-
-        <div className="grid gap-10 md:grid-cols-2">
-
-          <img
-            src="/preschool-case-study.png"
-            alt="Preschool Case Study"
-            className="rounded-3xl border border-zinc-200 shadow-lg"
-          />
-
-          <img
-            src="/dance-case-study.png"
-            alt="Dance Case Study"
-            className="rounded-3xl border border-zinc-200 shadow-lg"
-          />
-
-          <img
-            src="/entertainment-case-study.png"
-            alt="Entertainment Case Study"
-            className="rounded-3xl border border-zinc-200 shadow-lg"
-          />
-
-        </div>
-
-      </section>
-
-      <section
-        id="campaigns"
-        className="bg-zinc-50 py-24"
+      {/* EMAIL */}
+      <a
+        href="mailto:alex@mikdigital.online"
+        className="rounded-2xl border border-zinc-200 p-6 transition hover:border-[#4f46e5] hover:shadow-lg"
       >
+        <div className="flex items-center gap-4">
 
-        <div className="mx-auto max-w-7xl px-6">
-
-          <div className="mb-12">
-
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-600">
-              Campaign Screenshots
-            </p>
-
-            <h2 className="mt-4 text-4xl font-bold">
-              Platform Proof
-            </h2>
-
-          </div>
-
-          <div className="mb-16">
-
-            <h3 className="mb-6 text-2xl font-semibold">
-              Google Ads
-            </h3>
-
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-              <img
-                src="/googleads-1.png"
-                alt="Google Ads"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-              <img
-                src="/googleads-2.png"
-                alt="Google Ads"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-              <img
-                src="/googleads-3.png"
-                alt="Google Ads"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-              <img
-                src="/googleads-4.png"
-                alt="Google Ads"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-            </div>
-
-          </div>
-
-          <div className="mb-16">
-
-            <h3 className="mb-6 text-2xl font-semibold">
-              Meta Ads
-            </h3>
-
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-              <img
-                src="/metaad-0.png"
-                alt="Meta Ads"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-              <img
-                src="/metaad-1.png"
-                alt="Meta Ads"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-              <img
-                src="/metacampaigns-1.png"
-                alt="Meta Campaign"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-              <img
-                src="/metacampaigns-4.png"
-                alt="Meta Campaign"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-              <img
-                src="/metacampaigns-5.png"
-                alt="Meta Campaign"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-            </div>
-
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-100">
+            📧
           </div>
 
           <div>
+            <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+              Email
+            </p>
 
-            <h3 className="mb-6 text-2xl font-semibold">
-              SEO Results
-            </h3>
-
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-              <img
-                src="/seo-1.png"
-                alt="SEO Result"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-              <img
-                src="/seo-2.png"
-                alt="SEO Result"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-              <img
-                src="/seo-3.png"
-                alt="SEO Result"
-                className="rounded-2xl border bg-white shadow-sm"
-              />
-
-            </div>
-
+            <p className="mt-1 text-xl font-semibold text-black">
+              alex@mikdigital.online
+            </p>
           </div>
 
         </div>
+      </a>
 
-      </section>
-
-      <section
-        id="contact"
-        className="mx-auto max-w-5xl px-6 py-24"
+      {/* WHATSAPP */}
+      <a
+        href="https://wa.me/971506102836"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-2xl border border-zinc-200 p-6 transition hover:border-[#4f46e5] hover:shadow-lg"
       >
+        <div className="flex items-center gap-4">
 
-        <div className="rounded-3xl bg-indigo-700 p-10 text-white">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-100">
+            💬
+          </div>
 
-          <h2 className="text-4xl font-bold">
-            Let’s build your next growth system.
-          </h2>
-
-          <p className="mt-6 max-w-2xl text-lg text-indigo-100">
-            Available for freelance consulting, paid ads management,
-            analytics implementation, CRM systems, and lead generation projects.
-          </p>
-
-          <div className="mt-10 space-y-3 text-lg">
-
-            <p>
-              Email: alex@mikdigital.online
+          <div>
+            <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+              WhatsApp
             </p>
 
-            <p>
-              Phone: +971506102836
+            <p className="mt-1 text-xl font-semibold text-black">
+              +971 50 610 2836
             </p>
-
-            <p>
-              Website: mikdigital.online
-            </p>
-
-            <p>
-              Instagram:
-              {" "}
-              <a
-                href="https://instagram.com/mikdigital.online"
-                className="underline"
-              >
-                @mikdigital.online
-              </a>
-            </p>
-
-            <p>
-              Facebook:
-              {" "}
-              <a
-                href="https://facebook.com/mikdigital.online"
-                className="underline"
-              >
-                mikdigital.online
-              </a>
-            </p>
-
           </div>
 
         </div>
+      </a>
 
-      </section>
+      {/* INSTAGRAM */}
+      <a
+        href="https://www.instagram.com/mikdigital.online"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-2xl border border-zinc-200 p-6 transition hover:border-[#4f46e5] hover:shadow-lg"
+      >
+        <div className="flex items-center gap-4">
 
-    </main>
-  );
-}
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-100">
+            📸
+          </div>
+
+          <div>
+            <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+              Instagram
+            </p>
+
+            <p className="mt-1 text-xl font-semibold text-black">
+              @mikdigital.online
+            </p>
+          </div>
+
+        </div>
+      </a>
+
+      {/* FACEBOOK */}
+      <a
+        href="https://www.facebook.com/mikdigital.online"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-2xl border border-zinc-200 p-6 transition hover:border-[#4f46e5] hover:shadow-lg"
+      >
+        <div className="flex items-center gap-4">
+
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-zinc-100">
+            👍
+          </div>
+
+          <div>
+            <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+              Facebook
+            </p>
+
+            <p className="mt-1 text-xl font-semibold text-black">
+              mikdigital.online
+            </p>
+          </div>
+
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
