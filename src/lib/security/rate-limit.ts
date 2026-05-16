@@ -1,3 +1,10 @@
-export async function rateLimit() {
-return true;
+export function rateLimit(
+ip: string,
+limit: number,
+windowMs: number
+) {
+return {
+ok: true,
+remaining: limit,
+};
 }
