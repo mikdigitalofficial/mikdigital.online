@@ -1,190 +1,209 @@
 export default function HomePage() {
-  const caseStudies = [
-    {
-      title: "Preschool Admissions Growth",
-      result: "40–60 admissions monthly",
-      description:
-        "Meta Ads + WhatsApp funnel system generating consistent preschool enrollments.",
-    },
-    {
-      title: "Dance Class Lead Generation",
-      result: "1,962+ qualified leads",
-      description:
-        "Performance campaigns targeting entertainment and education audiences.",
-    },
-    {
-      title: "Entertainment Industry Campaigns",
-      result: "6,800+ leads generated",
-      description:
-        "Lead generation systems for music, dance, and training institutes.",
-    },
-  ];
-
   return (
-    <main className="min-h-screen bg-black text-white">
-      <header className="border-b border-zinc-800">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-          <div className="text-xl font-semibold tracking-tight">
+    <main className="min-h-screen bg-gray-50 text-gray-900">
+      <header className="border-b bg-white">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
+          <div className="text-lg font-bold">
             mikdigital
           </div>
 
-          <div className="flex gap-6 text-sm text-zinc-400">
-            <a href="#services" className="hover:text-white">
-              Services
+          <nav className="flex gap-6 text-sm">
+            <a href="#proof" className="hover:text-blue-600">
+              Proof
             </a>
 
-            <a href="#case-studies" className="hover:text-white">
-              Case Studies
+            <a
+              href="#contact"
+              className="rounded-xl border border-blue-600 px-4 py-2 text-blue-600"
+            >
+              Hire Me
             </a>
-
-            <a href="#contact" className="hover:text-white">
-              Contact
-            </a>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </header>
 
-      <section className="mx-auto max-w-6xl px-6 py-28">
-        <p className="text-sm uppercase tracking-[0.3em] text-zinc-500">
-          Performance Marketing Systems
-        </p>
+      <section className="bg-gradient-to-r from-blue-50 to-orange-50 py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
+          <div>
+            <h1 className="text-4xl font-bold leading-tight md:text-6xl">
+              Performance Marketing with{" "}
+              <span className="text-blue-600">
+                Real Proof
+              </span>
+            </h1>
 
-        <h1 className="mt-6 max-w-5xl text-5xl font-bold leading-tight md:text-7xl">
-          Performance marketing systems for education and entertainment brands.
-        </h1>
+            <p className="mt-6 text-lg text-gray-700">
+              Google Ads · Meta Ads · WhatsApp Funnels · Lead Generation ·
+              Analytics Systems
+            </p>
 
-        <p className="mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-          Meta Ads, Google Ads, WhatsApp funnels, local SEO, CRM workflows,
-          and lead generation systems built for measurable admissions and growth.
-        </p>
-      </section>
+            <p className="mt-4 text-gray-600">
+              16,000+ qualified leads · 93M+ impressions · Multi-brand campaign
+              experience across education and entertainment industries.
+            </p>
+          </div>
 
-      <section
-        id="services"
-        className="mx-auto grid max-w-6xl gap-6 px-6 py-16 md:grid-cols-3"
-      >
-        <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
-          <h3 className="text-xl font-semibold">Paid Ads</h3>
-
-          <p className="mt-4 text-zinc-400">
-            Meta Ads and Google Ads campaign systems focused on lead quality,
-            admissions growth, and conversion tracking.
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
-          <h3 className="text-xl font-semibold">WhatsApp Funnels</h3>
-
-          <p className="mt-4 text-zinc-400">
-            Automated lead nurturing and WhatsApp conversion systems.
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
-          <h3 className="text-xl font-semibold">CRM & Analytics</h3>
-
-          <p className="mt-4 text-zinc-400">
-            Conversion tracking, automation workflows, and reporting systems.
-          </p>
+          <div>
+            <img
+              src="/screenshots/googleadsoverall.png"
+              alt="Campaign Results"
+              className="rounded-3xl border bg-white p-4 shadow-xl"
+            />
+          </div>
         </div>
       </section>
 
-      <section
-        id="case-studies"
-        className="mx-auto max-w-6xl px-6 py-24"
-      >
-        <h2 className="text-4xl font-bold">Case Studies</h2>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {caseStudies.map((study) => (
-            <div
-              key={study.title}
-              className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6"
-            >
-              <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                Case Study
-              </p>
-
-              <h3 className="mt-4 text-2xl font-semibold">
-                {study.title}
-              </h3>
-
-              <p className="mt-4 text-lg font-medium text-white">
-                {study.result}
-              </p>
-
-              <p className="mt-4 text-zinc-400">
-                {study.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section
-        id="contact"
-        className="mx-auto max-w-4xl px-6 py-24"
-      >
-        <div className="rounded-3xl border border-zinc-800 bg-zinc-950 p-10">
-          <h2 className="text-4xl font-bold">
-            Let’s build a growth system that scales.
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6 text-center">
+          <h2 className="text-3xl font-bold">
+            Performance Highlights
           </h2>
 
-          <p className="mt-6 text-zinc-400">
-            Available for freelance consulting, paid acquisition systems,
-            WhatsApp funnels, analytics, and technical marketing support.
-          </p>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-2xl border p-6">
+              <div className="text-sm text-gray-500">
+                Campaign Experience
+              </div>
 
-          <div className="mt-10 space-y-4 text-zinc-300">
-            <p>Email: alex@mikdigital.online</p>
+              <div className="text-2xl font-bold">
+                Multi-Brand
+              </div>
+            </div>
 
-            <p>
-              Phone:{" "}
-              <a
-                href="https://wa.me/971506102836"
-                className="text-white hover:underline"
-              >
-                +971506102836
-              </a>
+            <div className="rounded-2xl border p-6">
+              <div className="text-sm text-gray-500">
+                Impressions
+              </div>
+
+              <div className="text-2xl font-bold">
+                93M+
+              </div>
+            </div>
+
+            <div className="rounded-2xl border p-6">
+              <div className="text-sm text-gray-500">
+                Leads Generated
+              </div>
+
+              <div className="text-2xl font-bold">
+                16,000+
+              </div>
+            </div>
+
+            <div className="rounded-2xl border p-6">
+              <div className="text-sm text-gray-500">
+                Industries
+              </div>
+
+              <div className="text-2xl font-bold">
+                Education & Entertainment
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proof" className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="mb-10 text-3xl font-bold">
+            Campaign Proof
+          </h2>
+
+          <h3 className="mb-4 text-xl font-semibold">
+            Google Ads
+          </h3>
+
+          <div className="mb-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <img
+              src="/screenshots/googleads-1.png"
+              className="rounded-2xl border bg-white"
+            />
+
+            <img
+              src="/screenshots/googleads-2.png"
+              className="rounded-2xl border bg-white"
+            />
+
+            <img
+              src="/screenshots/googleads-3.png"
+              className="rounded-2xl border bg-white"
+            />
+          </div>
+
+          <h3 className="mb-4 text-xl font-semibold">
+            Meta Ads
+          </h3>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <img
+              src="/screenshots/metaad-0.png"
+              className="rounded-2xl border bg-white"
+            />
+
+            <img
+              src="/screenshots/metaad-1.png"
+              className="rounded-2xl border bg-white"
+            />
+
+            <img
+              src="/screenshots/metacampaigns-1.png"
+              className="rounded-2xl border bg-white"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="bg-white py-20">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="rounded-3xl border bg-white p-10 shadow-sm">
+            <h2 className="text-4xl font-bold">
+              Let’s build growth systems that convert.
+            </h2>
+
+            <p className="mt-6 text-gray-600">
+              Available for freelance consulting, paid acquisition systems,
+              WhatsApp funnels, analytics implementation, and performance
+              marketing support.
             </p>
 
-            <p>Location: Dubai</p>
+            <div className="mt-10 space-y-4">
+              <p>
+                Email: alex@mikdigital.online
+              </p>
 
-            <p>
-              Portfolio:{" "}
-              <a
-                href="https://www.mikdigital.online"
-                target="_blank"
-                className="text-white hover:underline"
-              >
-                mikdigital.online
-              </a>
-            </p>
+              <p>
+                WhatsApp: +971506102836
+              </p>
 
-            <div className="flex gap-6 pt-4">
-              <a
-                href="https://instagram.com/mikdigitalofficial"
-                target="_blank"
-                className="text-zinc-400 hover:text-white"
-              >
-                Instagram
-              </a>
+              <p>
+                Location: Dubai
+              </p>
 
-              <a
-                href="https://facebook.com/mikdigitalofficial"
-                target="_blank"
-                className="text-zinc-400 hover:text-white"
-              >
-                Facebook
-              </a>
+              <div className="flex gap-6 pt-4">
+                <a
+                  href="https://instagram.com/mikdigitalofficial"
+                  target="_blank"
+                  className="text-blue-600"
+                >
+                  Instagram
+                </a>
 
-              <a
-                href="https://linkedin.com/in/mikdxb"
-                target="_blank"
-                className="text-zinc-400 hover:text-white"
-              >
-                LinkedIn
-              </a>
+                <a
+                  href="https://facebook.com/mikdigitalofficial"
+                  target="_blank"
+                  className="text-blue-600"
+                >
+                  Facebook
+                </a>
+
+                <a
+                  href="https://linkedin.com/in/mikdxb"
+                  target="_blank"
+                  className="text-blue-600"
+                >
+                  LinkedIn
+                </a>
+              </div>
             </div>
           </div>
         </div>
