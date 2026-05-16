@@ -2,7 +2,6 @@ export default function HomePage() {
 return ( <main className="min-h-screen bg-black text-white"> <header className="border-b border-zinc-800"> <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5"> <div className="text-xl font-semibold tracking-tight">
 mikdigital </div>
 
-```
       <div className="flex gap-6 text-sm text-zinc-400">
         <a href="#services" className="hover:text-white">
           Services
@@ -158,7 +157,7 @@ mikdigital </div>
     </div>
   </section>
 </main>
-```
+
 
 );
 }
