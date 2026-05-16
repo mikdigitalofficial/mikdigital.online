@@ -56,170 +56,219 @@ export default function HomePage() {
 >
 
   <p className="text-sm uppercase tracking-[0.3em] text-indigo-600">
-    mikdigital — Case Studies
+    mikdigital
   </p>
 
-  <h2 className="mt-4 text-5xl font-bold text-black">
-    Campaign Results
+  <h2 className="mt-4 max-w-5xl text-5xl font-bold leading-tight text-black">
+    Case Studies, Google Ads, Meta Ads, SEO, YouTube Ads & Certifications
   </h2>
 
-  <div className="mt-14 grid gap-10 md:grid-cols-2">
+  {/* CASE STUDIES */}
+  <div className="mt-20">
+    <h3 className="text-3xl font-bold text-black">
+      Case Studies
+    </h3>
 
-    <img
-      src="/images/screenshots/preschool01.png"
-      alt="Preschool Campaign"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+    <div className="mt-8 grid gap-10 md:grid-cols-2">
 
-    <img
-      src="/images/screenshots/preschool02.png"
-      alt="Preschool Campaign"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/preschool01.png"
+        alt="Case Study"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/bdancea01.png"
-      alt="Dance Campaign"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/preschool02.png"
+        alt="Case Study"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/bdancea02.png"
-      alt="Dance Campaign"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/bdancea01.png"
+        alt="Case Study"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/entertainment01.png"
-      alt="Entertainment Campaign"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/bdancea02.png"
+        alt="Case Study"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/googleadsoverall.png"
-      alt="Google Ads"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/entertainment01.png"
+        alt="Case Study"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/googleads-1.png"
-      alt="Google Ads"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+    </div>
+  </div>
 
-    <img
-      src="/images/screenshots/googleads-2.png"
-      alt="Google Ads"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+  {/* GOOGLE ADS */}
+  <div className="mt-24">
+    <h3 className="text-3xl font-bold text-black">
+      Google Ads
+    </h3>
 
-    <img
-      src="/images/screenshots/googleads-3.png"
-      alt="Google Ads"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+    <div className="mt-8 grid gap-10 md:grid-cols-2">
 
-    <img
-      src="/images/screenshots/googleads-4.png"
-      alt="Google Ads"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/googleadsoverall.png"
+        alt="Google Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/metaad-0.png"
-      alt="Meta Ads"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/googleads-1.png"
+        alt="Google Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/metaad-1.png"
-      alt="Meta Ads"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/googleads-2.png"
+        alt="Google Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/metaadobjective.png"
-      alt="Meta Objective"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/googleads-3.png"
+        alt="Google Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/metaadsdetailtargeting.png"
-      alt="Meta Targeting"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/googleads-4.png"
+        alt="Google Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/metacampaigns-1.png"
-      alt="Meta Campaign"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+    </div>
+  </div>
 
-    <img
-      src="/images/screenshots/metacampaigns-4.png"
-      alt="Meta Campaign"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+  {/* META ADS */}
+  <div className="mt-24">
+    <h3 className="text-3xl font-bold text-black">
+      Meta Ads / Facebook Ads
+    </h3>
 
-    <img
-      src="/images/screenshots/metacampaigns-5.png"
-      alt="Meta Campaign"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+    <div className="mt-8 grid gap-10 md:grid-cols-2">
 
-    <img
-      src="/images/screenshots/seo-1.png"
-      alt="SEO"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/metaad-0.png"
+        alt="Meta Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/seo-2.png"
-      alt="SEO"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/metaad-1.png"
+        alt="Meta Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/seo-3.png"
-      alt="SEO"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/metaadobjective.png"
+        alt="Meta Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/youtubeads-1.png"
-      alt="YouTube Ads"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/metaadsdetailtargeting.png"
+        alt="Meta Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/cert-1.png"
-      alt="Certification"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+      <img
+        src="/images/screenshots/metacampaigns-1.png"
+        alt="Meta Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
 
-    <img
-      src="/images/screenshots/cert-2.png"
-      alt="Certification"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+    </div>
+  </div>
 
-    <img
-      src="/images/screenshots/cert-4.png"
-      alt="Certification"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+  {/* SEO */}
+  <div className="mt-24">
+    <h3 className="text-3xl font-bold text-black">
+      SEO
+    </h3>
 
-    <img
-      src="/images/screenshots/cert-5.png"
-      alt="Certification"
-      className="rounded-3xl border border-zinc-200 shadow-xl"
-    />
+    <div className="mt-8 grid gap-10 md:grid-cols-2">
 
+      <img
+        src="/images/screenshots/seo-1.png"
+        alt="SEO"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
+
+      <img
+        src="/images/screenshots/seo-2.png"
+        alt="SEO"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
+
+      <img
+        src="/images/screenshots/seo-3.png"
+        alt="SEO"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
+
+    </div>
+  </div>
+
+  {/* YOUTUBE ADS */}
+  <div className="mt-24">
+    <h3 className="text-3xl font-bold text-black">
+      YouTube Ads
+    </h3>
+
+    <div className="mt-8">
+
+      <img
+        src="/images/screenshots/youtubeads-1.png"
+        alt="YouTube Ads"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
+
+    </div>
+  </div>
+
+  {/* CERTIFICATIONS */}
+  <div className="mt-24">
+    <h3 className="text-3xl font-bold text-black">
+      Certifications
+    </h3>
+
+    <div className="mt-8 grid gap-10 md:grid-cols-2">
+
+      <img
+        src="/images/screenshots/cert-1.png"
+        alt="Certification"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
+
+      <img
+        src="/images/screenshots/cert-2.png"
+        alt="Certification"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
+
+      <img
+        src="/images/screenshots/cert-4.png"
+        alt="Certification"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
+
+      <img
+        src="/images/screenshots/cert-5.png"
+        alt="Certification"
+        className="rounded-3xl border border-zinc-200 shadow-xl"
+      />
+
+    </div>
   </div>
 
 </section>
-    
-
+ 
       <section
         id="contact"
         className="mx-auto max-w-6xl px-6 py-24"
