@@ -1,0 +1,142 @@
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -1,6 +1,24 @@
+ <head>
+-  <title>Home</title>
+-  <link rel="icon" href="favicon.ico" />
++  <title>mikdigital.online – Freelance Performance Marketing by mohamed ibrahim khan</title>
++  <link rel="icon" href="website-logo.png" />
++
++  <meta name="description" content="mikdigital.online helps businesses in Dubai and globally achieve higher ROI with SEO, ads, and data-driven digital campaigns." />
++  <meta property="og:title" content="mikdigital.online – Freelance Performance Marketing by mohamed ibrahim khan" />
++  <meta property="og:description" content="mikdigital.online helps businesses in Dubai and globally achieve higher ROI with SEO, ads, and data-driven digital campaigns." />
++  <meta property="og:image" content="https://mikdigital.online/website-logo.png" />
++  <meta property="og:url" content="https://mikdigital.online" />
++  <meta property="og:type" content="website" />
++  <meta name="twitter:card" content="summary_large_image" />
++  <meta name="twitter:title" content="mikdigital.online – Freelance Performance Marketing by mohamed ibrahim khan" />
++  <meta name="twitter:description" content="mikdigital.online helps businesses in Dubai and globally achieve higher ROI with SEO, ads, and data-driven digital campaigns." />
++  <meta name="twitter:image" content="https://mikdigital.online/website-logo.png" />
+ </head>
+ <body>
++  <header>
++    <!-- other header links -->
++    <a href="https://www.linkedin.com/in/mohamed-ibrahim-khan/" target="_blank" rel="noopener" title="Connect on LinkedIn">
++      <img src="icons/linkedin.svg" alt="LinkedIn" style="width:20px;height:20px;" />
++    </a>
++  </header>
+   <!-- page content -->
+-  <footer>Old footer text</footer>
++  <footer>
++    <p>mikdigital.online – freelance performance marketing specialist in Dubai</p>
++    <p>
++      Run by <a href="https://www.linkedin.com/in/mohamed-ibrahim-khan/" target="_blank" rel="noopener" title="Connect on LinkedIn">mohamed ibrahim khan <img src="icons/linkedin.svg" alt="LinkedIn" style="width:14px;height:14px;" /></a> – helping businesses grow with SEO, ads, and digital strategy.
++    </p>
++  </footer>
+ </body>
+diff --git a/case-studies.html b/case-studies.html
+--- a/case-studies.html
++++ b/case-studies.html
+@@ -1,6 +1,24 @@
+ <head>
+-  <title>Case Studies</title>
+-  <link rel="icon" href="favicon.ico" />
++  <title>Case Studies – mikdigital.online</title>
++  <link rel="icon" href="website-logo.png" />
++
++  <meta name="description" content="See how mikdigital.online and mohamed ibrahim khan helped businesses boost ROI with performance marketing, SEO, and ads." />
++  <meta property="og:title" content="Case Studies – mikdigital.online" />
++  <meta property="og:description" content="See how mikdigital.online and mohamed ibrahim khan helped businesses boost ROI with performance marketing, SEO, and ads." />
++  <meta property="og:image" content="https://mikdigital.online/website-logo.png" />
++  <meta property="og:url" content="https://mikdigital.online/case-studies.html" />
++  <meta property="og:type" content="website" />
++  <meta name="twitter:card" content="summary_large_image" />
++  <meta name="twitter:title" content="Case Studies – mikdigital.online" />
++  <meta name="twitter:description" content="See how mikdigital.online and mohamed ibrahim khan helped businesses boost ROI with performance marketing, SEO, and ads." />
++  <meta name="twitter:image" content="https://mikdigital.online/website-logo.png" />
+ </head>
+ <body>
++  <header>
++    <a href="https://www.linkedin.com/in/mohamed-ibrahim-khan/" target="_blank" rel="noopener" title="Connect on LinkedIn">
++      <img src="icons/linkedin.svg" alt="LinkedIn" style="width:20px;height:20px;" />
++    </a>
++  </header>
+   <!-- page content -->
+-  <footer>Old footer text</footer>
++  <footer>
++    <p>mikdigital.online – freelance performance marketing specialist in Dubai</p>
++    <p>
++      Run by <a href="https://www.linkedin.com/in/mohamed-ibrahim-khan/" target="_blank" rel="noopener" title="Connect on LinkedIn">mohamed ibrahim khan <img src="icons/linkedin.svg" alt="LinkedIn" style="width:14px;height:14px;" /></a> – helping businesses grow with SEO, ads, and digital strategy.
++    </p>
++  </footer>
+ </body>
+diff --git a/services.html b/services.html
+--- a/services.html
++++ b/services.html
+@@ -1,6 +1,24 @@
+ <head>
+-  <title>Services</title>
+-  <link rel="icon" href="favicon.ico" />
++  <title>Services – mikdigital.online</title>
++  <link rel="icon" href="website-logo.png" />
++
++  <meta name="description" content="mikdigital.online offers freelance performance marketing services by mohamed ibrahim khan, including SEO, ads, and digital strategy for growth." />
++  <meta property="og:title" content="Services – mikdigital.online" />
++  <meta property="og:description" content="mikdigital.online offers freelance performance marketing services by mohamed ibrahim khan, including SEO, ads, and digital strategy for growth." />
++  <meta property="og:image" content="https://mikdigital.online/website-logo.png" />
++  <meta property="og:url" content="https://mikdigital.online/services.html" />
++  <meta property="og:type" content="website" />
++  <meta name="twitter:card" content="summary_large_image" />
++  <meta name="twitter:title" content="Services – mikdigital.online" />
++  <meta name="twitter:description" content="mikdigital.online offers freelance performance marketing services by mohamed ibrahim khan, including SEO, ads, and digital strategy for growth." />
++  <meta name="twitter:image" content="https://mikdigital.online/website-logo.png" />
+ </head>
+ <body>
++  <header>
++    <a href="https://www.linkedin.com/in/mohamed-ibrahim-khan/" target="_blank" rel="noopener" title="Connect on LinkedIn">
++      <img src="icons/linkedin.svg" alt="LinkedIn" style="width:20px;height:20px;" />
++    </a>
++  </header>
+   <!-- page content -->
+-  <footer>Old footer text</footer>
++  <footer>
++    <p>mikdigital.online – freelance performance marketing specialist in Dubai</p>
++    <p>
++      Run by <a href="https://www.linkedin.com/in/mohamed-ibrahim-khan/" target="_blank" rel="noopener" title="Connect on LinkedIn">mohamed ibrahim khan <img src="icons/linkedin.svg" alt="LinkedIn" style="width:14px;height:14px;" /></a> – helping businesses grow with SEO, ads, and digital strategy.
++    </p>
++  </footer>
+ </body>
+diff --git a/blog.html b/blog.html
+--- a/blog.html
++++ b/blog.html
+@@ -1,6 +1,24 @@
+ <head>
+-  <title>Blog</title>
+-  <link rel="icon" href="favicon.ico" />
++  <title>Blog – mikdigital.online</title>
++  <link rel="icon" href="website-logo.png" />
++
++  <meta name="description" content="Insights from mikdigital.online by freelancer mohamed ibrahim khan on SEO, ads, performance marketing, and digital strategies." />
++  <meta property="og:title" content="Blog – mikdigital.online" />
++  <meta property="og:description" content="Insights from mikdigital.online by freelancer mohamed ibrahim khan on SEO, ads, performance marketing, and digital strategies." />
++  <meta property="og:image" content="https://mikdigital.online/website-logo.png" />
++  <meta property="og:url" content="https://mikdigital.online/blog.html" />
++  <meta property="og:type" content="website" />
++  <meta name="twitter:card" content="summary_large_image" />
++  <meta name="twitter:title" content="Blog – mikdigital.online" />
++  <meta name="twitter:description" content="Insights from mikdigital.online by freelancer mohamed ibrahim khan on SEO, ads, performance marketing, and digital strategies." />
++  <meta name="twitter:image" content="https://mikdigital.online/website-logo.png" />
+ </head>
+ <body>
++  <header>
++    <a href="https://www.linkedin.com/in/mohamed-ibrahim-khan/" target="_blank" rel="noopener" title="Connect on LinkedIn">
++      <img src="icons/linkedin.svg" alt="LinkedIn" style="width:20px;height:20px;" />
++    </a>
++  </header>
+   <!-- page content -->
+-  <footer>Old footer text</footer>
++  <footer>
++    <p>mikdigital.online – freelance performance marketing specialist in Dubai</p>
++    <p>
++      Run by <a href="https://www.linkedin.com/in/mohamed-ibrahim-khan/" target

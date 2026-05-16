@@ -1,1 +1,12 @@
 .venv/
+node_modules/
+.next/
+.netlify/
+.npm-cache/
+server.*.log
+.env
+.env*.local
+out/
+dist/
+coverage/
+tsconfig.tsbuildinfo

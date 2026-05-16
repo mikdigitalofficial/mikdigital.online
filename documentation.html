@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.tailwindcss.com https://unpkg.com https://www.googletagmanager.com https://connect.facebook.net https://www.clarity.ms https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://use.fontawesome.com https://maxcdn.bootstrapcdn.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net https://www.clarity.ms; frame-src 'self' https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+    
+    <title>Documentation - MiKDIGITAL | Site Setup & SEO Guide</title>
+    <meta name="description" content="Documentation for MiKDIGITAL site: blog page, navigation updates, dropdown styling, SEO checklist, repository and deployment notes.">
+    <meta name="keywords" content="MiKDIGITAL Documentation, Blog Page, Navigation, Dropdown Styling, SEO Checklist, Repository, Deployment">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mikdigital.com/documentation.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mikdigital.com/documentation.html">
+    <meta property="og:title" content="MiKDIGITAL Documentation - Site Setup & SEO Guide">
+    <meta property="og:description" content="How the blog page and navigation were implemented, plus SEO checklist and deployment notes.">
+    <meta property="og:image" content="https://mikdigital.com/logo.png">
+    <meta property="og:site_name" content="MiKDIGITAL">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Font Awesome for brand icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/J6MDXk5s8IhQz9XbQhX5vFf3l9xQnVfY1XyYQYbCw3x2v5R5sJ8fM1Kk1R2kqK7h3K9b8i1wQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="twitter:url" content="https://mikdigital.com/documentation.html">
+    <meta name="twitter:title" content="MiKDIGITAL Documentation - Site Setup & SEO Guide">
+    <meta name="twitter:description" content="How the blog page and navigation were implemented, plus SEO checklist and deployment notes.">
+    <meta name="twitter:image" content="https://mikdigital.com/logo.png">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Documentation",
+      "url": "https://mikdigital.com/documentation.html",
+      "description": "MiKDIGITAL site documentation"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mikdigital.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Documentation", "item": "https://mikdigital.com/documentation.html"}
+      ]
+    }
+    </script>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <!-- Removed Inter preload -->
+    <link rel="preload" href="https://unpkg.com/feather-icons" as="script">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Removed Inter stylesheet -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+
+    <style>
+        body { font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, rgba(108,99,255,0.08) 0%, rgba(255,101,132,0.08) 100%); }
+        .logo-text { font-weight: 700; font-size: 1.5rem; background: linear-gradient(135deg, #6C63FF 0%, #FF6584 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .logo-dot { color: #1A1A1A; font-weight: 900; }
+        .section-card { background: #fff; border: 1px solid rgba(0,0,0,0.05); border-radius: 14px; padding: 24px; }
+        .fonseca-bold { font-family: 'Fonseca', 'Inter', sans-serif; font-weight: 700; }
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1303661508025094');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1303661508025094&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-274YF4P3S5"></script>
+<script>
+  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-274YF4P3S5');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MZJ3FNLG');</script>
+<body class="bg-gray-50">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZJ3FNLG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center"><img src="logo.png" alt="mikdigital" class="h-12 w-auto" loading="eager" decoding="async"></a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="case-studies.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Case Studies</a>
+                        <a href="contact.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center items-center mx-3">
+                    <div class="header-socials">
+                        <a href="https://wa.me/919344694120" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp w-5 h-5"></i></a>
+                        <a href="https://www.facebook.com/mikdigital101" aria-label="Facebook"><i class="fa-brands fa-facebook-f w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/mikdigital.online/" aria-label="Instagram"><i class="fa-brands fa-instagram w-5 h-5"></i></a>
+                        <a href="https://linkedin.com/in/mohamed-ibrahim-khan" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in w-5 h-5"></i></a>
+                        <a href="https://x.com/mik_digital" aria-label="X"><i class="fa-brands fa-x-twitter w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation Dropdown -->
+                <div class="md:hidden relative">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                    <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-56 bg-blue-600 text-white rounded-md shadow-lg py-2 z-50" style="font-family: 'Fonseca', 'Inter', sans-serif; font-weight: 700;">
+                        <a href="index.html" class="block px-4 py-2 text-sm text-white hover:bg-blue-700">Home</a>
+                        <a href="case-studies.html" class="block px-4 py-2 text-sm text-white hover:bg-blue-700">Case Studies</a>
+                        <a href="contact.html" class="block px-4 py-2 text-sm text-white hover:bg-blue-700">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Site Documentation</h1>
+            <p class="text-gray-600 mt-4 max-w-3xl mx-auto">Implementation notes for the Blog page, navigation and dropdown styling, SEO elements, repository and deployment practices.</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-6">
+            <div class="section-card">
+                <h2 class="text-xl font-bold text-gray-900 mb-3">Blog page and navigation</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>New page: <code>blog.html</code> with full on-page SEO (title, description, canonical, Open Graph, Twitter Card, JSON-LD Blog + Breadcrumbs).</li>
+                    <li>Desktop nav: Added <em>Blog</em> link on all pages.</li>
+                    <li>Mobile dropdown: blue/white background with bold appearance. If using Fonseca, load via <code>@font-face</code> or a font service; otherwise it falls back to Inter.</li>
+                    <li>Sitemap: <code>sitemap.xml</code> includes <code>blog.html</code> and <code>privacy-policy.html</code>.</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2 class="text-xl font-bold text-gray-900 mb-3">SEO checklist (new pages)</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Unique <code>&lt;title&gt;</code> and <code>&lt;meta name="description"&gt;</code>.</li>
+                    <li>Canonical: <code>&lt;link rel="canonical" href="..."&gt;</code>.</li>
+                    <li>Open Graph + Twitter Card tags with a representative image.</li>
+                    <li>JSON-LD schema matching the content (e.g., Article for posts, Blog for listing).</li>
+                    <li>Link the page in nav/footer; add to <code>sitemap.xml</code>.</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2 class="text-xl font-bold text-gray-900 mb-3">Portfolio Brand Color Palette</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <div class="flex items-center gap-3 p-3 rounded-lg border" style="background:#2563EB0D;border-color:#2563EB33;">
+                        <div class="w-10 h-10 rounded-md" style="background:#2563EB;"></div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Primary</div>
+                            <div class="text-sm text-gray-700">#2563EB — Bright royal blue (trust, professionalism)</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-lg border" style="background:#0F172A0D;border-color:#0F172A33;">
+                        <div class="w-10 h-10 rounded-md" style="background:#0F172A;"></div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Secondary</div>
+                            <div class="text-sm text-gray-700">#0F172A — Deep navy (backgrounds, contrast)</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-lg border" style="background:#FACC150D;border-color:#FACC1533;">
+                        <div class="w-10 h-10 rounded-md" style="background:#FACC15;"></div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Accent 1</div>
+                            <div class="text-sm text-gray-700">#FACC15 — Warm yellow (highlights, cursor glow)</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-lg border" style="background:#14B8A60D;border-color:#14B8A633;">
+                        <div class="w-10 h-10 rounded-md" style="background:#14B8A6;"></div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Accent 2</div>
+                            <div class="text-sm text-gray-700">#14B8A6 — Teal green (secondary buttons, icons)</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-lg border" style="background:#F8FAFC;border-color:#E2E8F0;">
+                        <div class="w-10 h-10 rounded-md" style="background:#F8FAFC;border:1px solid #E2E8F0;"></div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Neutral Light</div>
+                            <div class="text-sm text-gray-700">#F8FAFC — Off-white (section backgrounds)</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3 p-3 rounded-lg border" style="background:#64748B0D;border-color:#64748B33;">
+                        <div class="w-10 h-10 rounded-md" style="background:#64748B;"></div>
+                        <div>
+                            <div class="font-semibold text-gray-900">Neutral Dark</div>
+                            <div class="text-sm text-gray-700">#64748B — Cool gray (text, subtle elements)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-card">
+                <h2 class="text-xl font-bold text-gray-900 mb-3">Where to edit</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>Desktop nav: search for <code>ml-10 flex items-baseline</code> in each HTML.</li>
+                    <li>Mobile menu: search for <code>id="mobile-menu"</code> to edit items and styles.</li>
+                    <li>Footer links: search for <strong>Quick Links</strong> on each page.</li>
+                    <li>Blog cards: edit the cards in <code>blog.html</code>.</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2 class="text-xl font-bold text-gray-900 mb-3">Repository & deployment</h2>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li>GitHub: <a href="https://github.com/mikdigitalofficial/portfolio" class="text-blue-600 hover:text-blue-800">github.com/mikdigitalofficial/portfolio</a></li>
+                    <li>Issues: <a href="https://github.com/mikdigitalofficial/portfolio/issues" class="text-blue-600 hover:text-blue-800">/issues</a></li>
+                    <li>PRs: <a href="https://github.com/mikdigitalofficial/portfolio/pulls" class="text-blue-600 hover:text-blue-800">/pulls</a></li>
+                    <li>After adding pages, update <code>sitemap.xml</code>, commit, and push to <code>main</code>.</li>
+                    <li>Ensure canonical URLs point to the production domain.</li>
+                </ul>
+            </div>
+            <div class="section-card">
+                <h2 class="text-xl font-bold text-gray-900 mb-3">Cookies policy</h2>
+                <p class="text-gray-700 mb-3">I use cookies to enhance UX, measure analytics, and support marketing. Strictly necessary cookies are always on; others are opt-in.</p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2">
+                    <li><strong>Consent:</strong> The banner stores preferences in <code>localStorage</code> under <code>mik_cookie_consent_v1</code>.</li>
+                    <li><strong>Categories:</strong> Analytics and Marketing can be toggled in the banner via “Cookie settings.”</li>
+                    <li><strong>Change preferences:</strong> Clear site data or run <code>localStorage.removeItem('mik_cookie_consent_v1')</code> to reshow the banner.</li>
+                    <li><strong>Policy:</strong> Full details in <a href="privacy-policy.html" class="text-blue-600 hover:text-blue-800">Privacy Policy</a>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 footer-pink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4 footer-title">mikdigital</h3>
+                    <p class="text-gray-400 mb-4">
+                        Digital marketing expert freelancer specializing in Google Ads, Meta Ads, and lead generation strategies that deliver measurable ROI across Dubai, Australia, and India.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/mikdigital101" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/mikdigital.online/" class="text-gray-400 hover:text-pink-400 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram w-5 h-5"></i></a>
+                        <a href="https://linkedin.com/in/mohamed-ibrahim-khan" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in w-5 h-5"></i></a>
+                        <a href="https://x.com/mik_digital" class="text-gray-400 hover:text-gray-300 transition-colors" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter w-5 h-5"></i></a>
+                        <a href="https://wa.me/919344694120" class="text-gray-400 hover:text-green-400 transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp w-5 h-5"></i></a>
+                        <a href="https://youtube.com/@mikdigital" class="text-gray-400 hover:text-red-400 transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube w-5 h-5"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-white transition duration-300">Case Studies</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Google Ads</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Meta Ads</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Lead Generation</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">SEO</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 mikdigital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof feather !== 'undefined') { feather.replace(); }
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() { mobileMenu.classList.toggle('hidden'); });
+                document.addEventListener('click', function(event) {
+                    if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Cookies Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-[720px] z-[100] bg-white text-gray-800 rounded-xl shadow-lg border border-gray-200 p-4 md:p-5 hidden">
+        <div class="flex items-start gap-4">
+            <div class="flex-1">
+                <p class="text-sm md:text-base">I use cookies to enhance your browsing experience, serve personalized ads or content, and analyze traffic. By clicking “Accept All”, you consent to my use of cookies. Read the <a href="privacy-policy.html" class="text-blue-600 hover:text-blue-800 underline">Privacy Policy</a>.</p>
+                <details class="mt-2">
+                    <summary class="cursor-pointer text-sm text-gray-600">Cookie settings</summary>
+                    <div class="mt-2 text-sm text-gray-700 space-y-1">
+                        <label class="flex items-center gap-2"><input type="checkbox" checked disabled> Strictly necessary</label>
+                        <label class="flex items-center gap-2"><input id="cookie-analytics" type="checkbox" checked> Analytics</label>
+                        <label class="flex items-center gap-2"><input id="cookie-marketing" type="checkbox"> Marketing</label>
+                    </div>
+                </details>
+            </div>
+            <div class="flex flex-col md:flex-row gap-2 md:gap-3">
+                <button id="cookie-accept" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">Accept All</button>
+                <button id="cookie-decline" class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm hover:bg-gray-100">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const STORAGE_KEY = 'mik_cookie_consent_v1';
+            function getConsent() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); } catch(e) { return null; } }
+            function setConsent(value) { localStorage.setItem(STORAGE_KEY, JSON.stringify(value)); }
+            function showBanner() { document.getElementById('cookie-banner').classList.remove('hidden'); }
+            function hideBanner() { document.getElementById('cookie-banner').classList.add('hidden'); }
+            function init() {
+                const existing = getConsent();
+                if (!existing) { showBanner(); }
+                const accept = document.getElementById('cookie-accept');
+                const decline = document.getElementById('cookie-decline');
+                accept && accept.addEventListener('click', () => { setConsent({ all:true, analytics:true, marketing:true, ts:Date.now() }); hideBanner(); });
+                decline && decline.addEventListener('click', () => {
+                    const analytics = document.getElementById('cookie-analytics')?.checked || false;
+                    const marketing = document.getElementById('cookie-marketing')?.checked || false;
+                    setConsent({ all:false, analytics, marketing, ts:Date.now() }); hideBanner();
+                });
+            }
+            document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
+        })();
+    </script>
+</body>
+</html>

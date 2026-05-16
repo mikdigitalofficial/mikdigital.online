@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.tailwindcss.com https://unpkg.com https://www.googletagmanager.com https://connect.facebook.net https://www.clarity.ms https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://use.fontawesome.com https://maxcdn.bootstrapcdn.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net https://www.clarity.ms; frame-src 'self' https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+    
+    <title>Code Snippets - mikdigital Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Font Awesome for brand icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .code-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .code-header {
+            background: linear-gradient(90deg, #1e293b, #334155);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .traffic-light {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27ca3f; }
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .snippet-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .animated-gradient {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .typing-animation {
+            overflow: hidden;
+            border-right: 2px solid #3b82f6;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #3b82f6; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center"><img src="logo.png" alt="mikdigital" class="h-12 w-auto" loading="eager" decoding="async"></a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="case-studies.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Case Studies</a>
+                        <a href="contact.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center items-center mx-3">
+                    <div class="header-socials">
+                        <a href="https://wa.me/919344694120" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp w-5 h-5"></i></a>
+                        <a href="https://www.facebook.com/mikdigital101" aria-label="Facebook"><i class="fa-brands fa-facebook-f w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/mikdigital.online/" aria-label="Instagram"><i class="fa-brands fa-instagram w-5 h-5"></i></a>
+                        <a href="https://linkedin.com/in/mohamed-ibrahim-khan" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in w-5 h-5"></i></a>
+                        <a href="https://x.com/mik_digital" aria-label="X"><i class="fa-brands fa-x-twitter w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation Dropdown -->
+                <div class="md:hidden relative">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                    <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-56 bg-blue-600 text-white rounded-md shadow-lg py-2 z-50" style="font-family: 'Fonseca', 'Inter', sans-serif; font-weight: 700;">
+                        <a href="index.html" class="block px-4 py-2 text-sm text-white hover:bg-blue-700">Home</a>
+                        <a href="case-studies.html" class="block px-4 py-2 text-sm text-white hover:bg-blue-700">Case Studies</a>
+                        <a href="contact.html" class="block px-4 py-2 text-sm text-white hover:bg-blue-700">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="animated-gradient py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                <span class="typing-animation">Rich Code Snippets</span>
+            </h1>
+            <p class="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+                Interactive code examples showcasing modern web development techniques and digital marketing automation
+            </p>
+        </div>
+    </section>
+
+    <!-- Code Snippets Grid -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-8">
+                
+                <!-- Facebook Pixel Implementation -->
+                <div class="snippet-card">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Facebook Pixel Implementation</h3>
+                    <p class="text-gray-600 mb-6">Advanced Facebook Pixel setup with custom events and conversion tracking</p>
+                    <div class="code-container">
+                        <div class="code-header">
+                            <div class="traffic-light red"></div>
+                            <div class="traffic-light yellow"></div>
+                            <div class="traffic-light green"></div>
+                            <span class="text-white text-sm ml-4">facebook-pixel.js</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyCode('pixel-code')">Copy</button>
+                        <pre class="bg-gray-900 text-white p-4 overflow-x-auto"><code id="pixel-code" class="language-javascript">// Advanced Facebook Pixel Implementation
+!function(f,b,e,v,n,t,s) {
+  if(f.fbq) return;
+  n=f.fbq=function(){
+    n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+  };
+  if(!f._fbq) f._fbq=n;
+  n.push=n; n.loaded=!0; n.version='2.0';
+  n.queue=[]; t=b.createElement(e); t.async=!0;
+  t.src=v; s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+// Initialize with your Pixel ID
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+
+// Custom event tracking
+function trackCustomEvent(eventName, parameters = {}) {
+  fbq('track', eventName, parameters);
+  console.log(`Tracked: ${eventName}`, parameters);
+}
+
+// Lead generation tracking
+function trackLead(leadValue = 0) {
+  trackCustomEvent('Lead', {
+    value: leadValue,
+    currency: 'USD',
+    content_name: 'Lead Form Submission'
+  });
+}
+
+// Purchase tracking with enhanced data
+function trackPurchase(value, currency = 'USD', contentIds = []) {
+  trackCustomEvent('Purchase', {
+    value: value,
+    currency: currency,
+    content_type: 'product',
+    content_ids: contentIds
+  });
+}</code></pre>
+                    </div>
+                </div>
+
+                <!-- Google Ads Conversion Tracking -->
+                <div class="snippet-card">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Google Ads Conversion Tracking</h3>
+                    <p class="text-gray-600 mb-6">Enhanced Google Ads conversion tracking with dynamic values</p>
+                    <div class="code-container">
+                        <div class="code-header">
+                            <div class="traffic-light red"></div>
+                            <div class="traffic-light yellow"></div>
+                            <div class="traffic-light green"></div>
+                            <span class="text-white text-sm ml-4">google-ads.js</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyCode('gads-code')">Copy</button>
+                        <pre class="bg-gray-900 text-white p-4 overflow-x-auto"><code id="gads-code" class="language-javascript">// Google Ads Enhanced Conversion Tracking
+class GoogleAdsTracker {
+  constructor(conversionId, conversionLabel) {
+    this.conversionId = conversionId;
+    this.conversionLabel = conversionLabel;
+    this.initGtag();
+  }
+
+  initGtag() {
+    // Load gtag if not already loaded
+    if (!window.gtag) {
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${this.conversionId}`;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function() { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', this.conversionId);
+    }
+  }
+
+  trackConversion(value = 0, currency = 'USD', transactionId = null) {
+    const conversionData = {
+      'send_to': `${this.conversionId}/${this.conversionLabel}`,
+      'value': value,
+      'currency': currency
+    };
+
+    if (transactionId) {
+      conversionData.transaction_id = transactionId;
+    }
+
+    gtag('event', 'conversion', conversionData);
+    
+    console.log('Google Ads Conversion Tracked:', conversionData);
+  }
+
+  trackEnhancedConversion(userEmail, phoneNumber = null) {
+    gtag('event', 'conversion', {
+      'send_to': `${this.conversionId}/${this.conversionLabel}`,
+      'user_data': {
+        'email_address': userEmail,
+        'phone_number': phoneNumber
+      }
+    });
+  }
+}
+
+// Usage example
+const adsTracker = new GoogleAdsTracker('AW-XXXXXXXXX', 'conversion_label');
+adsTracker.trackConversion(99.99, 'USD', 'TXN_' + Date.now());</code></pre>
+                    </div>
+                </div>
+
+                <!-- Lead Generation Form -->
+                <div class="snippet-card">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Smart Lead Generation Form</h3>
+                    <p class="text-gray-600 mb-6">Advanced form with validation, tracking, and CRM integration</p>
+                    <div class="code-container">
+                        <div class="code-header">
+                            <div class="traffic-light red"></div>
+                            <div class="traffic-light yellow"></div>
+                            <div class="traffic-light green"></div>
+                            <span class="text-white text-sm ml-4">lead-form.js</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyCode('form-code')">Copy</button>
+                        <pre class="bg-gray-900 text-white p-4 overflow-x-auto"><code id="form-code" class="language-javascript">class SmartLeadForm {
+  constructor(formId, options = {}) {
+    this.form = document.getElementById(formId);
+    this.options = {
+      validateEmail: true,
+      trackEvents: true,
+      showProgress: true,
+      ...options
+    };
+    this.init();
+  }
+
+  init() {
+    if (!this.form) return;
+    
+    this.addValidation();
+    this.bindEvents();
+  }
+
+  bindEvents() {
+    this.form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      this.handleSubmit();
+    });
+  }
+
+  addValidation() {
+    const inputs = this.form.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => this.validateField(input));
+      input.addEventListener('input', () => this.clearError(input));
+    });
+  }
+
+  handleSubmit() {
+    const formData = new FormData(this.form);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Validate all fields
+    const inputs = this.form.querySelectorAll('input[required], textarea[required]');
+    let isValid = true;
+    
+    inputs.forEach(input => {
+      if (!this.validateField(input)) {
+        isValid = false;
+      }
+    });
+    
+    if (isValid) {
+      this.showSuccess('Form submitted successfully! (Demo mode)');
+    }
+  }
+
+  validateField(field) {
+    const value = field.value.trim();
+    let isValid = true;
+    let errorMessage = '';
+
+    // Email validation
+    if (field.type === 'email' && this.options.validateEmail) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(value)) {
+        isValid = false;
+        errorMessage = 'Please enter a valid email address';
+      }
+    }
+
+    // Required field validation
+    if (field.hasAttribute('required') && !value) {
+      isValid = false;
+      errorMessage = 'This field is required';
+    }
+
+    this.showFieldError(field, isValid ? '' : errorMessage);
+    return isValid;
+  }
+
+  showFieldError(field, message) {
+    let errorDiv = field.parentNode.querySelector('.error-message');
+    
+    if (!errorDiv) {
+      errorDiv = document.createElement('div');
+      errorDiv.className = 'error-message text-red-500 text-sm mt-1';
+      field.parentNode.appendChild(errorDiv);
+    }
+    
+    errorDiv.textContent = message;
+    field.classList.toggle('border-red-500', !!message);
+  }
+
+  clearError(field) {
+    const errorDiv = field.parentNode.querySelector('.error-message');
+    if (errorDiv) errorDiv.textContent = '';
+    field.classList.remove('border-red-500');
+  }
+
+  showSuccess(message) {
+    const successDiv = document.createElement('div');
+    successDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mt-4';
+    successDiv.textContent = message;
+    
+    // Remove any existing success/error messages
+    const existing = this.form.parentNode.querySelector('.bg-green-100, .bg-red-100');
+    if (existing) existing.remove();
+    
+    this.form.parentNode.appendChild(successDiv);
+    
+    // Auto-remove after 5 seconds
+    setTimeout(() => {
+      if (successDiv.parentNode) {
+        successDiv.remove();
+      }
+    }, 5000);
+  }
+
+  showError(message) {
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mt-4';
+    errorDiv.textContent = message;
+    
+    // Remove any existing success/error messages
+    const existing = this.form.parentNode.querySelector('.bg-green-100, .bg-red-100');
+    if (existing) existing.remove();
+    
+    this.form.parentNode.appendChild(errorDiv);
+  }
+
+  async submitForm(formData) {
+    try {
+      // Track form submission
+      if (this.options.trackEvents) {
+        if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+        if (typeof gtag !== 'undefined') gtag('event', 'generate_lead');
+      }
+
+      // Submit to your CRM/backend
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        this.showSuccess('Thank you! We\'ll be in touch soon.');
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (error) {
+      this.showError('Something went wrong. Please try again.');
+    }
+  }
+}
+
+// Initialize form
+const leadForm = new SmartLeadForm('contact-form');</code></pre>
+                    </div>
+                </div>
+
+                <!-- Performance Analytics Dashboard -->
+                <div class="snippet-card">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Performance Analytics Dashboard</h3>
+                    <p class="text-gray-600 mb-6">Real-time campaign performance tracking with Chart.js visualization</p>
+                    <div class="code-container">
+                        <div class="code-header">
+                            <div class="traffic-light red"></div>
+                            <div class="traffic-light yellow"></div>
+                            <div class="traffic-light green"></div>
+                            <span class="text-white text-sm ml-4">analytics-dashboard.js</span>
+                        </div>
+                        <button class="copy-btn" onclick="copyCode('analytics-code')">Copy</button>
+                        <pre class="bg-gray-900 text-white p-4 overflow-x-auto"><code id="analytics-code" class="language-javascript">class AnalyticsDashboard {
+  constructor(containerId) {
+    this.container = document.getElementById(containerId);
+    this.charts = {};
+    this.data = {
+      campaigns: [],
+      metrics: {},
+      timeRange: '7d'
+    };
+    this.init();
+  }
+
+  async init() {
+    await this.loadChartJS();
+    this.createDashboard();
+    this.fetchData();
+    this.startRealTimeUpdates();
+  }
+
+  async loadChartJS() {
+    if (!window.Chart) {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
+      document.head.appendChild(script);
+      
+      return new Promise(resolve => {
+        script.onload = resolve;
+      });
+    }
+  }
+
+  createDashboard() {
+    this.container.innerHTML = `
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div class="metric-card bg-blue-50 p-6 rounded-lg">
+          <h3 class="text-sm font-medium text-blue-600">Total Leads</h3>
+          <p class="text-3xl font-bold text-blue-900" id="total-leads">0</p>
+          <span class="text-sm text-blue-600" id="leads-change">+0%</span>
+        </div>
+        <div class="metric-card bg-green-50 p-6 rounded-lg">
+          <h3 class="text-sm font-medium text-green-600">ROAS</h3>
+          <p class="text-3xl font-bold text-green-900" id="roas">0.00x</p>
+          <span class="text-sm text-green-600" id="roas-change">+0%</span>
+        </div>
+        <div class="metric-card bg-purple-50 p-6 rounded-lg">
+          <h3 class="text-sm font-medium text-purple-600">Cost Per Lead</h3>
+          <p class="text-3xl font-bold text-purple-900" id="cpl">$0</p>
+          <span class="text-sm text-purple-600" id="cpl-change">+0%</span>
+        </div>
+        <div class="metric-card bg-orange-50 p-6 rounded-lg">
+          <h3 class="text-sm font-medium text-orange-600">Conversion Rate</h3>
+          <p class="text-3xl font-bold text-orange-900" id="cvr">0%</p>
+          <span class="text-sm text-orange-600" id="cvr-change">+0%</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-semibold mb-4">Campaign Performance</h3>
+          <canvas id="performance-chart"></canvas>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="text-lg font-semibold mb-4">Traffic Sources</h3>
+          <canvas id="sources-chart"></canvas>
+        </div>
+      </div>
+    `;
+
+    this.createCharts();
+  }
+
+  createCharts() {
+    // Performance Chart
+    const performanceCtx = document.getElementById('performance-chart');
+    this.charts.performance = new Chart(performanceCtx, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Leads',
+          data: [],
+          borderColor: '#3b82f6',
+          backgroundColor: 'rgba(59, 130, 246, 0.1)',
+          tension: 0.4
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+
+    // Sources Chart
+    const sourcesCtx = document.getElementById('sources-chart');
+    this.charts.sources = new Chart(sourcesCtx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Facebook Ads', 'Google Ads', 'Organic', 'Direct'],
+        datasets: [{
+          data: [0, 0, 0, 0],
+          backgroundColor: ['#1877f2', '#4285f4', '#34a853', '#ea4335']
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'bottom' }
+        }
+      }
+    });
+  }
+
+  async fetchData() {
+    try {
+      // Simulate API call
+      const response = await fetch(`/api/analytics?range=${this.data.timeRange}`);
+      const data = await response.json();
+      
+      this.updateMetrics(data.metrics);
+      this.updateCharts(data.chartData);
+    } catch (error) {
+      console.error('Failed to fetch analytics data:', error);
+    }
+  }
+
+  updateMetrics(metrics) {
+    document.getElementById('total-leads').textContent = metrics.totalLeads || 0;
+    document.getElementById('roas').textContent = `${metrics.roas || 0}x`;
+    document.getElementById('cpl').textContent = `$${metrics.cpl || 0}`;
+    document.getElementById('cvr').textContent = `${metrics.cvr || 0}%`;
+  }
+
+  startRealTimeUpdates() {
+    setInterval(() => {
+      this.fetchData();
+    }, 30000); // Update every 30 seconds
+  }
+}
+
+// Initialize dashboard
+const dashboard = new AnalyticsDashboard('analytics-container');</code></pre>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Interactive Demo</h2>
+                <p class="text-xl text-gray-300">Try out the code snippets in action</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Live Form Demo -->
+                <div class="bg-white rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Smart Lead Form Demo</h3>
+                    <form id="demo-form" class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                            <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                            Submit Form
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Live Analytics Demo -->
+                <div class="bg-white rounded-lg p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Live Analytics Demo</h3>
+                    <div id="demo-analytics" class="space-y-4">
+                        <div class="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
+                            <span class="font-medium">Total Impressions</span>
+                            <span class="text-2xl font-bold text-blue-600" id="demo-impressions">0</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                            <span class="font-medium">Clicks</span>
+                            <span class="text-2xl font-bold text-green-600" id="demo-clicks">0</span>
+                        </div>
+                        <div class="flex justify-between items-center p-4 bg-purple-50 rounded-lg">
+                            <span class="font-medium">Conversions</span>
+                            <span class="text-2xl font-bold text-purple-600" id="demo-conversions">0</span>
+                        </div>
+                        <button onclick="simulateTraffic()" class="w-full bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold hover:bg-gray-900 transition duration-300">
+                            Simulate Traffic
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script>
+        // Copy code functionality
+        function copyCode(elementId) {
+            const code = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = 'rgba(34, 197, 94, 0.2)';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = 'rgba(255,255,255,0.1)';
+                }, 2000);
+            });
+        }
+
+        // Demo form functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const demoForm = new SmartLeadForm('demo-form', {
+                validateEmail: true,
+                trackEvents: false
+            });
+        });
+
+        // Simulate traffic for analytics demo
+        function simulateTraffic() {
+            const impressions = document.getElementById('demo-impressions');
+            const clicks = document.getElementById('demo-clicks');
+            const conversions = document.getElementById('demo-conversions');
+
+            // Animate numbers
+            animateNumber(impressions, Math.floor(Math.random() * 10000) + 1000);
+            animateNumber(clicks, Math.floor(Math.random() * 500) + 50);
+            animateNumber(conversions, Math.floor(Math.random() * 25) + 5);
+        }
+
+        function animateNumber(element, target) {
+            const start = parseInt(element.textContent) || 0;
+            const duration = 1000;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const current = Math.floor(start + (target - start) * progress);
+                element.textContent = current.toLocaleString();
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Initialize syntax highlighting
+        Prism.highlightAll();
+        
+        // Initialize Feather icons
+        if (typeof feather !== 'undefined') {
+            feather.replace();
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 footer-pink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4 footer-title">mikdigital</h3>
+                    <p class="text-gray-400 mb-4">
+                        Digital marketing expert freelancer specializing in Google Ads, Meta Ads, and lead generation strategies that deliver measurable ROI across Dubai, Australia, and India.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/mikdigital101" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/mikdigital.online/" class="text-gray-400 hover:text-pink-400 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram w-5 h-5"></i></a>
+                        <a href="https://linkedin.com/in/mohamed-ibrahim-khan" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in w-5 h-5"></i></a>
+                        <a href="https://x.com/mik_digital" class="text-gray-400 hover:text-gray-300 transition-colors" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter w-5 h-5"></i></a>
+                        <a href="https://wa.me/919344694120" class="text-gray-400 hover:text-green-400 transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp w-5 h-5"></i></a>
+                        <a href="https://youtube.com/@mikdigital" class="text-gray-400 hover:text-red-400 transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube w-5 h-5"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-white transition duration-300">Case Studies</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Google Ads</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Meta Ads</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Lead Generation</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">SEO</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 mikdigital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Contact — mikdigital</title>
+  <meta name="description" content="Contact mikdigital for Google Ads, Meta Ads & lead generation. Based in Dubai, UAE." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+  f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MZJ3FNLG');
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-274YF4P3S5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-274YF4P3S5');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "tcwopb01sd");
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+<!-- GTM noscript -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZJ3FNLG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+<!-- HEADER -->
+<header class="bg-white border-b">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="index.html" class="font-bold text-xl">mikdigital</a>
+    <a href="index.html" class="text-sm text-blue-600 hover:underline">← Back to Home</a>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-12">
+
+  <!-- LEFT: CONTACT INFO -->
+  <div>
+    <h1 class="text-4xl font-bold mb-4">Let’s talk</h1>
+    <p class="text-gray-600 mb-6">
+      Looking for performance-driven Google Ads, Meta Ads, or lead generation?
+      Fill the form or reach out directly.
+    </p>
+
+    <div class="space-y-4 text-sm">
+      <p><strong>Email:</strong> <a href="mailto:mikdigitalofficial@gmail.com" class="text-blue-600">mikdigitalofficial@gmail.com</a></p>
+      <p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/919344694120" class="text-blue-600">+91 93446 94120</a></p>
+      <p><strong>Location:</strong> Dubai, UAE</p>
+    </div>
+  </div>
+
+  <!-- RIGHT: FORM -->
+  <div class="bg-white p-8 rounded-2xl border shadow-sm">
+    <h2 class="text-2xl font-semibold mb-6">Send a message</h2>
+
+    <form
+    <form id="contactForm">
+  <input type="text" name="name" required placeholder="Your name" />
+  <input type="email" name="email" required placeholder="Your email" />
+  <textarea name="message" required placeholder="Your message"></textarea>
+
+  <button type="submit"
+    class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold">
+    Send Message
+  </button>
+</form>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  fetch('https://formspree.io/f/mreablaj', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: new FormData(this)
+  })
+  .then(response => {
+    if (response.ok) {
+      window.location.href = '/thank-you.html';
+    } else {
+      alert('Submission failed. Try again.');
+    }
+  })
+  .catch(() => alert('Network error.'));
+});
+</script>
+
+      <!-- Redirect after submit -->
+      <input type="hidden" name="_redirect" value="https://mikdigital.com/thank-you.html">
+
+      <button type="submit"
+        class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700">
+        Send Message
+      </button>
+    </form>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t py-6 text-center text-sm text-gray-500">
+  © 2025 mikdigital. All rights reserved.
+</footer>
+
+</body>
+</html>
+
+

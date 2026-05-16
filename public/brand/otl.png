@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.tailwindcss.com https://unpkg.com https://www.googletagmanager.com https://connect.facebook.net https://www.clarity.ms https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com https://use.fontawesome.com https://maxcdn.bootstrapcdn.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net https://www.clarity.ms; frame-src 'self' https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=()">
+    
+    <title>Privacy Policy - mikdigital | Performance Marketing Specialist</title>
+    <meta name="description" content="Privacy Policy for mikdigital - Learn how I collect, use, and protect your personal information. Google Ads & Meta Ads Lead Generation Specialist.">
+    <meta name="keywords" content="Privacy Policy, mikdigital, Google Ads Expert Dubai, Meta Ads Specialist, Data Protection">
+    <meta name="author" content="mikdigital">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon links -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome for brand icons - Multiple CDNs for reliability -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Backup Font Awesome CDNs -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    
+    <!-- Additional fallback for icons -->
+    <style>
+        .social-icon {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 24px !important;
+            height: 24px !important;
+            font-size: 1.5rem !important;
+            font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands Solid", "Font Awesome 5 Pro" !important;
+        }
+        
+        /* Override Tailwind CSS conflicts */
+        .fab, .fa-brands {
+            font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands Solid" !important;
+            font-weight: 400 !important;
+            font-style: normal !important;
+        }
+        
+        /* Ensure icons display properly */
+        i.fab::before, i.fa-brands::before {
+            font-family: "Font Awesome 6 Brands", "Font Awesome 5 Brands Solid" !important;
+        }
+        
+        /* Specific icon fixes */
+        .fa-linkedin-in::before { content: "\f0e1" !important; }
+        .fa-facebook-f::before { content: "\f39e" !important; }
+        .fa-instagram::before { content: "\f16d" !important; }
+        .fa-whatsapp::before { content: "\f232" !important; }
+        .fa-twitter::before { content: "\f099" !important; }
+        .fa-youtube::before { content: "\f167" !important; }
+        
+        /* Prevent Tailwind from overriding icon styles */
+        .w-12.h-12 i {
+            width: auto !important;
+            height: auto !important;
+        }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-274YF4P3S5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-274YF4P3S5');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MZJ3FNLG');</script>
+<!-- End Google Tag Manager -->
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mikdigital.com/privacy-policy">
+    <meta property="og:title" content="Privacy Policy - mikdigital Portfolio">
+    <meta property="og:description" content="Privacy Policy for mikdigital - Learn how I collect, use, and protect your personal information. Google Ads & Meta Ads Lead Generation Specialist.">
+    <meta property="og:image" content="https://mikdigital.com/og-image.jpg">
+    <meta property="og:site_name" content="mikdigital">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mikdigital.com/privacy-policy">
+    <meta property="twitter:title" content="Privacy Policy - mikdigital Portfolio">
+    <meta property="twitter:description" content="Privacy Policy for mikdigital - Learn how I collect, use, and protect your personal information. Google Ads & Meta Ads Lead Generation Specialist.">
+    <meta property="twitter:image" content="https://mikdigital.com/og-image.jpg">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mikdigital.com/privacy-policy">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy - mikdigital",
+      "description": "Privacy Policy for mikdigital - Learn how I collect, use, and protect your personal information. Google Ads & Meta Ads Lead Generation Specialist.",
+      "url": "https://mikdigital.com/privacy-policy",
+      "publisher": {
+        "@type": "Person",
+        "name": "mikdigital",
+        "jobTitle": "Performance Marketing Specialist",
+        "email": "mikdigitalofficial@gmail.com"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://mikdigital.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Privacy Policy"
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="https://unpkg.com/feather-icons" as="script">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: {
+                preflight: false,
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1d4ed8 100%);
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(29, 78, 216, 0.1) 100%);
+        }
+        
+        /* Logo styling */
+        .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #000000;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo-dot {
+            color: #000000;
+            font-weight: 900;
+        }
+     
+        /* Performance optimizations */
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Reduce motion for accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZJ3FNLG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="flex items-center"><img src="logo.png" alt="mikdigital" class="h-12 w-auto" loading="eager" decoding="async"></a>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="case-studies.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Case Studies</a>
+                        <a href="contact.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center items-center mx-3">
+                    <div class="header-socials">
+                        <a href="https://wa.me/919344694120" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp w-5 h-5"></i></a>
+                        <a href="https://www.facebook.com/mikdigital101" aria-label="Facebook"><i class="fa-brands fa-facebook-f w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/mikdigital.online/" aria-label="Instagram"><i class="fa-brands fa-instagram w-5 h-5"></i></a>
+                        <a href="https://linkedin.com/in/mohamed-ibrahim-khan" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in w-5 h-5"></i></a>
+                        <a href="https://x.com/mik_digital" aria-label="X"><i class="fa-brands fa-x-twitter w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation Dropdown -->
+                <div class="md:hidden relative">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-blue-600 focus:outline-none focus:text-blue-600">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                    <div id="mobile-menu" class="hidden absolute right-0 mt-2 w-56 bg-blue-600 text-white rounded-md shadow-lg py-2 z-50" style="font-family: 'Fonseca', 'Inter', sans-serif; font-weight: 700;">
+                        <a href="index.html" class="block px-4 py-2 text-sm text-white hover:bg-blue-700">Home</a>
+                        <a href="case-studies.html" class="block px-4 py-2 text-sm text-white hover:bg-blue-700">Case Studies</a>
+                        <a href="contact.html" class="block px-4 py-2 text-sm text-white hover:bg-blue-700">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                    Privacy <span class="text-blue-600">Policy</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+                    Learn how I collect, use, and protect your personal information when you visit my website or use my services.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="prose prose-blue max-w-none">
+                <p class="text-sm text-gray-500 mb-8"><strong>Effective Date:</strong> January 1, 2025</p>
+                
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Information I Collect</h2>
+                <p class="text-gray-600 mb-6">When you visit my website or contact me, I may collect the following types of information:</p>
+                <ul class="list-disc pl-6 text-gray-600 mb-6">
+                    <li><strong>Personal Information:</strong> Name, email address, phone number, and any other information you provide when contacting me or using my services.</li>
+                    <li><strong>Website Usage Data:</strong> IP address, browser type, pages visited, time spent on pages, and other analytics data collected through Google Analytics and similar tools.</li>
+                    <li><strong>Communication Data:</strong> Records of my communications with you, including emails, calls, and messages through social media platforms.</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">2. How I Use Your Information</h2>
+                <p class="text-gray-600 mb-6">I use the collected information for the following purposes:</p>
+                <ul class="list-disc pl-6 text-gray-600 mb-6">
+                    <li>To provide and improve my digital marketing services</li>
+                    <li>To respond to your inquiries and communicate with you</li>
+                    <li>To analyze website performance and user behavior</li>
+                    <li>To send promotional materials (only with your consent)</li>
+                    <li>To comply with legal obligations</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Information Sharing</h2>
+                <p class="text-gray-600 mb-6">I do not sell, trade, or rent your personal information to third parties. I may share your information only in the following circumstances:</p>
+                <ul class="list-disc pl-6 text-gray-600 mb-6">
+                    <li>With your explicit consent</li>
+                    <li>To comply with legal requirements or court orders</li>
+                    <li>With service providers who assist me in operating my business (subject to confidentiality agreements)</li>
+                    <li>In connection with a business transfer or merger</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Cookies and Tracking Technologies</h2>
+                <p class="text-gray-600 mb-6">My website uses cookies and similar tracking technologies to:</p>
+                <ul class="list-disc pl-6 text-gray-600 mb-6">
+                    <li>Enhance your browsing experience</li>
+                    <li>Analyze website traffic and performance</li>
+                    <li>Provide personalized content and advertisements</li>
+                </ul>
+                <p class="text-gray-600 mb-6">You can control cookie settings through your browser preferences. Note that disabling cookies may affect website functionality.</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Data Security</h2>
+                <p class="text-gray-600 mb-6">I implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Your Rights</h2>
+                <p class="text-gray-600 mb-6">Depending on your location, you may have the following rights regarding your personal information:</p>
+                <ul class="list-disc pl-6 text-gray-600 mb-6">
+                    <li>Right to access your personal data</li>
+                    <li>Right to correct inaccurate information</li>
+                    <li>Right to delete your personal data</li>
+                    <li>Right to restrict processing</li>
+                    <li>Right to data portability</li>
+                    <li>Right to withdraw consent</li>
+                </ul>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Third-Party Services</h2>
+                <p class="text-gray-600 mb-6">My website may contain links to third-party websites or integrate with third-party services (such as Google Analytics, Facebook Pixel). These third parties have their own privacy policies, and I am not responsible for their practices.</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Children's Privacy</h2>
+                <p class="text-gray-600 mb-6">My services are not intended for children under 13 years of age. I do not knowingly collect personal information from children under 13.</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Changes to This Privacy Policy</h2>
+                <p class="text-gray-600 mb-6">I may update this Privacy Policy from time to time. I will notify you of any changes by posting the new Privacy Policy on this page and updating the "Effective Date" at the top.</p>
+
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Contact Us</h2>
+                <p class="text-gray-600 mb-6">If you have any questions about this Privacy Policy or my privacy practices, please contact me:</p>
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="text-gray-700 mb-2"><strong>mikdigital</strong></p>
+                    <p class="text-gray-700 mb-2">Email: <a href="mailto:mikdigitalofficial@gmail.com" class="text-blue-600 hover:text-blue-700">mikdigitalofficial@gmail.com</a></p>
+                    <p class="text-gray-700 mb-2">Phone: <a href="tel:+919344694120" class="text-blue-600 hover:text-blue-700">+91 93446 94120</a></p>
+                    <p class="text-gray-700">WhatsApp: <a href="https://wa.me/919344694120" class="text-blue-600 hover:text-blue-700" target="_blank">+91 93446 94120</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 footer-pink">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4 footer-title">mikdigital</h3>
+                    <p class="text-gray-400 mb-4">
+                        Digital marketing expert freelancer specializing in Google Ads, Meta Ads, and lead generation strategies that deliver measurable ROI across Dubai, Australia, and India.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/mikdigital101" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f w-5 h-5"></i></a>
+                        <a href="https://www.instagram.com/mikdigital.online/" class="text-gray-400 hover:text-pink-400 transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram w-5 h-5"></i></a>
+                        <a href="https://linkedin.com/in/mohamed-ibrahim-khan" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in w-5 h-5"></i></a>
+                        <a href="https://x.com/mik_digital" class="text-gray-400 hover:text-gray-300 transition-colors" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter w-5 h-5"></i></a>
+                        <a href="https://wa.me/919344694120" class="text-gray-400 hover:text-green-400 transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp w-5 h-5"></i></a>
+                        <a href="https://youtube.com/@mikdigital" class="text-gray-400 hover:text-red-400 transition-colors" aria-label="YouTube"><i class="fa-brands fa-youtube w-5 h-5"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="case-studies.html" class="text-gray-400 hover:text-white transition duration-300">Case Studies</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Google Ads</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Meta Ads</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">Lead Generation</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition duration-300">SEO</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2025 mikdigital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+
+    <!-- Cookies Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-[720px] z-[100] bg-white text-gray-800 rounded-xl shadow-lg border border-gray-200 p-4 md:p-5 hidden">
+        <div class="flex items-start gap-4">
+            <div class="flex-1">
+                <p class="text-sm md:text-base">I use cookies to enhance your browsing experience, serve personalized ads or content, and analyze my traffic. By clicking "Accept All", you consent to my use of cookies. Read my <a href="privacy-policy.html" class="text-blue-600 hover:text-blue-800 underline">Privacy Policy</a>.</p>
+                <details class="mt-2">
+                    <summary class="cursor-pointer text-sm text-gray-600">Cookie settings</summary>
+                    <div class="mt-2 text-sm text-gray-700 space-y-1">
+                        <label class="flex items-center gap-2"><input type="checkbox" checked disabled> Strictly necessary</label>
+                        <label class="flex items-center gap-2"><input id="cookie-analytics" type="checkbox" checked> Analytics</label>
+                        <label class="flex items-center gap-2"><input id="cookie-marketing" type="checkbox"> Marketing</label>
+                    </div>
+                </details>
+            </div>
+            <div class="flex flex-col md:flex-row gap-2 md:gap-3">
+                <button id="cookie-accept" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700">Accept All</button>
+                <button id="cookie-decline" class="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm hover:bg-gray-100">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const STORAGE_KEY = 'mik_cookie_consent_v1';
+            function getConsent() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); } catch(e) { return null; } }
+            function setConsent(value) { localStorage.setItem(STORAGE_KEY, JSON.stringify(value)); }
+            function showBanner() { document.getElementById('cookie-banner').classList.remove('hidden'); }
+            function hideBanner() { document.getElementById('cookie-banner').classList.add('hidden'); }
+            function init() {
+                const existing = getConsent();
+                if (!existing) { showBanner(); }
+                const accept = document.getElementById('cookie-accept');
+                const decline = document.getElementById('cookie-decline');
+                accept && accept.addEventListener('click', () => { setConsent({ all:true, analytics:true, marketing:true, ts:Date.now() }); hideBanner(); });
+                decline && decline.addEventListener('click', () => {
+                    const analytics = document.getElementById('cookie-analytics')?.checked || false;
+                    const marketing = document.getElementById('cookie-marketing')?.checked || false;
+                    setConsent({ all:false, analytics, marketing, ts:Date.now() }); hideBanner();
+                });
+            }
+            document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', init) : init();
+        })();
+    </script>
+</body>
+</html>
