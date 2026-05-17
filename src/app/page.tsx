@@ -16,27 +16,31 @@ export default function HomePage() {
     className="h-10 w-auto object-contain md:h-12"
   />
 </Link>
-         
+<div className="hidden items-center gap-8 text-sm font-medium text-zinc-600 md:flex">
 
-          <div className="hidden items-center gap-8 text-sm font-medium text-zinc-600 md:flex">
+  <a href="#services" className="transition hover:text-black">
+    Services
+  </a>
 
-            <a href="#services" className="transition hover:text-black">
-              Services
-            </a>
+  <Link
+    href="/case-studies"
+    className="transition hover:text-black"
+  >
+    Case Studies
+  </Link>
 
-            <a href="#case-studies" className="transition hover:text-black">
-              Case Studies
-            </a>
+  <a href="#about" className="transition hover:text-black">
+    About
+  </a>
 
-            <a href="#about" className="transition hover:text-black">
-              About
-            </a>
+  <Link
+    href="/contact"
+    className="transition hover:text-black"
+  >
+    Contact
+  </Link>
 
-            <a href="#contact" className="transition hover:text-black">
-              Contact
-            </a>
-
-          </div>
+</div>
 
         </nav>
       </header>
