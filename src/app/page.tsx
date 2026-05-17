@@ -6,13 +6,17 @@ export default function HomePage() {
       {/* HEADER */}
       <header className="sticky top-0 z-50 border-b border-zinc-200/80 bg-white/80 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-
-          <Link
+<Link
   href="/"
-  className="text-3xl font-black tracking-tight"
+  className="flex items-center"
 >
-  <span className="text-indigo-700">mik</span>digital
+  <img
+    src="/website-logo.png"
+    alt="mikdigital"
+    className="h-10 w-auto object-contain md:h-12"
+  />
 </Link>
+         
 
           <div className="hidden items-center gap-8 text-sm font-medium text-zinc-600 md:flex">
 
