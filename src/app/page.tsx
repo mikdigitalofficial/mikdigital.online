@@ -56,7 +56,7 @@ export default function HomePage() {
           <div className="max-w-5xl">
 
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-700">
-              Dubai Growth Operator
+              Performance Growth Partner
             </p>
 
             <h1 className="mt-6 text-5xl font-black leading-[1.02] tracking-tight text-zinc-950 md:text-7xl">
@@ -64,11 +64,8 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
-              mikdigital helps UAE businesses generate qualified leads,
-              improve conversion visibility, and scale acquisition through
-              Meta Ads, Google Ads, SEO, CRM workflows, analytics,
-              automation, and conversion-focused execution.
-            </p>
+  After working as a Performance Marketing Specialist across UAE and Australian markets, I now operate mikdigital as an independent performance growth partner helping businesses improve lead generation, customer acquisition, analytics visibility, and conversion-focused marketing performance through Meta Ads, Google Ads, SEO, CRM workflows, and automation systems.
+</p>
 
             <div className="mt-10 flex flex-wrap gap-4">
 
