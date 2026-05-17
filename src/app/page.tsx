@@ -376,7 +376,6 @@ export default function HomePage() {
       
 <ExpertiseSection />
       
-<ExpertiseSection />
 
 {/* FOUNDER AUTHORITY */}
 <section className="mx-auto max-w-7xl px-6 py-24">
@@ -389,7 +388,7 @@ export default function HomePage() {
       <div className="overflow-hidden rounded-[32px] border border-zinc-200 shadow-xl">
 
         <img
-          src="/images/mikdigital-founder.png"
+          src="/images/screenshots/mikdigital-founder.png"
           alt="mikdigital founder"
           className="h-full w-full object-cover"
         />
