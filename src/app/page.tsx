@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-zinc-900">
@@ -6,12 +7,12 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 border-b border-zinc-200/80 bg-white/80 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
 
-          <a
-            href="/"
-            className="text-3xl font-black tracking-tight"
-          >
-            <span className="text-indigo-700">mik</span>digital
-          </a>
+          <Link
+  href="/"
+  className="text-3xl font-black tracking-tight"
+>
+  <span className="text-indigo-700">mik</span>digital
+</Link>
 
           <div className="hidden items-center gap-8 text-sm font-medium text-zinc-600 md:flex">
 
