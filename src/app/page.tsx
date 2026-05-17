@@ -4,54 +4,106 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-zinc-900">
 
-      {/* HEADER */}
-      <header className="sticky top-0 z-50 border-b border-zinc-200/80 bg-white/80 backdrop-blur-xl">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-<Link
-  href="/"
-  className="flex items-center"
->
-  <img
-    src="/website-logo.png"
-    alt="mikdigital"
-    className="h-10 w-auto object-contain md:h-12"
-  />
-</Link>
-<div className="hidden items-center gap-8 text-sm font-medium text-zinc-600 md:flex">
+{/* HEADER */}
+<header className="sticky top-0 z-50 border-b border-indigo-100/60 bg-white/75 backdrop-blur-2xl">
 
-  <a href="#services" className="transition hover:text-black">
-    Services
-  </a>
+  {/* BACKDROP */}
+  <div className="absolute inset-0 bg-gradient-to-r from-indigo-50/70 via-white to-indigo-50/70" />
 
-  <Link
-    href="/case-studies"
-    className="transition hover:text-black"
-  >
-    Case Studies
-  </Link>
+  <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6 md:py-5">
 
-  <a href="#about" className="transition hover:text-black">
-    About
-  </a>
+    {/* LOGO */}
+    <Link
+      href="/"
+      className="flex items-center"
+    >
+      <img
+        src="/website-logo.png"
+        alt="mikdigital"
+        className="h-14 w-auto object-contain md:h-16"
+      />
+    </Link>
 
-  <Link
-    href="/contact"
-    className="transition hover:text-black"
-  >
-    Contact
-  </Link>
+    {/* DESKTOP MENU */}
+    <div className="hidden items-center gap-8 text-sm font-semibold text-zinc-700 md:flex">
 
-</div>
+      <a
+        href="#services"
+        className="transition hover:text-indigo-700"
+      >
+        Services
+      </a>
 
-        </nav>
-      </header>
+      <Link
+        href="/case-studies"
+        className="transition hover:text-indigo-700"
+      >
+        Case Studies
+      </Link>
+
+      <a
+        href="#about"
+        className="transition hover:text-indigo-700"
+      >
+        About
+      </a>
+
+      <Link
+        href="/contact"
+        className="transition hover:text-indigo-700"
+      >
+        Contact
+      </Link>
+
+    </div>
+
+  </nav>
+
+  {/* MOBILE MENU */}
+  <div className="relative border-t border-indigo-100/60 md:hidden">
+
+    <div className="flex items-center justify-center gap-5 overflow-x-auto px-4 py-3 text-sm font-semibold text-zinc-700 scrollbar-hide">
+
+      <a
+        href="#services"
+        className="whitespace-nowrap transition hover:text-indigo-700"
+      >
+        Services
+      </a>
+
+      <Link
+        href="/case-studies"
+        className="whitespace-nowrap transition hover:text-indigo-700"
+      >
+        Case Studies
+      </Link>
+
+      <a
+        href="#about"
+        className="whitespace-nowrap transition hover:text-indigo-700"
+      >
+        About
+      </a>
+
+      <Link
+        href="/contact"
+        className="whitespace-nowrap transition hover:text-indigo-700"
+      >
+        Contact
+      </Link>
+
+    </div>
+
+  </div>
+
+</header>
 
      {/* HERO */}
 <section className="relative overflow-hidden">
 
   <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 via-white to-white" />
 
-  <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-36">
+  <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
 
     <div className="max-w-5xl">
 
@@ -148,7 +200,7 @@ export default function HomePage() {
 </section>
 
       {/* TRUST */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-20">
 
         <div className="grid gap-10 md:grid-cols-2">
 
@@ -197,7 +249,7 @@ export default function HomePage() {
       {/* SERVICES */}
       <section
         id="services"
-        className="mx-auto max-w-7xl px-6 py-24"
+        className="mx-auto max-w-7xl px-6 py-20"
       >
 
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
@@ -266,7 +318,7 @@ export default function HomePage() {
 
       </section>
       {/* TOOLS & SKILLS */}
-<section className="mx-auto max-w-7xl px-6 py-24">
+<section className="mx-auto max-w-7xl px-6 py-20">
 
   <p className="text-center text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
     Tools & Skills
@@ -313,7 +365,7 @@ export default function HomePage() {
 </section>
 
       {/* WHY MIKDIGITAL */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-20">
 
         <div className="overflow-hidden rounded-[32px] border border-zinc-200">
 
@@ -382,7 +434,7 @@ export default function HomePage() {
 <ExpertiseSection />
       
 {/* FOUNDER AUTHORITY */}
-<section className="mx-auto max-w-7xl px-6 py-24">
+<section className="mx-auto max-w-7xl px-6 py-20">
 
   <div className="grid items-center gap-16 rounded-[40px] border border-zinc-200 bg-white p-10 shadow-sm md:grid-cols-2 md:p-16">
 
@@ -505,7 +557,7 @@ export default function HomePage() {
            {/* CASE STUDIES */}
       <section
         id="case-studies"
-        className="mx-auto max-w-7xl px-6 py-24"
+        className="mx-auto max-w-7xl px-6 py-20"
       >
 
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
@@ -539,7 +591,7 @@ export default function HomePage() {
       {/* ABOUT */}
       <section
         id="about"
-        className="mx-auto max-w-7xl px-6 py-24"
+        className="mx-auto max-w-7xl px-6 py-20"
       >
 
         <div className="rounded-[40px] bg-zinc-950 p-12 text-white md:p-16">
@@ -567,7 +619,7 @@ export default function HomePage() {
       {/* CONTACT */}
       <section
         id="contact"
-        className="mx-auto max-w-6xl px-6 py-24"
+        className="mx-auto max-w-6xl px-6 py-20"
       >
 
         <div className="rounded-[40px] border border-zinc-200 bg-white p-10 shadow-2xl md:p-14">
