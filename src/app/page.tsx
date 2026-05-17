@@ -259,6 +259,52 @@ export default function HomePage() {
         </div>
 
       </section>
+      {/* TOOLS & SKILLS */}
+<section className="mx-auto max-w-7xl px-6 py-24">
+
+  <p className="text-center text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
+    Tools & Skills
+  </p>
+
+  <h2 className="mt-5 text-center text-5xl font-black leading-tight text-zinc-950 md:text-6xl">
+    Marketing infrastructure I work with.
+  </h2>
+
+  <div className="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4">
+
+    {[
+      "WordPress",
+      "Shopify",
+      "Zapier",
+      "Brevo",
+      "Looker Studio",
+      "Webflow",
+      "Google Analytics",
+      "Google Ads",
+      "Meta Ads",
+      "Canva",
+      "Microsoft Clarity",
+      "SEMrush",
+      "Mailchimp",
+      "CapCut",
+      "GA4",
+      "CRM Automation",
+    ].map((tool) => (
+      <div
+        key={tool}
+        className="flex h-36 items-center justify-center rounded-[28px] border border-zinc-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+      >
+
+        <p className="text-center text-xl font-semibold text-zinc-700">
+          {tool}
+        </p>
+
+      </div>
+    ))}
+
+  </div>
+
+</section>
 
       {/* WHY MIKDIGITAL */}
       <section className="mx-auto max-w-7xl px-6 py-24">
