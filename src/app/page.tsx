@@ -46,98 +46,106 @@ export default function HomePage() {
         </nav>
       </header>
 
-      {/* HERO */}
-      <section className="relative overflow-hidden">
+     {/* HERO */}
+<section className="relative overflow-hidden">
 
-        <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 via-white to-white" />
+  <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 via-white to-white" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-36">
+  <div className="relative mx-auto max-w-7xl px-6 py-28 md:py-36">
 
-          <div className="max-w-5xl">
+    <div className="max-w-5xl">
 
-            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-700">
-              Performance Growth Partner
-            </p>
+      <p className="text-sm font-semibold uppercase tracking-[0.35em] text-indigo-700">
+        Independent Performance Growth Partner
+      </p>
 
-            <h1 className="mt-6 text-5xl font-black leading-[1.02] tracking-tight text-zinc-950 md:text-7xl">
-              Lead generation systems engineered for real business growth.
-            </h1>
+      <h1 className="mt-6 text-5xl font-black leading-[1.02] tracking-tight text-zinc-950 md:text-7xl">
+        Performance marketing systems built for measurable business growth.
+      </h1>
 
-            <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
-  After working as a Performance Marketing Specialist across UAE and Australian markets, I now operate mikdigital as an independent performance growth partner helping businesses improve lead generation, customer acquisition, analytics visibility, and conversion-focused marketing performance through Meta Ads, Google Ads, SEO, CRM workflows, and automation systems.
-</p>
+      <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
+        After working as a Performance Marketing Specialist across UAE and Australian markets, I now operate mikdigital as an independent performance growth partner helping businesses improve lead generation, customer acquisition, analytics visibility, and conversion-focused marketing performance through Meta Ads, Google Ads, SEO, CRM workflows, and automation systems.
+      </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+      <div className="mt-10 flex flex-wrap gap-4">
 
-              <a
-                href="https://calendly.com/mikdigitalofficial/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white shadow-xl transition hover:scale-[1.02]"
-              >
-                Book Strategy Call
-              </a>
+        <a
+          href="https://calendly.com/mikdigitalofficial/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white shadow-xl transition hover:scale-[1.02]"
+        >
+          Book Strategy Call
+        </a>
 
-              <a
-                href="https://wa.me/971506102836"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-2xl border border-zinc-300 bg-white px-8 py-4 text-lg font-semibold transition hover:border-zinc-900"
-              >
-                WhatsApp
-              </a>
+        <a
+          href="https://wa.me/971506102836"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-2xl border border-zinc-300 bg-white px-8 py-4 text-lg font-semibold transition hover:border-zinc-900"
+        >
+          WhatsApp
+        </a>
 
-            </div>
+      </div>
 
-            <div className="mt-14 grid gap-6 md:grid-cols-4">
+      <div className="mt-14 grid gap-6 md:grid-cols-4">
 
-              <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-                <p className="text-3xl font-black text-zinc-950">
-                  AED 462K+
-                </p>
+        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
 
-                <p className="mt-2 text-sm leading-7 text-zinc-600">
-                  Managed ad spend across UAE & Australian brands
-                </p>
-              </div>
+          <p className="text-3xl font-black text-zinc-950">
+            AED 462K+
+          </p>
 
-              <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-                <p className="text-3xl font-black text-zinc-950">
-                  14,000+
-                </p>
-
-                <p className="mt-2 text-sm leading-7 text-zinc-600">
-                  Qualified leads generated through paid acquisition
-                </p>
-              </div>
-
-              <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-                <p className="text-3xl font-black text-zinc-950">
-                  141K+
-                </p>
-
-                <p className="mt-2 text-sm leading-7 text-zinc-600">
-                  Meta conversations generated across campaigns
-                </p>
-              </div>
-
-              <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
-                <p className="text-3xl font-black text-zinc-950">
-                  UAE + AUS
-                </p>
-
-                <p className="mt-2 text-sm leading-7 text-zinc-600">
-                  Multi-market campaign & acquisition experience
-                </p>
-              </div>
-
-            </div>
-
-          </div>
+          <p className="mt-2 text-sm leading-7 text-zinc-600">
+            Managed advertising spend across UAE & Australian brands
+          </p>
 
         </div>
 
-      </section>
+        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+
+          <p className="text-3xl font-black text-zinc-950">
+            14,000+
+          </p>
+
+          <p className="mt-2 text-sm leading-7 text-zinc-600">
+            Qualified leads generated through paid acquisition
+          </p>
+
+        </div>
+
+        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+
+          <p className="text-3xl font-black text-zinc-950">
+            141K+
+          </p>
+
+          <p className="mt-2 text-sm leading-7 text-zinc-600">
+            Meta conversations generated across campaigns
+          </p>
+
+        </div>
+
+        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+
+          <p className="text-3xl font-black text-zinc-950">
+            UAE + AUS
+          </p>
+
+          <p className="mt-2 text-sm leading-7 text-zinc-600">
+            Multi-market acquisition & performance marketing experience
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* TRUST */}
       <section className="mx-auto max-w-7xl px-6 py-24">
