@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ExpertiseSection from "@/components/ExpertiseSection";
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-zinc-900">
@@ -372,7 +373,9 @@ export default function HomePage() {
         </div>
 
       </section>
-
+      
+<ExpertiseSection />
+      
       {/* CASE STUDIES */}
       <section
         id="case-studies"
