@@ -375,14 +375,53 @@ export default function HomePage() {
       </section>
       
 <ExpertiseSection />
+      
+<ExpertiseSection />
+
+{/* FOUNDER AUTHORITY */}
 <section className="mx-auto max-w-7xl px-6 py-24">
+
+  <div className="grid items-center gap-16 rounded-[40px] border border-zinc-200 bg-white p-10 shadow-sm md:grid-cols-2 md:p-16">
+
+    {/* LEFT */}
+    <div>
+
+      <div className="overflow-hidden rounded-[32px] border border-zinc-200 shadow-xl">
+
+        <img
+          src="/images/mikdigital-founder.png"
+          alt="mikdigital founder"
+          className="h-full w-full object-cover"
+        />
+
+      </div>
+
+    </div>
+
+    {/* RIGHT */}
+    <div>
+
+      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
+        Founder-Led Execution
+      </p>
+
+      <h2 className="mt-5 text-5xl font-black leading-tight text-zinc-950">
+        Built by an operator who worked inside real acquisition pressure environments.
+      </h2>
+
+      <p className="mt-8 text-lg leading-9 text-zinc-600">
+        mikdigital was built through hands-on campaign execution across UAE and Australian businesses handling paid acquisition, lead generation, CRM workflows, SEO systems, analytics implementation, and conversion infrastructure.
+      </p>
+
       <p className="mt-6 text-lg leading-9 text-zinc-600">
         Experience includes Meta Ads, Google Ads, WhatsApp funnels, local SEO, reporting systems, automation workflows, AI search optimization, and conversion-focused growth operations designed around measurable business outcomes.
       </p>
 
+      {/* METRICS */}
       <div className="mt-10 grid gap-5 sm:grid-cols-2">
 
         <div className="rounded-2xl bg-zinc-50 p-5">
+
           <p className="text-3xl font-black text-zinc-950">
             UAE + AUS
           </p>
@@ -390,9 +429,11 @@ export default function HomePage() {
           <p className="mt-2 text-sm leading-7 text-zinc-600">
             Multi-market acquisition experience
           </p>
+
         </div>
 
         <div className="rounded-2xl bg-zinc-50 p-5">
+
           <p className="text-3xl font-black text-zinc-950">
             14K+
           </p>
@@ -400,9 +441,11 @@ export default function HomePage() {
           <p className="mt-2 text-sm leading-7 text-zinc-600">
             Qualified leads generated
           </p>
+
         </div>
 
         <div className="rounded-2xl bg-zinc-50 p-5">
+
           <p className="text-3xl font-black text-zinc-950">
             AED 462K+
           </p>
@@ -410,9 +453,11 @@ export default function HomePage() {
           <p className="mt-2 text-sm leading-7 text-zinc-600">
             Managed advertising spend
           </p>
+
         </div>
 
         <div className="rounded-2xl bg-zinc-50 p-5">
+
           <p className="text-3xl font-black text-zinc-950">
             Full Funnel
           </p>
@@ -420,10 +465,12 @@ export default function HomePage() {
           <p className="mt-2 text-sm leading-7 text-zinc-600">
             Ads, CRM, SEO, analytics & automation
           </p>
+
         </div>
 
       </div>
 
+      {/* TAGS */}
       <div className="mt-10 flex flex-wrap gap-3">
 
         {[
@@ -450,7 +497,8 @@ export default function HomePage() {
 
   </div>
 
-</section>      
+</section>
+     
       {/* CASE STUDIES */}
       <section
         id="case-studies"
