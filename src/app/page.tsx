@@ -375,7 +375,82 @@ export default function HomePage() {
       </section>
       
 <ExpertiseSection />
-      
+<section className="mx-auto max-w-7xl px-6 py-24">
+      <p className="mt-6 text-lg leading-9 text-zinc-600">
+        Experience includes Meta Ads, Google Ads, WhatsApp funnels, local SEO, reporting systems, automation workflows, AI search optimization, and conversion-focused growth operations designed around measurable business outcomes.
+      </p>
+
+      <div className="mt-10 grid gap-5 sm:grid-cols-2">
+
+        <div className="rounded-2xl bg-zinc-50 p-5">
+          <p className="text-3xl font-black text-zinc-950">
+            UAE + AUS
+          </p>
+
+          <p className="mt-2 text-sm leading-7 text-zinc-600">
+            Multi-market acquisition experience
+          </p>
+        </div>
+
+        <div className="rounded-2xl bg-zinc-50 p-5">
+          <p className="text-3xl font-black text-zinc-950">
+            14K+
+          </p>
+
+          <p className="mt-2 text-sm leading-7 text-zinc-600">
+            Qualified leads generated
+          </p>
+        </div>
+
+        <div className="rounded-2xl bg-zinc-50 p-5">
+          <p className="text-3xl font-black text-zinc-950">
+            AED 462K+
+          </p>
+
+          <p className="mt-2 text-sm leading-7 text-zinc-600">
+            Managed advertising spend
+          </p>
+        </div>
+
+        <div className="rounded-2xl bg-zinc-50 p-5">
+          <p className="text-3xl font-black text-zinc-950">
+            Full Funnel
+          </p>
+
+          <p className="mt-2 text-sm leading-7 text-zinc-600">
+            Ads, CRM, SEO, analytics & automation
+          </p>
+        </div>
+
+      </div>
+
+      <div className="mt-10 flex flex-wrap gap-3">
+
+        {[
+          "Meta Ads",
+          "Google Ads",
+          "SEO",
+          "CRM Systems",
+          "Automation",
+          "GA4",
+          "WhatsApp Funnels",
+          "AI Search",
+        ].map((item) => (
+          <div
+            key={item}
+            className="rounded-full bg-indigo-50 px-5 py-2 text-sm font-medium text-indigo-700"
+          >
+            {item}
+          </div>
+        ))}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>      
       {/* CASE STUDIES */}
       <section
         id="case-studies"
