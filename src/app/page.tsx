@@ -316,7 +316,248 @@ export default function HomePage() {
         </div>
 
       </section>
+{/* WHY WORK WITH ME */}
+<section className="mx-auto max-w-7xl px-6 py-24">
 
+  <p className="text-sm uppercase tracking-[0.3em] text-indigo-700">
+    Why Clients Work With mikdigital
+  </p>
+
+  <h2 className="mt-4 max-w-5xl text-5xl font-black leading-tight text-zinc-950">
+    Direct operator support without agency layers, delays, or inflated overhead.
+  </h2>
+
+  <p className="mt-8 max-w-4xl text-lg leading-8 text-zinc-600">
+    Specialized in education and entertainment sector growth systems across paid acquisition,
+    local SEO, AI-powered marketing infrastructure, landing pages, CRM workflows, and automation.
+  </p>
+
+  <div className="mt-16 overflow-hidden rounded-[32px] border border-zinc-200">
+
+    {/* HEADER */}
+    <div className="grid grid-cols-2 border-b border-zinc-200 bg-zinc-50">
+
+      <div className="border-r border-zinc-200 p-6">
+        <h3 className="text-xl font-bold text-zinc-500">
+          Typical Dubai Agency
+        </h3>
+      </div>
+
+      <div className="p-6">
+        <h3 className="text-xl font-bold text-indigo-700">
+          mikdigital
+        </h3>
+      </div>
+
+    </div>
+
+    {/* ROW */}
+    <div className="grid border-b border-zinc-200 md:grid-cols-2">
+
+      <div className="border-r border-zinc-200 bg-red-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-600">
+          Risk
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          You pitch to a senior, but execution is handed to junior staff
+          managing multiple accounts simultaneously.
+        </p>
+      </div>
+
+      <div className="bg-indigo-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">
+          Direct Execution
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          You work directly with the strategist and operator managing
+          your campaigns, systems, analytics, and optimization.
+        </p>
+      </div>
+
+    </div>
+
+    {/* ROW */}
+    <div className="grid border-b border-zinc-200 md:grid-cols-2">
+
+      <div className="border-r border-zinc-200 bg-red-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-600">
+          Contracts
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          Long lock-in retainers with slow exits and rigid agreements.
+        </p>
+      </div>
+
+      <div className="bg-indigo-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">
+          Flexible Collaboration
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          Flexible month-to-month collaboration focused on performance,
+          transparency, and measurable growth.
+        </p>
+      </div>
+
+    </div>
+
+    {/* ROW */}
+    <div className="grid border-b border-zinc-200 md:grid-cols-2">
+
+      <div className="border-r border-zinc-200 bg-red-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-600">
+          Communication Delays
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          Multiple layers, account managers, delayed approvals,
+          and slow reporting cycles.
+        </p>
+      </div>
+
+      <div className="bg-indigo-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">
+          Fast Direct Access
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          Direct communication, fast turnaround, rapid optimization,
+          and immediate campaign visibility.
+        </p>
+      </div>
+
+    </div>
+
+    {/* ROW */}
+    <div className="grid border-b border-zinc-200 md:grid-cols-2">
+
+      <div className="border-r border-zinc-200 bg-red-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-600">
+          Generic Strategy
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          Template campaigns reused across dozens of unrelated businesses.
+        </p>
+      </div>
+
+      <div className="bg-indigo-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">
+          Business-Specific Systems
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          Campaign structures, automation systems, and acquisition
+          strategies tailored specifically to your business model.
+        </p>
+      </div>
+
+    </div>
+
+    {/* ROW */}
+    <div className="grid border-b border-zinc-200 md:grid-cols-2">
+
+      <div className="border-r border-zinc-200 bg-red-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-600">
+          Overhead Costs
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          Significant budget absorbed by agency overhead,
+          sales teams, office costs, and internal layers.
+        </p>
+      </div>
+
+      <div className="bg-indigo-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">
+          Lean Execution
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          Budget focused directly on strategy, execution,
+          optimization, automation, and growth systems.
+        </p>
+      </div>
+
+    </div>
+
+    {/* ROW */}
+    <div className="grid md:grid-cols-2">
+
+      <div className="border-r border-zinc-200 bg-red-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-red-600">
+          Divided Attention
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          One of dozens of accounts competing for limited time and focus.
+        </p>
+      </div>
+
+      <div className="bg-indigo-50/40 p-8">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-700">
+          Dedicated Partnership
+        </p>
+
+        <p className="mt-4 text-lg leading-8 text-zinc-700">
+          Focused support with direct accountability across paid ads,
+          SEO, AI workflows, automation, reporting, and optimization.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* BOTTOM NOTE */}
+  <div className="mt-12 rounded-[32px] border border-indigo-100 bg-indigo-50 p-10">
+
+    <h3 className="text-3xl font-black text-zinc-950">
+      Built for modern AI-powered marketing execution.
+    </h3>
+
+    <p className="mt-6 max-w-4xl text-lg leading-8 text-zinc-700">
+      Experience across Meta Ads, Google Ads, Local SEO, Google Business Profile optimization,
+      AI-powered landing pages, conversion-focused websites, CRM workflows, analytics systems,
+      reporting dashboards, automations, and performance infrastructure.
+    </p>
+
+    <div className="mt-8 flex flex-wrap gap-3">
+
+      {[
+        "ChatGPT",
+        "Claude",
+        "Perplexity",
+        "Google Ads",
+        "Meta Ads",
+        "GA4",
+        "Search Console",
+        "WordPress",
+        "Shopify",
+        "Brevo",
+        "Mailchimp",
+        "Canva",
+        "CapCut",
+        "Microsoft Clarity",
+        "Apify",
+        "Automation",
+      ].map((tool) => (
+        <div
+          key={tool}
+          className="rounded-full bg-white px-5 py-2 text-sm font-medium text-zinc-700 shadow-sm"
+        >
+          {tool}
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
       {/* CONTACT */}
       <section
         id="contact"
