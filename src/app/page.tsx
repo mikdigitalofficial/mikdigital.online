@@ -3,16 +3,13 @@ import ExpertiseSection from "@/components/ExpertiseSection";
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-zinc-900">
-
 {/* HEADER */}
-<header className="sticky top-0 z-50 border-b border-indigo-100/60 bg-white/75 backdrop-blur-2xl">
+<header className="sticky top-0 z-50 border-b border-indigo-100/60 bg-white/80 backdrop-blur-2xl">
 
-  {/* BACKDROP */}
-  <div className="absolute inset-0 bg-gradient-to-r from-indigo-50/70 via-white to-indigo-50/70" />
+  <div className="absolute inset-0 bg-gradient-to-r from-indigo-50/80 via-white to-indigo-50/80" />
 
   <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6 md:py-5">
 
-    {/* LOGO */}
     <Link
       href="/"
       className="flex items-center"
@@ -24,7 +21,6 @@ export default function HomePage() {
       />
     </Link>
 
-    {/* DESKTOP MENU */}
     <div className="hidden items-center gap-8 text-sm font-semibold text-zinc-700 md:flex">
 
       <a
@@ -59,10 +55,10 @@ export default function HomePage() {
 
   </nav>
 
-  {/* MOBILE MENU */}
+  {/* MOBILE NAV */}
   <div className="relative border-t border-indigo-100/60 md:hidden">
 
-    <div className="flex items-center justify-center gap-5 overflow-x-auto px-4 py-3 text-sm font-semibold text-zinc-700 scrollbar-hide">
+    <div className="flex items-center justify-center gap-5 overflow-x-auto px-4 py-3 text-sm font-semibold text-zinc-700">
 
       <a
         href="#services"
@@ -98,12 +94,12 @@ export default function HomePage() {
 
 </header>
 
-     {/* HERO */}
+{/* HERO */}
 <section className="relative overflow-hidden">
 
   <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 via-white to-white" />
 
-  <div className="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
+  <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-32">
 
     <div className="max-w-5xl">
 
@@ -111,21 +107,22 @@ export default function HomePage() {
         Independent Performance Growth Partner
       </p>
 
-      <h1 className="mt-6 text-5xl font-black leading-[1.02] tracking-tight text-zinc-950 md:text-7xl">
+      <h1 className="mt-6 text-4xl font-black leading-[1.05] tracking-tight text-zinc-950 sm:text-5xl md:text-7xl">
         Performance marketing systems built for measurable business growth.
       </h1>
 
-      <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-600">
+      <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-600 md:text-xl md:leading-9">
         After working as a Performance Marketing Specialist across UAE and Australian markets, I now operate mikdigital as an independent performance growth partner helping businesses improve lead generation, customer acquisition, analytics visibility, and conversion-focused marketing performance through Meta Ads, Google Ads, SEO, CRM workflows, and automation systems.
       </p>
 
-      <div className="mt-10 flex flex-wrap gap-4">
+      {/* CTA */}
+      <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
         <a
           href="https://calendly.com/mikdigitalofficial/30min"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white shadow-xl transition hover:scale-[1.02]"
+          className="flex items-center justify-center rounded-2xl bg-indigo-700 px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
         >
           Book Strategy Call
         </a>
@@ -134,59 +131,60 @@ export default function HomePage() {
           href="https://wa.me/971506102836"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-2xl border border-zinc-300 bg-white px-8 py-4 text-lg font-semibold transition hover:border-zinc-900"
+          className="flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold transition hover:border-zinc-900 md:px-8 md:text-lg"
         >
           WhatsApp
         </a>
 
       </div>
 
-      <div className="mt-14 grid gap-6 md:grid-cols-4">
+      {/* METRICS */}
+      <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
 
-        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <div className="rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm md:p-6">
 
-          <p className="text-3xl font-black text-zinc-950">
+          <p className="text-2xl font-black text-zinc-950 md:text-3xl">
             AED 462K+
           </p>
 
-          <p className="mt-2 text-sm leading-7 text-zinc-600">
-            Managed advertising spend across UAE & Australian brands
+          <p className="mt-2 text-sm leading-6 text-zinc-600">
+            Managed advertising spend
           </p>
 
         </div>
 
-        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <div className="rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm md:p-6">
 
-          <p className="text-3xl font-black text-zinc-950">
-            14,000+
+          <p className="text-2xl font-black text-zinc-950 md:text-3xl">
+            14K+
           </p>
 
-          <p className="mt-2 text-sm leading-7 text-zinc-600">
-            Qualified leads generated through paid acquisition
+          <p className="mt-2 text-sm leading-6 text-zinc-600">
+            Qualified leads generated
           </p>
 
         </div>
 
-        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <div className="rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm md:p-6">
 
-          <p className="text-3xl font-black text-zinc-950">
+          <p className="text-2xl font-black text-zinc-950 md:text-3xl">
             141K+
           </p>
 
-          <p className="mt-2 text-sm leading-7 text-zinc-600">
-            Meta conversations generated across campaigns
+          <p className="mt-2 text-sm leading-6 text-zinc-600">
+            Meta conversations generated
           </p>
 
         </div>
 
-        <div className="rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
+        <div className="rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm md:p-6">
 
-          <p className="text-3xl font-black text-zinc-950">
+          <p className="text-2xl font-black text-zinc-950 md:text-3xl">
             UAE + AUS
           </p>
 
-          <p className="mt-2 text-sm leading-7 text-zinc-600">
-            Multi-market acquisition & performance marketing experience
+          <p className="mt-2 text-sm leading-6 text-zinc-600">
+            Multi-market experience
           </p>
 
         </div>
@@ -198,7 +196,7 @@ export default function HomePage() {
   </div>
 
 </section>
-
+      
       {/* TRUST */}
       <section className="mx-auto max-w-7xl px-6 py-20">
 
