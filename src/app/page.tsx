@@ -381,7 +381,6 @@ export default function HomePage() {
       
 <ExpertiseSection />
       
-
 {/* FOUNDER AUTHORITY */}
 <section className="mx-auto max-w-7xl px-6 py-24">
 
@@ -394,7 +393,7 @@ export default function HomePage() {
 
         <img
           src="/images/screenshots/mikdigital-founder.png"
-          alt="mikdigital founder"
+          alt="Mohamed Ibrahim Khan"
           className="h-full w-full object-cover"
         />
 
@@ -406,19 +405,19 @@ export default function HomePage() {
     <div>
 
       <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
-        Founder-Led Execution
+        Direct Growth Partnership
       </p>
 
       <h2 className="mt-5 text-5xl font-black leading-tight text-zinc-950">
-        Built by an operator who worked inside real acquisition pressure environments.
+        Built and operated by Mohamed Ibrahim Khan.
       </h2>
 
       <p className="mt-8 text-lg leading-9 text-zinc-600">
-        mikdigital was built through hands-on campaign execution across UAE and Australian businesses handling paid acquisition, lead generation, CRM workflows, SEO systems, analytics implementation, and conversion infrastructure.
+        After working as a Performance Marketing Specialist across UAE and Australian markets, I started mikdigital as an independent performance growth practice focused on lead generation, customer acquisition, analytics visibility, and scalable marketing systems.
       </p>
 
       <p className="mt-6 text-lg leading-9 text-zinc-600">
-        Experience includes Meta Ads, Google Ads, WhatsApp funnels, local SEO, reporting systems, automation workflows, AI search optimization, and conversion-focused growth operations designed around measurable business outcomes.
+        My experience includes Meta Ads, Google Ads, SEO, CRM workflows, analytics implementation, WhatsApp funnels, automation systems, reporting infrastructure, and conversion-focused growth operations designed around measurable business outcomes.
       </p>
 
       {/* METRICS */}
@@ -502,8 +501,8 @@ export default function HomePage() {
   </div>
 
 </section>
-     
-      {/* CASE STUDIES */}
+
+           {/* CASE STUDIES */}
       <section
         id="case-studies"
         className="mx-auto max-w-7xl px-6 py-24"
