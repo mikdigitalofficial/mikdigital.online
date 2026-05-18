@@ -125,16 +125,19 @@ export default function HomePage() {
           className="flex items-center justify-center rounded-2xl bg-indigo-700 px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
         >
           Book Strategy Call
-        </a>
+       <a
+  href="https://wa.me/971506102836"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold transition hover:border-zinc-900 md:px-8 md:text-lg"
+  onClick={() => {
 
-        <a
-          href="https://wa.me/971506102836"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold transition hover:border-zinc-900 md:px-8 md:text-lg"
-        >
-          WhatsApp
-        </a>
+    gtag('event', 'whatsapp_click');
+
+    fbq('track', 'Contact');
+
+  }}
+>
 
       </div>
 
