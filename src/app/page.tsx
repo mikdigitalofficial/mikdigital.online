@@ -723,11 +723,37 @@ export default function HomePage() {
       <div className="fixed bottom-5 left-0 right-0 z-50 flex justify-center px-6 md:hidden">
 
         <a
-          href="https://wa.me/971506102836"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full max-w-md rounded-2xl bg-indigo-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
-        >
+        <a
+  href="https://wa.me/971506102836"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="w-full max-w-md rounded-2xl bg-indigo-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
+  onClick={async () => {
+
+    gtag('event', 'whatsapp_click');
+
+    fbq('track', 'Contact');
+
+    await fetch('/api/meta-event', {
+
+      method: 'POST',
+
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      body: JSON.stringify({
+
+        event_name: 'whatsapp_click',
+
+        url: window.location.href,
+
+      }),
+
+    });
+
+  }}
+>
           WhatsApp — Book Strategy Call
         </a>
 
