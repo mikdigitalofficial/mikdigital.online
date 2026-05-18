@@ -167,18 +167,32 @@ export default function CaseStudiesPage() {
           <div className="mt-10 flex flex-wrap gap-4">
 
             <a
-              href="https://calendly.com/mikdigitalofficial/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white"
-            >
-              Book Strategy Call
-            </a>
+  href="https://calendly.com/mikdigitalofficial/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white"
+  onClick={() => {
+
+    gtag('event', 'strategy_call_click');
+
+    fbq('track', 'Schedule');
+
+  }}
+>
+  Book Strategy Call
+</a>
 
             <Link
-              href="/contact"
-              className="rounded-2xl border border-zinc-700 px-8 py-4 text-lg font-semibold text-white"
-            >
+  href="/contact"
+  className="rounded-2xl border border-zinc-700 px-8 py-4 text-lg font-semibold text-white"
+  onClick={() => {
+
+    gtag('event', 'contact_page_click');
+
+    fbq('track', 'Contact');
+
+  }}
+>
               Contact
             </Link>
 
