@@ -642,22 +642,29 @@ export default function HomePage() {
           <div className="mt-10 flex flex-wrap gap-4">
 
             <a
-              href="https://calendly.com/mikdigitalofficial/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white shadow-xl"
-            >
-              Book Strategy Call
-            </a>
+  href="https://calendly.com/mikdigitalofficial/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white shadow-xl"
+>
+  Book Strategy Call
+</a>
 
-            <a
-              href="https://wa.me/971506102836"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-2xl border border-zinc-300 px-8 py-4 text-lg font-semibold"
-            >
-              WhatsApp
-            </a>
+<a
+  href="https://wa.me/971506102836"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-2xl border border-zinc-300 px-8 py-4 text-lg font-semibold"
+  onClick={() => {
+
+    gtag('event', 'whatsapp_click');
+
+    fbq('track', 'Contact');
+
+  }}
+>
+  WhatsApp
+</a>
 
           </div>
 
