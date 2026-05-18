@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 import ExpertiseSection from "@/components/ExpertiseSection";
 export default function HomePage() {
