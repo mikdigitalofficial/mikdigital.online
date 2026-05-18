@@ -118,9 +118,19 @@ export default function ContactPage() {
                 Email
               </p>
 
-              <p className="mt-3 text-2xl font-semibold">
-                kimofficialmik@gmail.com
-              </p>
+            <a
+  href="mailto:alex@mikdigital.online"
+  className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
+  onClick={() => {
+
+    gtag('event', 'email_click');
+
+    fbq('track', 'Contact');
+
+  }}
+>
+  alex@mikdigital.online
+</a>
 
             </div>
 
@@ -130,9 +140,21 @@ export default function ContactPage() {
                 LinkedIn
               </p>
 
-              <p className="mt-3 text-2xl font-semibold">
-                linkedin.com/in/mikdxb
-              </p>
+              <a
+  href="https://linkedin.com/in/mikdxb"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
+  onClick={() => {
+
+    gtag('event', 'linkedin_click');
+
+    fbq('track', 'ViewContent');
+
+  }}
+>
+  linkedin.com/in/mikdxb
+</a>
 
             </div>
 
