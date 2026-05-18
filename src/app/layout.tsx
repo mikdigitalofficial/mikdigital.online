@@ -6,11 +6,6 @@ export const metadata: Metadata = {
   title: "mikdigital",
   description:
     "Technical performance marketing for companies that care about revenue, not vanity metrics.",
-
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({
@@ -21,14 +16,16 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <head>
+      <body>
+
+        {/* Google Analytics */}
 
         <Script
-          async
           src="https://www.googletagmanager.com/gtag/js?id=G-274YF4P3S5"
+          strategy="afterInteractive"
         />
 
-        <Script id="google-analytics">
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
 
@@ -42,9 +39,9 @@ export default function RootLayout({
           `}
         </Script>
 
-      </head>
+        {children}
 
-      <body>{children}</body>
+      </body>
 
     </html>
   );
