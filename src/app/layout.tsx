@@ -17,29 +17,30 @@ export default function RootLayout({
     <html lang="en">
 
       <body>
+{/* Google Analytics */}
 
-        {/* Google Analytics */}
+<Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-274YF4P3S5"
+  strategy="afterInteractive"
+/>
 
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-274YF4P3S5"
-          strategy="afterInteractive"
-        />
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
 
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
+    function gtag(){
+      dataLayer.push(arguments);
+    }
 
-            function gtag(){
-              dataLayer.push(arguments);
-            }
+    gtag('js', new Date());
 
-            gtag('js', new Date());
+    gtag('config', 'G-274YF4P3S5', {
+      page_path: window.location.pathname,
+    });
+  `}
+</Script>
 
-            gtag('config', 'G-274YF4P3S5');
-          `}
-        </Script>
-
-        {children}
+{children}
 
       </body>
 
