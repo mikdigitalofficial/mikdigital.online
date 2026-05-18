@@ -31,11 +31,18 @@ export default function ContactPage() {
         <div className="grid gap-8 md:grid-cols-2">
 
           <a
-            href="https://calendly.com/mikdigitalofficial/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
-          >
+  href="https://calendly.com/mikdigitalofficial/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+  onClick={() => {
+
+    gtag('event', 'strategy_call_click');
+
+    fbq('track', 'Schedule');
+
+  }}
+>
 
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
               Strategy Call
@@ -58,11 +65,18 @@ export default function ContactPage() {
           </a>
 
           <a
-            href="https://wa.me/971506102836"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
-          >
+  href="https://wa.me/971506102836"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+  onClick={() => {
+
+    gtag('event', 'whatsapp_click');
+
+    fbq('track', 'Contact');
+
+  }}
+>
 
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
               WhatsApp
