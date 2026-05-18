@@ -117,31 +117,45 @@ export default function HomePage() {
       </p>
 
       {/* CTA */}
-      <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+<div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
-        <a
-          href="https://calendly.com/mikdigitalofficial/30min"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center rounded-2xl bg-indigo-700 px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
-        >
-          Book Strategy Call
-       <a
-  href="https://wa.me/971506102836"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold transition hover:border-zinc-900 md:px-8 md:text-lg"
-  onClick={() => {
+  <a
+    href="https://calendly.com/mikdigitalofficial/30min"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center rounded-2xl bg-indigo-700 px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
+    onClick={() => {
 
-    gtag('event', 'whatsapp_click');
+      console.log('strategy clicked');
 
-    fbq('track', 'Contact');
+      gtag('event', 'strategy_call_click');
 
-  }}
->
+      fbq('track', 'Schedule');
 
-      </div>
+    }}
+  >
+    Book Strategy Call
+  </a>
 
+  <a
+    href="https://wa.me/971506102836"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold transition hover:border-zinc-900 md:px-8 md:text-lg"
+    onClick={() => {
+
+      console.log('whatsapp clicked');
+
+      gtag('event', 'whatsapp_click');
+
+      fbq('track', 'Contact');
+
+    }}
+  >
+    WhatsApp
+  </a>
+
+</div>
       {/* METRICS */}
       <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
 
