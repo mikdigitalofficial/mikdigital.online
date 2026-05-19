@@ -133,8 +133,6 @@ export default function HomePage() {
   className="flex items-center justify-center rounded-2xl bg-indigo-700 px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
   onClick={() => {
 
-    console.log('strategy clicked');
-
     window.dataLayer = window.dataLayer || [];
 
     window.dataLayer.push({
