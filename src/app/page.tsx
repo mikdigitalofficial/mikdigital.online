@@ -152,17 +152,41 @@ export default function HomePage() {
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold transition hover:border-zinc-900 md:px-8 md:text-lg"
-    onClick={() => {
-
-      console.log('whatsapp clicked');
-
-      window.dataLayer = window.dataLayer || [];
+    
+onClick={async () => {
+window.dataLayer = window.dataLayer || [];
 
 window.dataLayer.push({
   event: 'whatsapp_click',
 });
 
-      window.fbq('track', 'Contact');
+     window.fbq('track', 'Contact');
+
+try {
+
+  await fetch('/api/meta-event', {
+
+    method: 'POST',
+
+    headers: {
+      'Content-Type': 'application/json',
+    },
+
+    body: JSON.stringify({
+
+      event_name: 'whatsapp_click',
+
+      url: window.location.href,
+
+    }),
+
+  });
+
+} catch (error) {
+
+  console.log(error);
+
+}
 
     }}
   >
