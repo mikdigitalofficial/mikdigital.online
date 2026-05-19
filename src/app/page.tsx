@@ -152,9 +152,9 @@ export default function HomePage() {
 
       console.log('whatsapp clicked');
 
-      gtag('event', 'whatsapp_click');
+      window.gtag('event', 'whatsapp_click');
 
-      fbq('track', 'Contact');
+      window.fbq('track', 'Contact');
 
     }}
   >
