@@ -132,7 +132,7 @@ export default function ContactPage() {
 
     window.gtag('event', 'email_click');
 
-    windowfbq('track', 'Contact');
+    window.fbq('track', 'Contact');
 
   }}
 >
