@@ -694,11 +694,22 @@ try {
 
           <div className="mt-10 flex flex-wrap gap-4">
 
-            <a
+<a
   href="https://calendly.com/mikdigitalofficial/30min"
   target="_blank"
   rel="noopener noreferrer"
   className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white shadow-xl"
+  onClick={() => {
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer.push({
+      event: 'strategy_call_click',
+    });
+
+    window.fbq('track', 'Schedule');
+
+  }}
 >
   Book Strategy Call
 </a>
