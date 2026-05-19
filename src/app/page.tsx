@@ -676,13 +676,39 @@ export default function HomePage() {
   target="_blank"
   rel="noopener noreferrer"
   className="rounded-2xl border border-zinc-300 px-8 py-4 text-lg font-semibold"
-  onClick={() => {
+onClick={async () => {
 
-    window.gtag('event', 'whatsapp_click');
+  window.gtag('event', 'whatsapp_click');
 
-    window.fbq('track', 'Contact');
+  window.fbq('track', 'Contact');
 
-  }}
+  try {
+
+    await fetch('/api/meta-event', {
+
+      method: 'POST',
+
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      body: JSON.stringify({
+
+        event_name: 'Contact',
+
+        url: window.location.href,
+
+      }),
+
+    });
+
+  } catch (error) {
+
+    console.log(error);
+
+  }
+
+}}
 >
   WhatsApp
 </a>
@@ -734,8 +760,6 @@ export default function HomePage() {
   rel="noopener noreferrer"
   className="w-full max-w-md rounded-2xl bg-indigo-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
   onClick={async () => {
-
-    console.log('meta api firing');
 
     window.gtag('event', 'whatsapp_click');
 
