@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+    fbq: (...args: unknown[]) => void;
+  }
+}
 'use client';
 export default function ContactPage() {
   return (
@@ -38,9 +44,9 @@ export default function ContactPage() {
   className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
   onClick={() => {
 
-    gtag('event', 'strategy_call_click');
+    window.gtag('event', 'strategy_call_click');
 
-    fbq('track', 'Schedule');
+    window.fbq('track', 'Schedule');
 
   }}
 >
@@ -72,9 +78,9 @@ export default function ContactPage() {
   className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
   onClick={() => {
 
-    gtag('event', 'whatsapp_click');
+    window.gtag('event', 'whatsapp_click');
 
-    fbq('track', 'Contact');
+    window.fbq('track', 'Contact');
 
   }}
 >
@@ -124,9 +130,9 @@ export default function ContactPage() {
   className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
   onClick={() => {
 
-    gtag('event', 'email_click');
+    window.gtag('event', 'email_click');
 
-    fbq('track', 'Contact');
+    windowfbq('track', 'Contact');
 
   }}
 >
@@ -148,9 +154,9 @@ export default function ContactPage() {
   className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
   onClick={() => {
 
-    gtag('event', 'linkedin_click');
+    window.gtag('event', 'linkedin_click');
 
-    fbq('track', 'ViewContent');
+    window.fbq('track', 'ViewContent');
 
   }}
 >
