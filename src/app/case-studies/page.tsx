@@ -1,4 +1,10 @@
 'use client';
+declare global {
+  interface Window {
+    gtag: any;
+    fbq: any;
+  }
+}
 import Link from "next/link";
 
 export default function CaseStudiesPage() {
@@ -174,9 +180,9 @@ export default function CaseStudiesPage() {
   className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white"
   onClick={() => {
 
-    gtag('event', 'strategy_call_click');
+   window.gtag('event', 'strategy_call_click');
 
-    fbq('track', 'Schedule');
+    window.fbq('track', 'Schedule');
 
   }}
 >
@@ -188,9 +194,9 @@ export default function CaseStudiesPage() {
   className="rounded-2xl border border-zinc-700 px-8 py-4 text-lg font-semibold text-white"
   onClick={() => {
 
-    gtag('event', 'contact_page_click');
+    window.gtag('event', 'contact_page_click');
 
-    fbq('track', 'Contact');
+    window.fbq('track', 'Contact');
 
   }}
 >
