@@ -1,8 +1,8 @@
 'use client';
 declare global {
   interface Window {
-    gtag: any;
-    fbq: any;
+    gtag: (...args: unknown[]) => void;
+    fbq: (...args: unknown[]) => void;
   }
 }
 import Link from "next/link";
