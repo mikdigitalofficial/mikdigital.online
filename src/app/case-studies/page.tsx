@@ -184,7 +184,7 @@ export default function CaseStudiesPage() {
    window.dataLayer = window.dataLayer || [];
 
 window.dataLayer.push({
-  event: 'whatsapp_click',
+  event: 'strategy_call_click',
 });
 
     window.fbq('track', 'Schedule');
@@ -199,7 +199,11 @@ window.dataLayer.push({
   className="rounded-2xl border border-zinc-700 px-8 py-4 text-lg font-semibold text-white"
   onClick={() => {
 
-    window.gtag('event', 'contact_page_click');
+window.dataLayer = window.dataLayer || [];
+
+window.dataLayer.push({
+  event: 'contact_page_click',
+});
 
     window.fbq('track', 'Contact');
 
