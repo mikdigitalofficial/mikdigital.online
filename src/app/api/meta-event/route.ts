@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const response = await fetch(
-      "https://graph.facebook.com/v19.0/1303661508025094/events?access_token=EAAJzWX6k1VEBRa5mKpnj7wrVqbJSKUSzyZCTFfBLyYZBo6cq72lZAZASGGTBwLyKDoINnZBMHLxDtP2s1at4c8dWmjVD56VZCfjIZAAIfxMsnYNhcJhgdHS7mxiymPbvUNFHn7KqVwywHGZBe4hxUBSxnYKeFhiO5rrrtwmEwalOcvEcwvZCeROFq11f2vbBIGwBtlwZDZD",
+      "https://graph.facebook.com/v19.0/1303661508025094/events?access_token=YOUR_TOKEN",
       {
 
         method: "POST",
@@ -37,13 +37,9 @@ export async function POST(req: Request) {
 
     const data = await response.json();
 
-    console.log(data);
-
     return NextResponse.json(data);
 
   } catch (error) {
-
-    console.log(error);
 
     return NextResponse.json({
       error: true,
