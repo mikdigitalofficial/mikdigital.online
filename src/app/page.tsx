@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+    fbq: (...args: unknown[]) => void;
+  }
+}
 'use client';
 import Link from "next/link";
 import ExpertiseSection from "@/components/ExpertiseSection";
@@ -128,9 +134,9 @@ export default function HomePage() {
 
       console.log('strategy clicked');
 
-      gtag('event', 'strategy_call_click');
+      window.gtag('event', 'strategy_call_click');
 
-      fbq('track', 'Schedule');
+      window.fbq('track', 'Schedule');
 
     }}
   >
@@ -672,9 +678,9 @@ export default function HomePage() {
   className="rounded-2xl border border-zinc-300 px-8 py-4 text-lg font-semibold"
   onClick={() => {
 
-    gtag('event', 'whatsapp_click');
+    window.gtag('event', 'whatsapp_click');
 
-    fbq('track', 'Contact');
+    window.fbq('track', 'Contact');
 
   }}
 >
@@ -731,9 +737,9 @@ export default function HomePage() {
 
     console.log('meta api firing');
 
-    gtag('event', 'whatsapp_click');
+    window.gtag('event', 'whatsapp_click');
 
-    fbq('track', 'Contact');
+    window.fbq('track', 'Contact');
 
     await fetch('/api/meta-event', {
 
