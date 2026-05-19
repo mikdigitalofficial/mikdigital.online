@@ -722,13 +722,14 @@ export default function HomePage() {
       {/* MOBILE CTA */}
       <div className="fixed bottom-5 left-0 right-0 z-50 flex justify-center px-6 md:hidden">
 
-        <a
-       
+<a
   href="https://wa.me/971506102836"
   target="_blank"
   rel="noopener noreferrer"
   className="w-full max-w-md rounded-2xl bg-indigo-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
   onClick={async () => {
+
+    console.log('meta api firing');
 
     gtag('event', 'whatsapp_click');
 
@@ -754,8 +755,8 @@ export default function HomePage() {
 
   }}
 >
-          WhatsApp — Book Strategy Call
-        </a>
+  WhatsApp — Book Strategy Call
+</a>
 
       </div>
 
