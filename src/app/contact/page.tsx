@@ -44,7 +44,9 @@ export default function ContactPage() {
   className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
   onClick={() => {
 
-    window.gtag('event', 'strategy_call_click');
+    window.dataLayer.push({
+  event: 'strategy_call_click',
+});
 
     window.fbq('track', 'Schedule');
 
@@ -78,7 +80,11 @@ export default function ContactPage() {
   className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
   onClick={() => {
 
-    window.gtag('event', 'whatsapp_click');
+    window.dataLayer = window.dataLayer || [];
+
+window.dataLayer.push({
+  event: 'whatsapp_click',
+});
 
     window.fbq('track', 'Contact');
 
