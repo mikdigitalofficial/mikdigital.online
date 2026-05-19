@@ -1,11 +1,12 @@
+'use client';
+
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
     fbq: (...args: unknown[]) => void;
     dataLayer: Record<string, unknown>[];
   }
 }
-'use client';
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white text-zinc-900">
@@ -38,21 +39,24 @@ export default function ContactPage() {
 
         <div className="grid gap-8 md:grid-cols-2">
 
+          {/* STRATEGY CALL */}
           <a
-  href="https://calendly.com/mikdigitalofficial/30min"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
-  onClick={() => {
+            href="https://calendly.com/mikdigitalofficial/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            onClick={() => {
 
-    window.dataLayer.push({
-  event: 'strategy_call_click',
-});
+              window.dataLayer = window.dataLayer || [];
 
-    window.fbq('track', 'Schedule');
+              window.dataLayer.push({
+                event: 'strategy_call_click',
+              });
 
-  }}
->
+              window.fbq('track', 'Schedule');
+
+            }}
+          >
 
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
               Strategy Call
@@ -74,23 +78,50 @@ export default function ContactPage() {
 
           </a>
 
+          {/* WHATSAPP */}
           <a
-  href="https://wa.me/971506102836"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
-  onClick={() => {
+            href="https://wa.me/971506102836"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+            onClick={async () => {
 
-    window.dataLayer = window.dataLayer || [];
+              window.dataLayer = window.dataLayer || [];
 
-window.dataLayer.push({
-  event: 'whatsapp_click',
-});
+              window.dataLayer.push({
+                event: 'whatsapp_click',
+              });
 
-    window.fbq('track', 'Contact');
+              window.fbq('track', 'Contact');
 
-  }}
->
+              try {
+
+                await fetch('/api/meta-event', {
+
+                  method: 'POST',
+
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+
+                  body: JSON.stringify({
+
+                    event_name: 'whatsapp_click',
+
+                    url: window.location.href,
+
+                  }),
+
+                });
+
+              } catch (error) {
+
+                console.log(error);
+
+              }
+
+            }}
+          >
 
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
               WhatsApp
@@ -126,28 +157,60 @@ window.dataLayer.push({
 
           <div className="mt-10 grid gap-10 md:grid-cols-2">
 
+            {/* EMAIL */}
             <div>
 
               <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
                 Email
               </p>
 
-            <a
-  href="mailto:alex@mikdigital.online"
-  className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
-  onClick={() => {
+              <a
+                href="mailto:alex@mikdigital.online"
+                className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
+                onClick={async () => {
 
-    window.gtag('event', 'email_click');
+                  window.dataLayer = window.dataLayer || [];
 
-    window.fbq('track', 'Contact');
+                  window.dataLayer.push({
+                    event: 'email_click',
+                  });
 
-  }}
->
-  alex@mikdigital.online
-</a>
+                  window.fbq('track', 'Contact');
+
+                  try {
+
+                    await fetch('/api/meta-event', {
+
+                      method: 'POST',
+
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+
+                      body: JSON.stringify({
+
+                        event_name: 'email_click',
+
+                        url: window.location.href,
+
+                      }),
+
+                    });
+
+                  } catch (error) {
+
+                    console.log(error);
+
+                  }
+
+                }}
+              >
+                alex@mikdigital.online
+              </a>
 
             </div>
 
+            {/* LINKEDIN */}
             <div>
 
               <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
@@ -155,23 +218,54 @@ window.dataLayer.push({
               </p>
 
               <a
-  href="https://linkedin.com/in/mikdxb"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
-  onClick={() => {
+                href="https://linkedin.com/in/mikdxb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
+                onClick={async () => {
 
-    window.gtag('event', 'linkedin_click');
+                  window.dataLayer = window.dataLayer || [];
 
-    window.fbq('track', 'ViewContent');
+                  window.dataLayer.push({
+                    event: 'linkedin_click',
+                  });
 
-  }}
->
-  linkedin.com/in/mikdxb
-</a>
+                  window.fbq('track', 'ViewContent');
+
+                  try {
+
+                    await fetch('/api/meta-event', {
+
+                      method: 'POST',
+
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+
+                      body: JSON.stringify({
+
+                        event_name: 'linkedin_click',
+
+                        url: window.location.href,
+
+                      }),
+
+                    });
+
+                  } catch (error) {
+
+                    console.log(error);
+
+                  }
+
+                }}
+              >
+                linkedin.com/in/mikdxb
+              </a>
 
             </div>
 
+            {/* LOCATION */}
             <div>
 
               <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
@@ -184,6 +278,7 @@ window.dataLayer.push({
 
             </div>
 
+            {/* SERVICES */}
             <div>
 
               <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
