@@ -723,7 +723,7 @@ export default function HomePage() {
       <div className="fixed bottom-5 left-0 right-0 z-50 flex justify-center px-6 md:hidden">
 
         <a
-        <a
+       
   href="https://wa.me/971506102836"
   target="_blank"
   rel="noopener noreferrer"
