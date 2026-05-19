@@ -127,25 +127,26 @@ export default function HomePage() {
 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
   <a
-    href="https://calendly.com/mikdigitalofficial/30min"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center rounded-2xl bg-indigo-700 px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
-    onClick={() => {
+  href="https://calendly.com/mikdigitalofficial/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center justify-center rounded-2xl bg-indigo-700 px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
+  onClick={() => {
 
-      console.log('strategy clicked');
+    console.log('strategy clicked');
 
-      window.dataLayer.push({
-  event: 'strategy_call_click',
-});
+    window.dataLayer = window.dataLayer || [];
 
-      window.fbq('track', 'Schedule');
+    window.dataLayer.push({
+      event: 'strategy_call_click',
+    });
 
-    }}
-  >
-    Book Strategy Call
-  </a>
+    window.fbq('track', 'Schedule');
 
+  }}
+>
+  Book Strategy Call
+</a>
   <a
     href="https://wa.me/971506102836"
     target="_blank"
@@ -728,33 +729,107 @@ window.dataLayer.push({
 
           <div className="mt-14 grid gap-6 md:grid-cols-2">
 
-            <a
-              href="mailto:kimofficialmik@gmail.com"
-              className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
-            >
-              <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                Email
-              </p>
+  <a
+  href="mailto:alex@mikdigital.online"
+  className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
+  onClick={async () => {
 
-              <p className="mt-3 text-xl font-semibold text-zinc-950">
-                kimofficialmik@gmail.com
-              </p>
-            </a>
+    window.dataLayer = window.dataLayer || [];
 
-            <a
-              href="https://linkedin.com/in/mikdxb"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
-            >
-              <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                LinkedIn
-              </p>
+    window.dataLayer.push({
+      event: 'email_click',
+    });
 
-              <p className="mt-3 text-xl font-semibold text-zinc-950">
-                linkedin.com/in/mikdxb
-              </p>
-            </a>
+    window.fbq('track', 'Contact');
+
+    try {
+
+      await fetch('/api/meta-event', {
+
+        method: 'POST',
+
+        headers: {
+          'Content-Type': 'application/json',
+        },
+
+        body: JSON.stringify({
+
+          event_name: 'email_click',
+
+          url: window.location.href,
+
+        }),
+
+      });
+
+    } catch (error) {
+
+      console.log(error);
+
+    }
+
+  }}
+>
+  <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+    Email
+  </p>
+
+  <p className="mt-3 text-xl font-semibold text-zinc-950">
+    alex@mikdigital.online
+  </p>
+</a>
+            
+  <a
+  href="https://linkedin.com/in/mikdxb"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
+  onClick={async () => {
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer.push({
+      event: 'linkedin_click',
+    });
+
+    window.fbq('track', 'ViewContent');
+
+    try {
+
+      await fetch('/api/meta-event', {
+
+        method: 'POST',
+
+        headers: {
+          'Content-Type': 'application/json',
+        },
+
+        body: JSON.stringify({
+
+          event_name: 'linkedin_click',
+
+          url: window.location.href,
+
+        }),
+
+      });
+
+    } catch (error) {
+
+      console.log(error);
+
+    }
+
+  }}
+>
+  <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+    LinkedIn
+  </p>
+
+  <p className="mt-3 text-xl font-semibold text-zinc-950">
+    linkedin.com/in/mikdxb
+  </p>
+</a>
 
           </div>
 
