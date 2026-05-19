@@ -134,7 +134,9 @@ export default function HomePage() {
 
       console.log('strategy clicked');
 
-      window.gtag('event', 'strategy_call_click');
+      window.dataLayer.push({
+  event: 'strategy_call_click',
+});
 
       window.fbq('track', 'Schedule');
 
@@ -152,7 +154,11 @@ export default function HomePage() {
 
       console.log('whatsapp clicked');
 
-      window.gtag('event', 'whatsapp_click');
+      window.dataLayer = window.dataLayer || [];
+
+window.dataLayer.push({
+  event: 'whatsapp_click',
+});
 
       window.fbq('track', 'Contact');
 
@@ -678,7 +684,11 @@ export default function HomePage() {
   className="rounded-2xl border border-zinc-300 px-8 py-4 text-lg font-semibold"
 onClick={async () => {
 
-  window.gtag('event', 'whatsapp_click');
+  window.dataLayer = window.dataLayer || [];
+
+window.dataLayer.push({
+  event: 'whatsapp_click',
+});
 
   window.fbq('track', 'Contact');
 
@@ -761,7 +771,11 @@ onClick={async () => {
   className="w-full max-w-md rounded-2xl bg-indigo-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
   onClick={async () => {
 
-    window.gtag('event', 'whatsapp_click');
+    window.dataLayer = window.dataLayer || [];
+
+window.dataLayer.push({
+  event: 'whatsapp_click',
+});
 
     window.fbq('track', 'Contact');
 
