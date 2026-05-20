@@ -52,28 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   `}
 </Script>
         
-{/* Google Analytics */}
 
-<Script
-  src="https://www.googletagmanager.com/gtag/js?id=G-274YF4P3S5"
-  strategy="afterInteractive"
-/>
-
-<Script id="google-analytics" strategy="afterInteractive">
-  {`
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag(){
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-274YF4P3S5', {
-      page_path: window.location.pathname,
-    });
-  `}
-</Script>
 <!-- Google Tag Manager (noscript) -->
   
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZJ3FNLG"
