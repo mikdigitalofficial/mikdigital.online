@@ -40,107 +40,59 @@ export default function ContactPage() {
         <div className="grid gap-8 md:grid-cols-2">
 
           {/* STRATEGY CALL */}
-          <a
-            href="https://calendly.com/mikdigitalofficial/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
-            onClick={() => {
+         <a
+  href="https://calendly.com/mikdigitalofficial/30min"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+>
 
-              window.dataLayer = window.dataLayer || [];
+  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
+    Strategy Call
+  </p>
 
-              window.dataLayer.push({
-                event: 'strategy_call_click',
-              });
+  <h2 className="mt-5 text-4xl font-black text-zinc-950">
+    Book a consultation call.
+  </h2>
 
-              window.fbq('track', 'Schedule');
+  <p className="mt-6 text-lg leading-8 text-zinc-600">
+    Discuss your lead generation challenges,
+    acquisition systems, campaign performance,
+    and growth opportunities.
+  </p>
 
-            }}
-          >
+  <div className="mt-10 inline-flex rounded-2xl bg-indigo-700 px-6 py-4 text-lg font-semibold text-white">
+    Book Strategy Call
+  </div>
 
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
-              Strategy Call
-            </p>
-
-            <h2 className="mt-5 text-4xl font-black text-zinc-950">
-              Book a consultation call.
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-zinc-600">
-              Discuss your lead generation challenges,
-              acquisition systems, campaign performance,
-              and growth opportunities.
-            </p>
-
-            <div className="mt-10 inline-flex rounded-2xl bg-indigo-700 px-6 py-4 text-lg font-semibold text-white">
-              Book Strategy Call
-            </div>
-
-          </a>
+</a>
 
           {/* WHATSAPP */}
-          <a
-            href="https://wa.me/971506102836"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
-            onClick={async () => {
+         <a
+  href="https://wa.me/971506102836"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-[40px] border border-zinc-200 bg-white p-12 shadow-sm transition hover:-translate-y-1 hover:shadow-2xl"
+>
 
-              window.dataLayer = window.dataLayer || [];
+  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
+    WhatsApp
+  </p>
 
-              window.dataLayer.push({
-                event: 'whatsapp_click',
-              });
+  <h2 className="mt-5 text-4xl font-black text-zinc-950">
+    Direct operator communication.
+  </h2>
 
-              window.fbq('track', 'Contact');
+  <p className="mt-6 text-lg leading-8 text-zinc-600">
+    Fast direct communication for campaign discussions,
+    project inquiries, audits, and consulting support.
+  </p>
 
-              try {
+  <div className="mt-10 inline-flex rounded-2xl border border-zinc-300 px-6 py-4 text-lg font-semibold text-zinc-950">
+    Chat on WhatsApp
+  </div>
 
-                await fetch('/api/meta-event', {
-
-                  method: 'POST',
-
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-
-                  body: JSON.stringify({
-
-                    event_name: 'whatsapp_click',
-
-                    url: window.location.href,
-
-                  }),
-
-                });
-
-              } catch (error) {
-
-                console.log(error);
-
-              }
-
-            }}
-          >
-
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-700">
-              WhatsApp
-            </p>
-
-            <h2 className="mt-5 text-4xl font-black text-zinc-950">
-              Direct operator communication.
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-zinc-600">
-              Fast direct communication for campaign discussions,
-              project inquiries, audits, and consulting support.
-            </p>
-
-            <div className="mt-10 inline-flex rounded-2xl border border-zinc-300 px-6 py-4 text-lg font-semibold text-zinc-950">
-              Chat on WhatsApp
-            </div>
-
-          </a>
+</a>
 
         </div>
 
@@ -163,51 +115,13 @@ export default function ContactPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
                 Email
               </p>
-
-              <a
-                href="mailto:alex@mikdigital.online"
-                className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
-                onClick={async () => {
-
-                  window.dataLayer = window.dataLayer || [];
-
-                  window.dataLayer.push({
-                    event: 'email_click',
-                  });
-
-                  window.fbq('track', 'Contact');
-
-                  try {
-
-                    await fetch('/api/meta-event', {
-
-                      method: 'POST',
-
-                      headers: {
-                        'Content-Type': 'application/json',
-                      },
-
-                      body: JSON.stringify({
-
-                        event_name: 'email_click',
-
-                        url: window.location.href,
-
-                      }),
-
-                    });
-
-                  } catch (error) {
-
-                    console.log(error);
-
-                  }
-
-                }}
-              >
-                alex@mikdigital.online
-              </a>
-
+<a
+  href="mailto:alex@mikdigital.online"
+  className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
+>
+  alex@mikdigital.online
+</a>
+              
             </div>
 
             {/* LINKEDIN */}
@@ -217,51 +131,14 @@ export default function ContactPage() {
                 LinkedIn
               </p>
 
-              <a
-                href="https://linkedin.com/in/mikdxb"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
-                onClick={async () => {
-
-                  window.dataLayer = window.dataLayer || [];
-
-                  window.dataLayer.push({
-                    event: 'linkedin_click',
-                  });
-
-                  window.fbq('track', 'ViewContent');
-
-                  try {
-
-                    await fetch('/api/meta-event', {
-
-                      method: 'POST',
-
-                      headers: {
-                        'Content-Type': 'application/json',
-                      },
-
-                      body: JSON.stringify({
-
-                        event_name: 'linkedin_click',
-
-                        url: window.location.href,
-
-                      }),
-
-                    });
-
-                  } catch (error) {
-
-                    console.log(error);
-
-                  }
-
-                }}
-              >
-                linkedin.com/in/mikdxb
-              </a>
+             <a
+  href="https://linkedin.com/in/mikdxb"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-3 block text-2xl font-semibold hover:text-indigo-400"
+>
+  linkedin.com/in/mikdxb
+</a> 
 
             </div>
 
