@@ -123,75 +123,29 @@ export default function HomePage() {
         After working as a Performance Marketing Specialist across UAE and Australian markets, I now operate mikdigital as an independent performance growth partner helping businesses improve lead generation, customer acquisition, analytics visibility, and conversion-focused marketing performance through Meta Ads, Google Ads, SEO, CRM workflows, and automation systems.
       </p>
 
-      {/* CTA */}
+    {/* CTA */}
 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
 
   <a
-  href="https://calendly.com/mikdigitalofficial/30min"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center rounded-2xl bg-indigo-700 px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
-  onClick={() => {
+    href="https://calendly.com/mikdigitalofficial/30min"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center rounded-2xl bg-indigo-700 px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
+  >
+    Book Strategy Call
+  </a>
 
-    window.dataLayer = window.dataLayer || [];
-
-    window.dataLayer.push({
-      event: 'strategy_call_click',
-    });
-
-    window.fbq('track', 'Schedule');
-
-  }}
->
-  Book Strategy Call
-</a>
   <a
     href="https://wa.me/971506102836"
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center justify-center rounded-2xl border border-zinc-300 bg-white px-7 py-4 text-base font-semibold transition hover:border-zinc-900 md:px-8 md:text-lg"
-    
-onClick={async () => {
-window.dataLayer = window.dataLayer || [];
-
-window.dataLayer.push({
-  event: 'whatsapp_click',
-});
-
-     window.fbq('track', 'Contact');
-
-try {
-
-  await fetch('/api/meta-event', {
-
-    method: 'POST',
-
-    headers: {
-      'Content-Type': 'application/json',
-    },
-
-    body: JSON.stringify({
-
-      event_name: 'whatsapp_click',
-
-      url: window.location.href,
-
-    }),
-
-  });
-
-} catch (error) {
-
-  console.log(error);
-
-}
-
-    }}
   >
     WhatsApp
   </a>
 
 </div>
+      
       {/* METRICS */}
       <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
 
@@ -668,7 +622,7 @@ try {
 
       </section>
 
-      {/* CONTACT */}
+      {/* CONTACT BUTTONS */}
       <section
         id="contact"
         className="mx-auto max-w-6xl px-6 py-20"
@@ -690,229 +644,83 @@ try {
             and conversion-focused marketing support.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+       
 
-<a
-  href="https://calendly.com/mikdigitalofficial/30min"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white shadow-xl"
-  onClick={() => {
-
-    window.dataLayer = window.dataLayer || [];
-
-    window.dataLayer.push({
-      event: 'strategy_call_click',
-    });
-
-    window.fbq('track', 'Schedule');
-
-  }}
->
-  Book Strategy Call
-</a>
-
-<a
-  href="https://wa.me/971506102836"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-2xl border border-zinc-300 px-8 py-4 text-lg font-semibold"
-onClick={async () => {
-
-  window.dataLayer = window.dataLayer || [];
-
-window.dataLayer.push({
-  event: 'whatsapp_click',
-});
-
-  window.fbq('track', 'Contact');
-
-  try {
-
-    await fetch('/api/meta-event', {
-
-      method: 'POST',
-
-      headers: {
-        'Content-Type': 'application/json',
-      },
-
-      body: JSON.stringify({
-
-        event_name: 'Contact',
-
-        url: window.location.href,
-
-      }),
-
-    });
-
-  } catch (error) {
-
-    console.log(error);
-
-  }
-
-}}
->
-  WhatsApp
-</a>
-
-          </div>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
+<div className="mt-10 flex flex-wrap gap-4">
 
   <a
-  href="mailto:alex@mikdigital.online"
-  className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
-  onClick={async () => {
+    href="https://calendly.com/mikdigitalofficial/30min"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white shadow-xl"
+  >
+    Book Strategy Call
+  </a>
 
-    window.dataLayer = window.dataLayer || [];
-
-    window.dataLayer.push({
-      event: 'email_click',
-    });
-
-    window.fbq('track', 'Contact');
-
-    try {
-
-      await fetch('/api/meta-event', {
-
-        method: 'POST',
-
-        headers: {
-          'Content-Type': 'application/json',
-        },
-
-        body: JSON.stringify({
-
-          event_name: 'email_click',
-
-          url: window.location.href,
-
-        }),
-
-      });
-
-    } catch (error) {
-
-      console.log(error);
-
-    }
-
-  }}
->
-  <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-    Email
-  </p>
-
-  <p className="mt-3 text-xl font-semibold text-zinc-950">
-    alex@mikdigital.online
-  </p>
-</a>
-            
   <a
-  href="https://linkedin.com/in/mikdxb"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
-  onClick={async () => {
+    href="https://wa.me/971506102836"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-2xl border border-zinc-300 px-8 py-4 text-lg font-semibold"
+  >
+    WhatsApp
+  </a>
 
-    window.dataLayer = window.dataLayer || [];
+</div>
 
-    window.dataLayer.push({
-      event: 'linkedin_click',
-    });
+  {/* CONTACT CARDS + MOBILE CTA */}
 
-    window.fbq('track', 'ViewContent');
+<div className="mt-14 grid gap-6 md:grid-cols-2">
 
-    try {
+  <a
+    href="mailto:alex@mikdigital.online"
+    className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
+  >
+    <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+      Email
+    </p>
 
-      await fetch('/api/meta-event', {
+    <p className="mt-3 text-xl font-semibold text-zinc-950">
+      alex@mikdigital.online
+    </p>
+  </a>
 
-        method: 'POST',
+  <a
+    href="https://linkedin.com/in/mikdxb"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
+  >
+    <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+      LinkedIn
+    </p>
 
-        headers: {
-          'Content-Type': 'application/json',
-        },
+    <p className="mt-3 text-xl font-semibold text-zinc-950">
+      linkedin.com/in/mikdxb
+    </p>
+  </a>
 
-        body: JSON.stringify({
+</div>
 
-          event_name: 'linkedin_click',
+{/* MOBILE CTA */}
 
-          url: window.location.href,
 
-        }),
+<div className="fixed bottom-5 left-0 right-0 z-50 flex justify-center px-6 md:hidden">
 
-      });
+  <a
+    href="https://wa.me/971506102836"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full max-w-md rounded-2xl bg-indigo-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
+  >
+    WhatsApp — Book Strategy Call
+  </a>
 
-    } catch (error) {
+</div>
 
-      console.log(error);
+</div>
 
-    }
 
-  }}
->
-  <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-    LinkedIn
-  </p>
+</section>
 
-  <p className="mt-3 text-xl font-semibold text-zinc-950">
-    linkedin.com/in/mikdxb
-  </p>
-</a>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* MOBILE CTA */}
-      <div className="fixed bottom-5 left-0 right-0 z-50 flex justify-center px-6 md:hidden">
-
-<a
-  href="https://wa.me/971506102836"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="w-full max-w-md rounded-2xl bg-indigo-700 px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
-  onClick={async () => {
-
-    window.dataLayer = window.dataLayer || [];
-
-window.dataLayer.push({
-  event: 'whatsapp_click',
-});
-
-    window.fbq('track', 'Contact');
-
-    await fetch('/api/meta-event', {
-
-      method: 'POST',
-
-      headers: {
-        'Content-Type': 'application/json',
-      },
-
-      body: JSON.stringify({
-
-        event_name: 'whatsapp_click',
-
-        url: window.location.href,
-
-      }),
-
-    });
-
-  }}
->
-  WhatsApp — Book Strategy Call
-</a>
-
-      </div>
-
-    </main>
-  );
-}
+      
