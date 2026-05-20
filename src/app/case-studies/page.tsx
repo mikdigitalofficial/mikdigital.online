@@ -1,11 +1,5 @@
 'use client';
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
-    fbq: (...args: unknown[]) => void;
-    dataLayer: Record<string, unknown>[];
-  }
-}
+
 import Link from "next/link";
 
 export default function CaseStudiesPage() {
@@ -153,68 +147,27 @@ export default function CaseStudiesPage() {
 
       </section>
 
-      {/* CTA SECTION */}
-      <section className="mx-auto max-w-6xl px-6 pb-24">
+     <div className="mt-10 flex flex-wrap gap-4">
 
-        <div className="rounded-[40px] bg-zinc-950 p-12 text-white md:p-16">
+  <a
+    href="https://calendly.com/mikdigitalofficial/30min"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white"
+  >
+    Book Strategy Call
+  </a>
 
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-indigo-400">
-            Need Similar Results?
-          </p>
+  <Link
+    href="/contact"
+    className="rounded-2xl border border-zinc-700 px-8 py-4 text-lg font-semibold text-white"
+  >
+    Contact
+  </Link>
 
-          <h2 className="mt-5 max-w-4xl text-5xl font-black leading-tight">
-            Let’s build a scalable acquisition system for your business.
-          </h2>
+</div> 
 
-          <p className="mt-8 max-w-3xl text-xl leading-9 text-zinc-300">
-            Available for Meta Ads, Google Ads, WhatsApp funnel systems,
-            SEO, CRM workflows, analytics implementation,
-            and conversion-focused lead generation campaigns.
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-4">
-
-            <a
-  href="https://calendly.com/mikdigitalofficial/30min"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-2xl bg-indigo-700 px-8 py-4 text-lg font-semibold text-white"
-  onClick={() => {
-
-   window.dataLayer = window.dataLayer || [];
-
-window.dataLayer.push({
-  event: 'strategy_call_click',
-});
-
-    window.fbq('track', 'Schedule');
-
-  }}
->
-  Book Strategy Call
-</a>
-
-            <Link
-  href="/contact"
-  className="rounded-2xl border border-zinc-700 px-8 py-4 text-lg font-semibold text-white"
-  onClick={() => {
-
-window.dataLayer = window.dataLayer || [];
-
-window.dataLayer.push({
-  event: 'contact_page_click',
-});
-
-    window.fbq('track', 'Contact');
-
-  }}
->
-              Contact
-            </Link>
-
-          </div>
-
-        </div>
+</div>
 
       </section>
 
