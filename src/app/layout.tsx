@@ -26,6 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   
       <body>
+        
         {/* Meta Pixel */}
 
 <Script id="meta-pixel" strategy="afterInteractive">
@@ -50,6 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     fbq('track', 'PageView');
   `}
 </Script>
+        
 {/* Google Analytics */}
 
 <Script
