@@ -13,10 +13,12 @@ e.preventDefault()
 
 setLoading(true)
 
+const form = e.currentTarget
+
 const formData = {
-name: e.target.name.value,
-email: e.target.email.value,
-phone: e.target.phone.value
+name: (form.elements.namedItem('name') as HTMLInputElement).value,
+email: (form.elements.namedItem('email') as HTMLInputElement).value,
+phone: (form.elements.namedItem('phone') as HTMLInputElement).value
 }
 
 const response = await fetch('/api/lead', {
