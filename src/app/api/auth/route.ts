@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 export async function GET() {
 
 const clientId = process.env.ZOHO_CLIENT_ID
-const redirectUri = const redirectUri = 'https://www.mikdigital.online/api/auth/callback'
+const redirectUri = 'https://www.mikdigital.online/api/auth/callback'
 
 const scope =
 'ZohoCRM.modules.ALL,ZohoCRM.settings.ALL'
