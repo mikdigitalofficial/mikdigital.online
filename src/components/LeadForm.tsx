@@ -1,13 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 export default function LeadForm() {
 
 const [loading, setLoading] = useState(false)
 const [success, setSuccess] = useState(false)
 
-async function handleSubmit(e:any) {
+async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 
 e.preventDefault()
 
