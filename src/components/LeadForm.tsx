@@ -1,6 +1,15 @@
 'use client'
 
 import React, { useState } from 'react'
+'use client'
+
+import React, { useState } from 'react'
+
+declare global {
+interface Window {
+dataLayer: Record<string, unknown>[]
+}
+}
 
 export default function LeadForm() {
 
