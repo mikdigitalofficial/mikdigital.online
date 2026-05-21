@@ -1,9 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-'use client'
-
-import React, { useState } from 'react'
 
 declare global {
 interface Window {
