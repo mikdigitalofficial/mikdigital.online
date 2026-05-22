@@ -39,13 +39,15 @@ Authorization: `Zoho-oauthtoken ${accessToken}`,
 'Content-Type': 'application/json'
 },
 body: JSON.stringify({
-data: [
-{
-Last_Name: body.name,
-Email: body.email,
-Phone: body.phone
-}
-]
+  data: [
+    {
+      Last_Name: body.name,
+      Email: body.email,
+      Phone: body.phone,
+      Lead_Source: 'Web Site',        // ← add this
+      Lead_Status: 'Not Contacted'    // ← optional but useful
+    }
+  ]
 })
 }
 )
