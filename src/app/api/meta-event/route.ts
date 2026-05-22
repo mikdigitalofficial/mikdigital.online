@@ -30,9 +30,11 @@ export async function POST(req: Request) {
     )
 
     const data = await response.json()
-    return NextResponse.json(data)
+    console.log('Meta API response:', JSON.stringify(data))
+    return NextResponse.json({ success: true })
 
-  } catch {
+  } catch (err) {
+    console.error('Meta API error:', err)
     return NextResponse.json({ error: true })
   }
 }
