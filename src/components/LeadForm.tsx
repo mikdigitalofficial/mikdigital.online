@@ -33,11 +33,23 @@ export default function LeadForm() {
 
     const data = await response.json()
 
-    if (data?.data?.[0]?.code === 'SUCCESS') {
+// Always fire Meta CAPI regardless of Zoho result
+await fetch('/api/meta-event', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    event_name: 'Lead',
+    url: window.location.href,
+    email: formData.email,
+    phone: formData.phone,
+  })
+})
 
-      // GTM dataLayer
-      window.dataLayer = window.dataLayer || []
-      window.dataLayer.push({ event: 'generate_lead' })
+if (data?.data?.[0]?.code === 'SUCCESS' || data?.data?.[0]?.code === 'DUPLICATE') {
+  window.dataLayer = window.dataLayer || []
+  window.dataLayer.push({ event: 'generate_lead' })
+  setSuccess(true)
+}
 
       // ✅ Meta Conversions API (server-side)
       await fetch('/api/meta-event', {
