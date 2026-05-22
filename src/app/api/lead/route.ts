@@ -38,22 +38,46 @@ headers: {
 Authorization: `Zoho-oauthtoken ${accessToken}`,
 'Content-Type': 'application/json'
 },
-body: JSON.stringify({
-  data: [
-    {
-      Last_Name: body.name,
-      Email: body.email,
-      Phone: body.phone,
-      Lead_Source: 'Web Site',        // ← add this
-      Lead_Status: 'Not Contacted'    // ← optional but useful
-    }
-  ]
-})
+import { NextRequest, NextResponse } from 'next/server'
+
+async function getAccessToken() {
+  const response = await fetch('https://accounts.zoho.in/oauth/v2/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({
+      refresh_token: process.env.ZOHO_REFRESH_TOKEN!,
+      client_id: process.env.ZOHO_CLIENT_ID!,
+      client_secret: process.env.ZOHO_CLIENT_SECRET!,
+      grant_type: 'refresh_token'
+    })
+  })
+  const data = await response.json()
+  return data.access_token
 }
-)
 
-const data = await zohoResponse.json()
+export async function POST(req: NextRequest) {
+  const body = await req.json()
+  const accessToken = await getAccessToken()
 
-return NextResponse.json(data)
+  const zohoResponse = await fetch('https://www.zohoapis.in/crm/v2/Leads', {
+    method: 'POST',
+    headers: {
+      Authorization: `Zoho-oauthtoken ${accessToken}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      data: [
+        {
+          Last_Name: body.name,
+          Email: body.email,
+          Phone: body.phone,
+          Lead_Source: 'Web Site',       // ← added
+          Lead_Status: 'Not Contacted'   // ← added
+        }
+      ]
+    })
+  })
 
+  const data = await zohoResponse.json()
+  return NextResponse.json(data)
 }
