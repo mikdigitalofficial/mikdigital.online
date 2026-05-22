@@ -38,13 +38,20 @@ try {
   const metaRes = await fetch('/api/meta-event', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      event_name: 'Lead',
-      url: window.location.href,
-      email: formData.email,
-      phone: formData.phone,
-    })
-  })
+ // Get Meta cookies for better match quality
+const getCookie = (name: string) => {
+  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'))
+  return match ? match[2] : undefined
+}
+
+body: JSON.stringify({
+  event_name: 'Lead',
+  url: window.location.href,
+  email: formData.email,
+  phone: formData.phone,
+  fbc: getCookie('_fbc'),   // Meta click ID
+  fbp: getCookie('_fbp'),   // Meta browser ID
+})
   const metaData = await metaRes.json()
   console.log('META CAPI response:', JSON.stringify(metaData))
 } catch (err) {
