@@ -33,17 +33,23 @@ export default function LeadForm() {
 
     const data = await response.json()
 
-    // Always fire Meta CAPI regardless of Zoho result
-    await fetch('/api/meta-event', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        event_name: 'Lead',
-        url: window.location.href,
-        email: formData.email,
-        phone: formData.phone,
-      })
+  // Always fire Meta CAPI regardless of Zoho result
+try {
+  const metaRes = await fetch('/api/meta-event', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      event_name: 'Lead',
+      url: window.location.href,
+      email: formData.email,
+      phone: formData.phone,
     })
+  })
+  const metaData = await metaRes.json()
+  console.log('META CAPI response:', JSON.stringify(metaData))
+} catch (err) {
+  console.error('META CAPI error:', err)
+}
 
     if (data?.data?.[0]?.code === 'SUCCESS' || data?.data?.[0]?.code === 'DUPLICATE') {
       window.dataLayer = window.dataLayer || []
