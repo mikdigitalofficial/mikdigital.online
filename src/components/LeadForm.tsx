@@ -13,8 +13,18 @@ export default function LeadForm() {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
 
+  const getCookie = (name: string) => {
+    const match = document.cookie.match(
+      new RegExp('(^| )' + name + '=([^;]+)')
+    )
+
+    return match ? match[2] : undefined
+  }
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+
     e.preventDefault()
+
     setLoading(true)
 
     const form = e.currentTarget
@@ -25,76 +35,136 @@ export default function LeadForm() {
       phone: (form.elements.namedItem('phone') as HTMLInputElement).value
     }
 
-    const response = await fetch('/api/lead', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    })
+    try {
 
-    const data = await response.json()
+      const response = await fetch('/api/lead', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      })
 
-  // Always fire Meta CAPI regardless of Zoho result
-try {
-  const metaRes = await fetch('/api/meta-event', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
- // Get Meta cookies for better match quality
-const getCookie = (name: string) => {
-  const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'))
-  return match ? match[2] : undefined
-}
+      const data = await response.json()
 
-body: JSON.stringify({
-  event_name: 'Lead',
-  url: window.location.href,
-  email: formData.email,
-  phone: formData.phone,
-  fbc: getCookie('_fbc'),   // Meta click ID
-  fbp: getCookie('_fbp'),   // Meta browser ID
-})
-  const metaData = await metaRes.json()
-  console.log('META CAPI response:', JSON.stringify(metaData))
-} catch (err) {
-  console.error('META CAPI error:', err)
-}
+      // META CAPI EVENT
+      try {
 
-    if (data?.data?.[0]?.code === 'SUCCESS' || data?.data?.[0]?.code === 'DUPLICATE') {
-      window.dataLayer = window.dataLayer || []
-      window.dataLayer.push({ event: 'generate_lead' })
-      setSuccess(true)
+        const metaRes = await fetch('/api/meta-event', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            event_name: 'Lead',
+            page_url: window.location.href,
+            email: formData.email,
+            phone: formData.phone,
+            fbc: getCookie('_fbc'),
+            fbp: getCookie('_fbp'),
+            event_id: crypto.randomUUID()
+          })
+        })
+
+        const metaData = await metaRes.json()
+
+        console.log('META CAPI response:', metaData)
+
+      } catch (err) {
+
+        console.error('META CAPI error:', err)
+
+      }
+
+      // GTM / GA4 EVENT
+      if (
+        data?.data?.[0]?.code === 'SUCCESS' ||
+        data?.data?.[0]?.code === 'DUPLICATE'
+      ) {
+
+        window.dataLayer = window.dataLayer || []
+
+        window.dataLayer.push({
+          event: 'generate_lead'
+        })
+
+        setSuccess(true)
+
+      }
+
+    } catch (err) {
+
+      console.error('Lead submit error:', err)
+
     }
 
     setLoading(false)
+
   }
 
   return (
+
     <section className="mx-auto max-w-3xl px-6 py-20">
+
       <div className="rounded-[32px] border border-zinc-200 bg-white p-10 shadow-xl">
-        <h2 className="text-4xl font-black text-zinc-950">Get In Touch</h2>
-        <p className="mt-4 text-zinc-600">Submit your details and we&apos;ll contact you shortly.</p>
 
-        <form onSubmit={handleSubmit} className="mt-10 space-y-6">
-          <input name="name" placeholder="Full Name" required
-            className="w-full rounded-2xl border border-zinc-300 px-5 py-4 text-lg outline-none focus:border-indigo-600" />
+        <h2 className="text-4xl font-black text-zinc-950">
+          Get In Touch
+        </h2>
 
-          <input name="email" type="email" placeholder="Email Address" required
-            className="w-full rounded-2xl border border-zinc-300 px-5 py-4 text-lg outline-none focus:border-indigo-600" />
+        <p className="mt-4 text-zinc-600">
+          Submit your details and we&apos;ll contact you shortly.
+        </p>
 
-          <input name="phone" placeholder="Phone Number" required
-            className="w-full rounded-2xl border border-zinc-300 px-5 py-4 text-lg outline-none focus:border-indigo-600" />
+        <form
+          onSubmit={handleSubmit}
+          className="mt-10 space-y-6"
+        >
 
-          <button type="submit"
-            className="w-full rounded-2xl bg-indigo-700 px-6 py-4 text-lg font-semibold text-white transition hover:bg-indigo-800">
+          <input
+            name="name"
+            placeholder="Full Name"
+            required
+            className="w-full rounded-2xl border border-zinc-300 px-5 py-4 text-lg outline-none focus:border-indigo-600"
+          />
+
+          <input
+            name="email"
+            type="email"
+            placeholder="Email Address"
+            required
+            className="w-full rounded-2xl border border-zinc-300 px-5 py-4 text-lg outline-none focus:border-indigo-600"
+          />
+
+          <input
+            name="phone"
+            placeholder="Phone Number"
+            required
+            className="w-full rounded-2xl border border-zinc-300 px-5 py-4 text-lg outline-none focus:border-indigo-600"
+          />
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full rounded-2xl bg-indigo-700 px-6 py-4 text-lg font-semibold text-white transition hover:bg-indigo-800 disabled:opacity-50"
+          >
             {loading ? 'Submitting...' : 'Submit'}
           </button>
+
         </form>
 
         {success && (
+
           <div className="mt-6 rounded-2xl bg-green-100 px-5 py-4 text-green-700">
             Lead submitted successfully.
           </div>
+
         )}
+
       </div>
+
     </section>
+
   )
+
 }
