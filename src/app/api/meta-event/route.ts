@@ -25,7 +25,10 @@ export async function POST(req: Request) {
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data: [eventData] }),
+        body: JSON.stringify({
+          data: [eventData],
+          test_event_code: process.env.META_TEST_EVENT_CODE
+        }),
       }
     )
 
