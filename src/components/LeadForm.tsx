@@ -58,7 +58,7 @@ export default function LeadForm() {
     <section className="mx-auto max-w-3xl px-6 py-20">
       <div className="rounded-[32px] border border-zinc-200 bg-white p-10 shadow-xl">
         <h2 className="text-4xl font-black text-zinc-950">Get In Touch</h2>
-        <p className="mt-4 text-zinc-600">Submit your details and we'll contact you shortly.</p>
+        <p className="mt-4 text-zinc-600">Submit your details and we&apos;ll contact you shortly.</p>
 
         <form onSubmit={handleSubmit} className="mt-10 space-y-6">
           <input name="name" placeholder="Full Name" required
