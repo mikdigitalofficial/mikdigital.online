@@ -15,12 +15,18 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         messaging_product: 'whatsapp',
         to: body.phone,
-        type: 'template',
-        template: {
-          name: 'hello_world',
-          language: {
-            code: 'en_US'
-          }
+        type: 'text',
+        text: {
+          body:
+`Hi ${body.name},
+
+Thank you for contacting mikdigital.
+
+Your inquiry has been received successfully.
+
+How can I help you further?
+
+— mikdigital`
         }
       })
     }
