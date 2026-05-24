@@ -221,7 +221,7 @@ export default function LeadForm() {
           </div>
           <p className="text-xl font-black text-white">Message received.</p>
           <p className="mt-2 text-sm leading-7 text-zinc-400">
-            We'll follow up within 24 hours at <span className="text-zinc-200">{values.email}</span>. Check your WhatsApp too.
+            We&apos;ll follow up within 24 hours at <span className="text-zinc-200">{values.email}</span>. Check your WhatsApp too.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
