@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 async function getAccessToken() {
-
   const response = await fetch(
     'https://accounts.zoho.in/oauth/v2/token',
     {
@@ -17,15 +16,23 @@ async function getAccessToken() {
       })
     }
   )
-
   const data = await response.json()
-
   return data.access_token
 }
 
 export async function POST(req: NextRequest) {
-
   const body = await req.json()
+
+  const { name, email, phone } = body
+
+  if (!name || !email || !phone) {
+    return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+  }
+
+  // Normalize phone to E.164 — strip spaces/dashes, prepend + if missing
+  const normalizedPhone = phone.trim().startsWith('+')
+    ? phone.trim().replace(/[\s\-]/g, '')
+    : '+' + phone.trim().replace(/[\s\-]/g, '')
 
   const accessToken = await getAccessToken()
 
@@ -40,9 +47,9 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         data: [
           {
-            Last_Name: body.name,
-            Email: body.email,
-            Phone: body.phone,
+            Last_Name: name,
+            Email: email,
+            Phone: normalizedPhone,
             Lead_Source: 'Web Site',
             Lead_Status: 'Not Contacted'
           }
@@ -53,19 +60,15 @@ export async function POST(req: NextRequest) {
 
   const data = await zohoResponse.json()
 
+  // FIX: pass name so WhatsApp greeting works
   await fetch(
     `${process.env.NEXT_PUBLIC_SITE_URL}/api/whatsapp`,
     {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        phone: body.phone
-      })
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, phone: normalizedPhone })
     }
   )
 
   return NextResponse.json(data)
-
 }
