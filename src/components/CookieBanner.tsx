@@ -2,13 +2,18 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { motion, AnimatePresence } from 'framer-motion'
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const consent = localStorage.getItem('cookie_consent')
-    if (!consent) setVisible(true)
+    if (!consent) {
+      // Small delay so it doesn't flash immediately
+      const t = setTimeout(() => setVisible(true), 1500)
+      return () => clearTimeout(t)
+    }
   }, [])
 
   function accept() {
@@ -21,39 +26,41 @@ export default function CookieBanner() {
     setVisible(false)
   }
 
-  if (!visible) return null
-
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-[100] px-4 pb-4 md:px-6 md:pb-6">
-      <div
-        className="mx-auto max-w-4xl rounded-[24px] border border-violet-100 p-5 shadow-2xl md:flex md:items-center md:justify-between md:gap-8 md:p-6"
-        style={{
-          background: 'linear-gradient(135deg, rgba(91,33,255,0.05) 0%, rgba(255,255,255,0.98) 60%, rgba(255,213,79,0.06) 100%)',
-          backdropFilter: 'blur(20px)',
-        }}
-      >
-        <p className="text-sm leading-6 text-zinc-600">
-          We use cookies for analytics and to improve your experience.{' '}
-          <Link href="/privacy" className="font-semibold text-violet-700 underline underline-offset-2">
-            Privacy Policy
-          </Link>
-        </p>
-        <div className="mt-4 flex shrink-0 gap-3 md:mt-0">
-          <button
-            onClick={decline}
-            className="rounded-xl border border-zinc-300 px-5 py-2.5 text-sm font-semibold text-zinc-700 transition hover:border-zinc-500"
-          >
-            Decline
-          </button>
-          <button
-            onClick={accept}
-            className="rounded-xl px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
-            style={{ background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)' }}
-          >
-            Accept All
-          </button>
-        </div>
-      </div>
-    </div>
+    <AnimatePresence>
+      {visible && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+          className="fixed bottom-4 left-4 right-4 z-[100] md:bottom-6 md:left-6 md:right-auto md:max-w-md"
+        >
+          <div className="rounded-2xl border border-white/[0.10] bg-[#111111]/95 p-5 shadow-2xl backdrop-blur-xl">
+            <p className="text-sm leading-6 text-zinc-400">
+              We use cookies for analytics and to improve your experience.{' '}
+              <Link href="/privacy" className="font-semibold text-violet-400 underline underline-offset-2 transition hover:text-violet-300">
+                Privacy Policy
+              </Link>
+            </p>
+            <div className="mt-4 flex gap-3">
+              <button
+                onClick={decline}
+                className="rounded-lg border border-white/[0.10] px-4 py-2 text-sm font-semibold text-zinc-400 transition hover:border-white/20 hover:text-white"
+              >
+                Decline
+              </button>
+              <button
+                onClick={accept}
+                className="rounded-lg px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+                style={{ background: 'linear-gradient(135deg, #7c3aed, #a855f7)' }}
+              >
+                Accept All
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   )
 }
