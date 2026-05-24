@@ -114,7 +114,7 @@ export default function AboutPage() {
                   Over time the scope expanded beyond ads into what actually compounds: tracking architecture, CRM workflows, attribution visibility, WhatsApp automation, and conversion infrastructure that connects marketing spend to revenue outcomes.
                 </p>
                 <p>
-                  The positioning is intentionally narrow. Education and entertainment brands in UAE and Australia. That's where the experience is deep and the systems are proven.
+                  The positioning is intentionally narrow. Education and entertainment brands in UAE and Australia. That&apos;s where the experience is deep and the systems are proven.
                 </p>
               </div>
             </div>
