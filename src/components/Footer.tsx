@@ -41,7 +41,7 @@ export default function Footer() {
               <img
                 src="/website-logo.png"
                 alt="mikdigital"
-                className="h-8 w-auto brightness-0 invert"
+                className="h-8 w-auto invert"
               />
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-7 text-zinc-500">

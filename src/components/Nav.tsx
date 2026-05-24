@@ -56,7 +56,7 @@ export default function Nav() {
             <img
               src="/website-logo.png"
               alt="mikdigital"
-              className="h-8 w-auto brightness-0 invert sm:h-9 md:h-9"
+              className="h-8 w-auto invert sm:h-9 md:h-9"
             />
           </Link>
 
@@ -154,7 +154,12 @@ export default function Nav() {
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-4">
-                <img src="/website-logo.png" alt="mikdigital" className="h-8 w-auto brightness-0 invert" />
+                <img 
+                  src="/website-logo.png" 
+                  alt="mikdigital" 
+                  className="h-8 w-auto invert"
+                  decoding="async"
+                />
                 <button
                   onClick={() => setMenuOpen(false)}
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-400 transition hover:text-white"
