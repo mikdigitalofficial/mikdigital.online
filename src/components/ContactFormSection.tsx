@@ -111,7 +111,7 @@ export default function ContactFormSection() {
                   {tag}
                 </div>
               ))}
-            </div>
+  </div>
             <div className="mt-8 flex flex-col gap-3">
               
                 href="https://calendly.com/mikdigitalofficial/30min"
@@ -130,8 +130,7 @@ export default function ContactFormSection() {
                 💬 Chat on WhatsApp
               </a>
             </div>
-          </div>
-
+          </div>          
           {/* RIGHT — FORM */}
           <div className="rounded-[32px] border border-zinc-200 bg-white p-8 shadow-xl">
             <form onSubmit={handleSubmit} className="space-y-5">
