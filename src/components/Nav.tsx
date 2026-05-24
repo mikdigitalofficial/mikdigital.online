@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -53,10 +54,14 @@ export default function Nav() {
 
           {/* LOGO - Enhanced visibility */}
           <Link href="/" className="flex shrink-0 items-center">
-            <img
+            <Image
               src="/website-logo.png"
               alt="mikdigital"
-              className="h-8 w-auto object-contain brightness-0 invert sm:h-9 md:h-9"
+              width={36}
+              height={36}
+              priority
+              className="h-8 w-auto brightness-0 invert sm:h-9 md:h-9"
+              quality={100}
             />
           </Link>
 
@@ -154,7 +159,14 @@ export default function Nav() {
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-4">
-                <img src="/website-logo.png" alt="mikdigital" className="h-8 w-auto brightness-0 invert" />
+                <Image
+                  src="/website-logo.png"
+                  alt="mikdigital"
+                  width={32}
+                  height={32}
+                  className="h-8 w-auto brightness-0 invert"
+                  quality={100}
+                />
                 <button
                   onClick={() => setMenuOpen(false)}
                   className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-400 transition hover:text-white"
