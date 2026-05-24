@@ -45,31 +45,31 @@ export default function Nav() {
       <header
         className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'border-b border-white/[0.08] bg-[#0a0a0a]/80 backdrop-blur-2xl shadow-lg'
-            : 'bg-[#0a0a0a]/40 backdrop-blur-md'
+            ? 'border-b border-white/[0.06] bg-[#0a0a0a]/95 backdrop-blur-lg'
+            : 'border-b border-white/[0.02] bg-transparent'
         }`}
       >
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:py-5">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3.5 sm:px-6 md:py-4">
 
-          {/* LOGO - Improved visibility */}
+          {/* LOGO - Enhanced visibility */}
           <Link href="/" className="flex shrink-0 items-center">
             <img
               src="/website-logo.png"
               alt="mikdigital"
-              className="h-9 w-auto object-contain brightness-0 invert sm:h-10 md:h-9 lg:h-10"
+              className="h-8 w-auto object-contain brightness-0 invert sm:h-9 md:h-9"
             />
           </Link>
 
           {/* DESKTOP NAV */}
-          <div className="hidden items-center gap-2 md:flex">
+          <div className="hidden items-center gap-1 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${
+                className={`rounded-md px-3.5 py-2 text-sm font-medium transition ${
                   isActive(link.href)
-                    ? 'bg-white/[0.1] text-white'
-                    : 'text-zinc-400 hover:bg-white/[0.06] hover:text-white'
+                    ? 'bg-white/[0.06] text-white'
+                    : 'text-zinc-400 hover:text-zinc-200'
                 }`}
               >
                 {link.label}
@@ -78,9 +78,9 @@ export default function Nav() {
           </div>
 
           {/* DESKTOP RIGHT */}
-          <div className="hidden items-center gap-4 md:flex">
+          <div className="hidden items-center gap-3 md:flex">
             {/* Social icons */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5">
               {socialLinks.map(({ href, icon: Icon, label }) => (
                 <a
                   key={label}
@@ -88,7 +88,7 @@ export default function Nav() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-500 transition hover:bg-white/[0.08] hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-500 transition hover:text-zinc-200"
                 >
                   <Icon size={16} />
                 </a>
@@ -98,9 +98,8 @@ export default function Nav() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-500 transition hover:bg-white/[0.08] hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-500 transition hover:text-zinc-200"
               >
-                {/* WhatsApp SVG */}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                 </svg>
@@ -112,20 +111,20 @@ export default function Nav() {
               href="https://calendly.com/mikdigitalofficial/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-85"
+              className="rounded-lg px-4 py-2 text-sm font-semibold text-white transition hover:opacity-85"
               style={{ background: 'linear-gradient(135deg, #7c3aed, #a855f7)' }}
             >
               Work With Me
             </a>
           </div>
 
-          {/* MOBILE MENU TOGGLE - Touch-friendly */}
+          {/* MOBILE MENU TOGGLE */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
-            className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.1] bg-white/[0.05] text-white transition hover:bg-white/[0.1] md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/[0.08] text-zinc-400 transition hover:text-white md:hidden"
           >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+            {menuOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
 
         </nav>
@@ -135,71 +134,60 @@ export default function Nav() {
       <AnimatePresence>
         {menuOpen && (
           <>
-            {/* Backdrop - Enhanced blur */}
+            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm md:hidden"
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-40 bg-black/50 md:hidden"
               onClick={() => setMenuOpen(false)}
             />
 
-            {/* Drawer - Mobile-optimized */}
+            {/* Drawer */}
             <motion.div
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 32, stiffness: 290 }}
-              className="fixed right-0 top-0 bottom-0 z-50 flex w-full max-w-sm flex-col border-l border-white/[0.1] bg-gradient-to-b from-[#0d0d0d] to-[#0a0a0a] md:hidden safe-area-inset-right"
+              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+              className="fixed right-0 top-0 bottom-0 z-50 flex w-[85%] flex-col border-l border-white/[0.06] bg-[#0a0a0a] md:hidden"
             >
-              {/* Drawer header - Premium spacing */}
-              <div className="flex items-center justify-between border-b border-white/[0.08] px-5 py-6">
-                <img src="/website-logo.png" alt="mikdigital" className="h-9 w-auto brightness-0 invert" />
+              {/* Drawer header */}
+              <div className="flex items-center justify-between border-b border-white/[0.06] px-5 py-4">
+                <img src="/website-logo.png" alt="mikdigital" className="h-8 w-auto brightness-0 invert" />
                 <button
                   onClick={() => setMenuOpen(false)}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg text-zinc-300 transition hover:bg-white/[0.08] hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-400 transition hover:text-white"
                 >
-                  <X size={20} />
+                  <X size={18} />
                 </button>
               </div>
 
-              {/* Nav links - Larger typography */}
-              <div className="flex-1 overflow-y-auto px-5 py-6">
-                <nav className="space-y-2">
-                  {navLinks.map((link, idx) => (
-                    <motion.div
+              {/* Nav links */}
+              <div className="flex-1 overflow-y-auto px-4 py-5">
+                <nav className="space-y-1.5">
+                  {navLinks.map((link) => (
+                    <Link
                       key={link.href}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: idx * 0.05, duration: 0.3 }}
+                      href={link.href}
+                      className={`block rounded-lg px-4 py-2.5 text-base font-medium transition ${
+                        isActive(link.href)
+                          ? 'bg-white/[0.08] text-white'
+                          : 'text-zinc-400 hover:bg-white/[0.04] hover:text-white'
+                      }`}
                     >
-                      <Link
-                        href={link.href}
-                        className={`flex items-center rounded-xl px-5 py-3.5 text-base font-semibold transition-all ${
-                          isActive(link.href)
-                            ? 'bg-gradient-to-r from-violet-500/15 to-purple-500/10 text-white ring-1 ring-violet-500/30'
-                            : 'text-zinc-300 hover:bg-white/[0.06] hover:text-white'
-                        }`}
-                      >
-                        {link.label}
-                      </Link>
-                    </motion.div>
+                      {link.label}
+                    </Link>
                   ))}
                 </nav>
 
-                {/* Mobile CTA - Premium spacing */}
-                <motion.div
-                  className="mt-10 space-y-3"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.25, duration: 0.3 }}
-                >
+                {/* Mobile CTA */}
+                <div className="mt-8 space-y-3">
                   <a
                     href="https://calendly.com/mikdigitalofficial/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-center rounded-xl py-4 text-base font-semibold text-white transition hover:opacity-90 shadow-lg"
+                    className="flex w-full items-center justify-center rounded-lg py-3 text-base font-semibold text-white transition hover:opacity-85"
                     style={{ background: 'linear-gradient(135deg, #7c3aed, #a855f7)' }}
                   >
                     Book Strategy Call
@@ -208,19 +196,14 @@ export default function Nav() {
                     href="https://wa.me/971506102836"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex w-full items-center justify-center rounded-xl border border-white/[0.1] bg-white/[0.05] py-4 text-base font-semibold text-white transition hover:bg-white/[0.1]"
+                    className="flex w-full items-center justify-center rounded-lg border border-white/[0.08] py-3 text-base font-semibold text-white transition hover:bg-white/[0.04]"
                   >
                     WhatsApp
                   </a>
-                </motion.div>
+                </div>
 
-                {/* Social icons - Better spacing */}
-                <motion.div
-                  className="mt-10 flex items-center gap-4 border-t border-white/[0.08] pt-8"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.35, duration: 0.3 }}
-                >
+                {/* Social icons */}
+                <div className="mt-8 flex items-center gap-2 border-t border-white/[0.06] pt-5">
                   {socialLinks.map(({ href, icon: Icon, label }) => (
                     <a
                       key={label}
@@ -228,22 +211,22 @@ export default function Nav() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.1] bg-white/[0.05] text-zinc-300 transition hover:bg-white/[0.1] hover:text-white"
+                      className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-500 transition hover:text-white"
                     >
-                      <Icon size={18} />
+                      <Icon size={16} />
                     </a>
                   ))}
                   <a
                     href="https://wa.me/971506102836"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/[0.1] bg-white/[0.05] text-zinc-300 transition hover:bg-white/[0.1] hover:text-white"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg text-zinc-500 transition hover:text-white"
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                     </svg>
                   </a>
-                </motion.div>
+                </div>
               </div>
             </motion.div>
           </>
@@ -251,7 +234,7 @@ export default function Nav() {
       </AnimatePresence>
 
       {/* Spacer so content doesn't hide under sticky nav */}
-      <div className="h-[56px] sm:h-[66px]" />
+      <div className="h-[56px] sm:h-[56px]" />
     </>
   )
 }
