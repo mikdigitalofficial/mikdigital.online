@@ -236,4 +236,222 @@ export default function HomePage() {
 
 </section>
 
-{/
+{/* WHY MIKDIGITAL */}
+<section className="mx-auto max-w-7xl px-6 py-20">
+  <div className="overflow-hidden rounded-[32px] border border-zinc-200">
+
+    <div className="grid border-b border-zinc-200 bg-zinc-50 md:grid-cols-2">
+      <div className="border-r border-zinc-200 p-8">
+        <h3 className="text-2xl font-black text-zinc-500">Typical Agency</h3>
+      </div>
+      <div className="p-8">
+        <h3 className="text-2xl font-black text-violet-700">mikdigital</h3>
+      </div>
+    </div>
+
+    {[
+      ["Junior execution after sales handoff.", "Direct operator involvement across strategy and execution."],
+      ["Generic campaigns reused across industries.", "Business-specific acquisition and conversion systems."],
+      ["Slow reporting and communication layers.", "Fast direct communication and rapid optimization."],
+      ["Focus on impressions and vanity metrics.", "Focus on lead quality, CPL, and revenue visibility."],
+      ["High overhead and bloated retainers.", "Lean execution focused on performance."],
+    ].map((item, index) => (
+      <div key={index} className="grid border-b border-zinc-200 md:grid-cols-2">
+        <div className="border-r border-zinc-200 bg-red-50/40 p-8">
+          <p className="text-lg leading-8 text-zinc-700">{item[0]}</p>
+        </div>
+        <div className="bg-violet-50/40 p-8">
+          <p className="text-lg leading-8 text-zinc-700">{item[1]}</p>
+        </div>
+      </div>
+    ))}
+
+  </div>
+</section>
+
+<ExpertiseSection />
+
+{/* FOUNDER AUTHORITY */}
+<section className="mx-auto max-w-7xl px-6 py-20">
+  <div className="grid items-center gap-16 rounded-[40px] border border-zinc-200 bg-white p-10 shadow-sm md:grid-cols-2 md:p-16">
+
+    <div>
+      <div className="overflow-hidden rounded-[32px] border border-zinc-200 shadow-xl">
+        <img
+          src="/images/screenshots/mikdigital-founder.png"
+          alt="Mohamed Ibrahim Khan"
+          className="h-full w-full object-cover"
+        />
+      </div>
+    </div>
+
+    <div>
+      <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-700">
+        Direct Growth Partnership
+      </p>
+      <h2 className="mt-5 text-5xl font-black leading-tight text-zinc-950">
+        Built and operated by Mohamed Ibrahim Khan.
+      </h2>
+      <p className="mt-8 text-lg leading-9 text-zinc-600">
+        After working as a Performance Marketing Specialist across UAE and Australian markets, I started mikdigital as an independent performance growth practice focused on lead generation, customer acquisition, analytics visibility, and scalable marketing systems.
+      </p>
+      <p className="mt-6 text-lg leading-9 text-zinc-600">
+        My experience includes Meta Ads, Google Ads, SEO, CRM workflows, analytics implementation, WhatsApp funnels, automation systems, reporting infrastructure, and conversion-focused growth operations designed around measurable business outcomes.
+      </p>
+
+      <div className="mt-10 grid gap-5 sm:grid-cols-2">
+        <div className="rounded-2xl bg-zinc-50 p-5">
+          <p className="text-3xl font-black text-zinc-950">UAE + AUS</p>
+          <p className="mt-2 text-sm leading-7 text-zinc-600">Multi-market acquisition experience</p>
+        </div>
+        <div className="rounded-2xl bg-zinc-50 p-5">
+          <p className="text-3xl font-black text-zinc-950">14K+</p>
+          <p className="mt-2 text-sm leading-7 text-zinc-600">Qualified leads generated</p>
+        </div>
+        <div className="rounded-2xl bg-zinc-50 p-5">
+          <p className="text-3xl font-black text-zinc-950">AED 462K+</p>
+          <p className="mt-2 text-sm leading-7 text-zinc-600">Managed advertising spend</p>
+        </div>
+        <div className="rounded-2xl bg-zinc-50 p-5">
+          <p className="text-3xl font-black text-zinc-950">Full Funnel</p>
+          <p className="mt-2 text-sm leading-7 text-zinc-600">Ads, CRM, SEO, analytics & automation</p>
+        </div>
+      </div>
+
+      <div className="mt-10 flex flex-wrap gap-3">
+        {["Meta Ads", "Google Ads", "SEO", "CRM Systems", "Automation", "GA4", "WhatsApp Funnels", "AI Search"].map((item) => (
+          <div key={item} className="rounded-full bg-violet-50 px-5 py-2 text-sm font-medium text-violet-700">
+            {item}
+          </div>
+        ))}
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{/* CASE STUDIES */}
+<section id="case-studies" className="mx-auto max-w-7xl px-6 py-20">
+
+  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-700">
+    Case Studies
+  </p>
+
+  <h2 className="mt-5 max-w-5xl text-5xl font-black leading-tight text-zinc-950">
+    Campaign performance, acquisition systems, and operational execution.
+  </h2>
+
+  <div className="mt-16 grid gap-10 md:grid-cols-2">
+    {[
+      "/images/screenshots/googleadsoverall.png",
+      "/images/screenshots/metaad-1.png",
+      "/images/screenshots/seo-1.png",
+      "/images/screenshots/googleads-2.png",
+    ].map((image, index) => (
+      <img
+        key={index}
+        src={image}
+        alt="Case Study"
+        className="rounded-[32px] border border-zinc-200 shadow-xl"
+      />
+    ))}
+  </div>
+
+</section>
+
+{/* ABOUT */}
+<section id="about" className="mx-auto max-w-7xl px-6 py-20">
+  <div className="rounded-[40px] bg-zinc-950 p-12 text-white md:p-16">
+    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-400">
+      About mikdigital
+    </p>
+    <h2 className="mt-5 max-w-5xl text-5xl font-black leading-tight">
+      Built by an operator who has worked inside real UAE marketing environments.
+    </h2>
+    <p className="mt-8 max-w-4xl text-xl leading-9 text-zinc-300">
+      Started in performance marketing handling real acquisition pressure,
+      lead generation targets, and campaign execution for UAE businesses.
+      Over time the work expanded beyond ads into CRM systems,
+      automation workflows, reporting infrastructure,
+      SEO visibility, and conversion-focused growth operations.
+    </p>
+  </div>
+</section>
+
+{/* CONTACT */}
+<section id="contact" className="mx-auto max-w-6xl px-6 py-20">
+  <div className="rounded-[40px] border border-zinc-200 bg-white p-10 shadow-2xl md:p-14">
+
+    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-700">
+      Contact
+    </p>
+
+    <h2 className="mt-5 text-5xl font-black leading-tight text-zinc-950">
+      Let's build a scalable acquisition system for your business.
+    </h2>
+
+    <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-600">
+      Available for freelance consulting, acquisition systems,
+      CRM workflows, SEO, paid ads, analytics implementation,
+      and conversion-focused marketing support.
+    </p>
+
+    <div className="mt-10 flex flex-wrap gap-4">
+      
+        href="https://calendly.com/mikdigitalofficial/30min"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-2xl px-8 py-4 text-lg font-semibold text-white shadow-xl transition hover:opacity-90"
+        style={{background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)'}}
+      >
+        Book Strategy Call
+      </a>
+      
+        href="https://wa.me/971506102836"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-2xl border border-zinc-300 px-8 py-4 text-lg font-semibold transition hover:border-zinc-900"
+      >
+        WhatsApp
+      </a>
+    </div>
+
+    <div className="mt-14 grid gap-6 md:grid-cols-2">
+      
+        href="mailto:alex@mikdigital.online"
+        className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
+      >
+        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">Email</p>
+        <p className="mt-3 text-xl font-semibold text-zinc-950">alex@mikdigital.online</p>
+      </a>
+      
+        href="https://linkedin.com/in/mikdxb"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
+      >
+        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">LinkedIn</p>
+        <p className="mt-3 text-xl font-semibold text-zinc-950">linkedin.com/in/mikdxb</p>
+      </a>
+    </div>
+
+    {/* MOBILE STICKY CTA */}
+    <div className="fixed bottom-5 left-0 right-0 z-50 flex justify-center px-6 md:hidden">
+      
+        href="https://wa.me/971506102836"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full max-w-md rounded-2xl px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
+        style={{background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)'}}
+      >
+        WhatsApp — Book Strategy Call
+      </a>
+    </div>
+
+  </div>
+</section>
+
+    </main>
+  );
+}
