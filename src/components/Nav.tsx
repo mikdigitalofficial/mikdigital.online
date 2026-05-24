@@ -41,7 +41,7 @@ export default function Nav() {
 
         {/* DESKTOP NAV */}
         <div className="hidden items-center gap-6 text-sm font-semibold text-zinc-700 md:flex">
-          <a href="/#services" className="transition hover:text-violet-700">Services</a>
+          <Link href="/#services" className="transition hover:text-violet-700">Services</Link>
           <Link
             href="/case-studies"
             className={`transition hover:text-violet-700 ${isActive('/case-studies') ? 'text-violet-700' : ''}`}
