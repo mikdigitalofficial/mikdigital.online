@@ -346,7 +346,7 @@ export default function HomePage() {
           <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true }}>
             <p className="text-xs font-semibold uppercase tracking-widest text-violet-400">Technical infrastructure</p>
             <h2 className="mt-5 max-w-3xl text-4xl font-black leading-tight text-white md:text-5xl">
-              AI-enhanced systems most agencies can't build.
+              AI-enhanced systems most agencies can&apos;t build.
             </h2>
             <p className="mt-5 max-w-2xl text-lg text-zinc-400">
               Server-side tracking, offline conversions, automated lead routing — the technical layer that makes every campaign sharper.
@@ -553,7 +553,7 @@ export default function HomePage() {
             <div className="relative">
               <p className="text-xs font-semibold uppercase tracking-widest text-violet-400">Ready to scale smarter?</p>
               <h2 className="mt-5 text-4xl font-black text-white md:text-6xl">
-                Let's build your acquisition system.
+                Let&apos;s build your acquisition system.
               </h2>
               <p className="mx-auto mt-6 max-w-xl text-lg text-zinc-400">
                 Meta Ads, Google Ads, server-side tracking, CRM automation, and full-funnel attribution — built and operated directly, no agency layers.
