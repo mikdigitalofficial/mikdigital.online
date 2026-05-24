@@ -1,61 +1,17 @@
 'use client';
-import Link from "next/link";
+
 import ExpertiseSection from "@/components/ExpertiseSection";
+import ContactFormSection from "@/components/ContactFormSection";
+
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white text-zinc-900">
 
-{/* HEADER */}
-<header className="sticky top-0 z-50 border-b border-violet-100/40" style={{background: 'linear-gradient(135deg, rgba(91,33,255,0.07) 0%, rgba(255,255,255,0.96) 50%, rgba(255,213,79,0.09) 100%)', backdropFilter: 'blur(20px)'}}>
-  <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
-
-    {/* LOGO */}
-    <Link href="/" className="flex items-center shrink-0">
-      <img
-        src="/website-logo.png"
-        alt="mikdigital"
-        className="h-10 w-auto object-contain md:h-12"
-      />
-    </Link>
-
-    {/* DESKTOP NAV */}
-    <div className="hidden items-center gap-8 text-sm font-semibold text-zinc-700 md:flex">
-      <a href="#services" className="transition hover:text-violet-700">Services</a>
-      <Link href="/case-studies" className="transition hover:text-violet-700">Case Studies</Link>
-      <a href="#about" className="transition hover:text-violet-700">About</a>
-      <Link
-        href="/contact"
-        className="rounded-xl px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
-        style={{background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)'}}
-      >
-        Contact
-      </Link>
-    </div>
-
-    {/* MOBILE NAV — inline with logo */}
-    <div className="flex items-center gap-3 md:hidden">
-      <a href="#services" className="text-xs font-semibold text-zinc-600 whitespace-nowrap">Services</a>
-      <Link href="/case-studies" className="text-xs font-semibold text-zinc-600 whitespace-nowrap">Work</Link>
-      <a href="#about" className="text-xs font-semibold text-zinc-600 whitespace-nowrap">About</a>
-      <Link
-        href="/contact"
-        className="rounded-lg px-3 py-2 text-xs font-semibold text-white whitespace-nowrap"
-        style={{background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)'}}
-      >
-        Contact
-      </Link>
-    </div>
-
-  </nav>
-</header>
-
 {/* HERO */}
 <section className="relative overflow-hidden">
-
   <div className="absolute inset-0 bg-gradient-to-b from-violet-50 via-white to-white" />
 
   <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-6 md:py-32">
-
     <div className="max-w-5xl">
 
       <p className="text-sm font-semibold uppercase tracking-[0.35em] text-violet-700">
@@ -70,18 +26,19 @@ export default function HomePage() {
         After working as a Performance Marketing Specialist across UAE and Australian markets, I now operate mikdigital as an independent performance growth partner helping businesses improve lead generation, customer acquisition, analytics visibility, and conversion-focused marketing performance through Meta Ads, Google Ads, SEO, CRM workflows, and automation systems.
       </p>
 
-      {/* CTA */}
       <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-        
+
+        <a
           href="https://calendly.com/mikdigitalofficial/30min"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center rounded-2xl px-7 py-4 text-base font-semibold text-white shadow-xl transition hover:scale-[1.02] md:px-8 md:text-lg"
-          style={{background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)'}}
+          style={{ background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)' }}
         >
           Book Strategy Call
         </a>
-        
+
+        <a
           href="https://wa.me/971506102836"
           target="_blank"
           rel="noopener noreferrer"
@@ -89,9 +46,9 @@ export default function HomePage() {
         >
           WhatsApp
         </a>
+
       </div>
 
-      {/* METRICS */}
       <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
 
         <div className="rounded-3xl border border-zinc-200 bg-white p-5 shadow-sm md:p-6">
@@ -117,9 +74,7 @@ export default function HomePage() {
       </div>
 
     </div>
-
   </div>
-
 </section>
 
 {/* TRUST */}
@@ -130,9 +85,11 @@ export default function HomePage() {
       <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-700">
         Built Through Real Execution
       </p>
+
       <h2 className="mt-5 text-4xl font-black leading-tight text-zinc-950">
         Operational experience from real campaigns, not generic templates.
       </h2>
+
       <p className="mt-6 text-lg leading-8 text-zinc-600">
         Experience handling customer acquisition, lead qualification,
         CRM workflows, automation, analytics implementation,
@@ -145,6 +102,7 @@ export default function HomePage() {
       <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-400">
         What Businesses Actually Need
       </p>
+
       <ul className="mt-8 space-y-5 text-lg leading-8 text-zinc-300">
         <li>• Better lead quality</li>
         <li>• Lower customer acquisition costs</li>
@@ -207,7 +165,7 @@ export default function HomePage() {
 
 </section>
 
-{/* TOOLS & SKILLS */}
+{/* TOOLS */}
 <section className="mx-auto max-w-7xl px-6 py-20">
 
   <p className="text-center text-sm font-semibold uppercase tracking-[0.3em] text-violet-700">
@@ -220,10 +178,22 @@ export default function HomePage() {
 
   <div className="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4">
     {[
-      "WordPress", "Shopify", "Zapier", "Brevo",
-      "Looker Studio", "Webflow", "Google Analytics", "Google Ads",
-      "Meta Ads", "Canva", "Microsoft Clarity", "SEMrush",
-      "Mailchimp", "CapCut", "GA4", "CRM Automation",
+      "WordPress",
+      "Shopify",
+      "Zapier",
+      "Brevo",
+      "Looker Studio",
+      "Webflow",
+      "Google Analytics",
+      "Google Ads",
+      "Meta Ads",
+      "Canva",
+      "Microsoft Clarity",
+      "SEMrush",
+      "Mailchimp",
+      "CapCut",
+      "GA4",
+      "CRM Automation",
     ].map((tool) => (
       <div
         key={tool}
@@ -244,6 +214,7 @@ export default function HomePage() {
       <div className="border-r border-zinc-200 p-8">
         <h3 className="text-2xl font-black text-zinc-500">Typical Agency</h3>
       </div>
+
       <div className="p-8">
         <h3 className="text-2xl font-black text-violet-700">mikdigital</h3>
       </div>
@@ -257,12 +228,15 @@ export default function HomePage() {
       ["High overhead and bloated retainers.", "Lean execution focused on performance."],
     ].map((item, index) => (
       <div key={index} className="grid border-b border-zinc-200 md:grid-cols-2">
+
         <div className="border-r border-zinc-200 bg-red-50/40 p-8">
           <p className="text-lg leading-8 text-zinc-700">{item[0]}</p>
         </div>
+
         <div className="bg-violet-50/40 p-8">
           <p className="text-lg leading-8 text-zinc-700">{item[1]}</p>
         </div>
+
       </div>
     ))}
 
@@ -271,7 +245,7 @@ export default function HomePage() {
 
 <ExpertiseSection />
 
-{/* FOUNDER AUTHORITY */}
+{/* FOUNDER */}
 <section className="mx-auto max-w-7xl px-6 py-20">
   <div className="grid items-center gap-16 rounded-[40px] border border-zinc-200 bg-white p-10 shadow-sm md:grid-cols-2 md:p-16">
 
@@ -286,48 +260,59 @@ export default function HomePage() {
     </div>
 
     <div>
+
       <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-700">
         Direct Growth Partnership
       </p>
+
       <h2 className="mt-5 text-5xl font-black leading-tight text-zinc-950">
         Built and operated by Mohamed Ibrahim Khan.
       </h2>
+
       <p className="mt-8 text-lg leading-9 text-zinc-600">
         After working as a Performance Marketing Specialist across UAE and Australian markets, I started mikdigital as an independent performance growth practice focused on lead generation, customer acquisition, analytics visibility, and scalable marketing systems.
       </p>
+
       <p className="mt-6 text-lg leading-9 text-zinc-600">
         My experience includes Meta Ads, Google Ads, SEO, CRM workflows, analytics implementation, WhatsApp funnels, automation systems, reporting infrastructure, and conversion-focused growth operations designed around measurable business outcomes.
       </p>
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2">
+
         <div className="rounded-2xl bg-zinc-50 p-5">
           <p className="text-3xl font-black text-zinc-950">UAE + AUS</p>
           <p className="mt-2 text-sm leading-7 text-zinc-600">Multi-market acquisition experience</p>
         </div>
+
         <div className="rounded-2xl bg-zinc-50 p-5">
           <p className="text-3xl font-black text-zinc-950">14K+</p>
           <p className="mt-2 text-sm leading-7 text-zinc-600">Qualified leads generated</p>
         </div>
+
         <div className="rounded-2xl bg-zinc-50 p-5">
           <p className="text-3xl font-black text-zinc-950">AED 462K+</p>
           <p className="mt-2 text-sm leading-7 text-zinc-600">Managed advertising spend</p>
         </div>
+
         <div className="rounded-2xl bg-zinc-50 p-5">
           <p className="text-3xl font-black text-zinc-950">Full Funnel</p>
           <p className="mt-2 text-sm leading-7 text-zinc-600">Ads, CRM, SEO, analytics & automation</p>
         </div>
+
       </div>
 
       <div className="mt-10 flex flex-wrap gap-3">
         {["Meta Ads", "Google Ads", "SEO", "CRM Systems", "Automation", "GA4", "WhatsApp Funnels", "AI Search"].map((item) => (
-          <div key={item} className="rounded-full bg-violet-50 px-5 py-2 text-sm font-medium text-violet-700">
+          <div
+            key={item}
+            className="rounded-full bg-violet-50 px-5 py-2 text-sm font-medium text-violet-700"
+          >
             {item}
           </div>
         ))}
       </div>
 
     </div>
-
   </div>
 </section>
 
@@ -362,13 +347,17 @@ export default function HomePage() {
 
 {/* ABOUT */}
 <section id="about" className="mx-auto max-w-7xl px-6 py-20">
+
   <div className="rounded-[40px] bg-zinc-950 p-12 text-white md:p-16">
+
     <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-400">
       About mikdigital
     </p>
+
     <h2 className="mt-5 max-w-5xl text-5xl font-black leading-tight">
       Built by an operator who has worked inside real UAE marketing environments.
     </h2>
+
     <p className="mt-8 max-w-4xl text-xl leading-9 text-zinc-300">
       Started in performance marketing handling real acquisition pressure,
       lead generation targets, and campaign execution for UAE businesses.
@@ -376,81 +365,28 @@ export default function HomePage() {
       automation workflows, reporting infrastructure,
       SEO visibility, and conversion-focused growth operations.
     </p>
-  </div>
-</section>
-
-{/* CONTACT */}
-<section id="contact" className="mx-auto max-w-6xl px-6 py-20">
-  <div className="rounded-[40px] border border-zinc-200 bg-white p-10 shadow-2xl md:p-14">
-
-    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-violet-700">
-      Contact
-    </p>
-
-    <h2 className="mt-5 text-5xl font-black leading-tight text-zinc-950">
-      Let's build a scalable acquisition system for your business.
-    </h2>
-
-    <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-600">
-      Available for freelance consulting, acquisition systems,
-      CRM workflows, SEO, paid ads, analytics implementation,
-      and conversion-focused marketing support.
-    </p>
-
-    <div className="mt-10 flex flex-wrap gap-4">
-      
-        href="https://calendly.com/mikdigitalofficial/30min"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-2xl px-8 py-4 text-lg font-semibold text-white shadow-xl transition hover:opacity-90"
-        style={{background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)'}}
-      >
-        Book Strategy Call
-      </a>
-      
-        href="https://wa.me/971506102836"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-2xl border border-zinc-300 px-8 py-4 text-lg font-semibold transition hover:border-zinc-900"
-      >
-        WhatsApp
-      </a>
-    </div>
-
-    <div className="mt-14 grid gap-6 md:grid-cols-2">
-      
-        href="mailto:alex@mikdigital.online"
-        className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
-      >
-        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">Email</p>
-        <p className="mt-3 text-xl font-semibold text-zinc-950">alex@mikdigital.online</p>
-      </a>
-      
-        href="https://linkedin.com/in/mikdxb"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="rounded-3xl border border-zinc-200 p-8 transition hover:border-zinc-900"
-      >
-        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">LinkedIn</p>
-        <p className="mt-3 text-xl font-semibold text-zinc-950">linkedin.com/in/mikdxb</p>
-      </a>
-    </div>
-
-    {/* MOBILE STICKY CTA */}
-    <div className="fixed bottom-5 left-0 right-0 z-50 flex justify-center px-6 md:hidden">
-      
-        href="https://wa.me/971506102836"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full max-w-md rounded-2xl px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
-        style={{background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)'}}
-      >
-        WhatsApp — Book Strategy Call
-      </a>
-    </div>
 
   </div>
+
 </section>
+
+{/* CONTACT FORM */}
+<ContactFormSection />
+
+{/* MOBILE STICKY CTA */}
+<div className="fixed bottom-5 left-0 right-0 z-50 flex justify-center px-6 md:hidden">
+
+  <a
+    href="https://wa.me/971506102836"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full max-w-md rounded-2xl px-6 py-4 text-center text-lg font-semibold text-white shadow-2xl"
+    style={{ background: 'linear-gradient(135deg, #5B21FF 0%, #7C3AED 100%)' }}
+  >
+    WhatsApp — Book Strategy Call
+  </a>
+
+</div>
 
     </main>
   );
