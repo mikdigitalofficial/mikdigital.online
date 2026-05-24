@@ -362,7 +362,7 @@ export default function ContactFormSection() {
                   </div>
                   <p className="text-lg font-black text-white">Message sent.</p>
                   <p className="mt-2 text-sm leading-7 text-zinc-400">
-                    We'll follow up within 24 hours. Check your WhatsApp and email for a confirmation.
+                    We&apos;ll follow up within 24 hours. Check your WhatsApp and email for a confirmation.
                   </p>
                   <div className="mt-6 flex gap-3">
                     <a
