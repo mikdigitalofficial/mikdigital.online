@@ -197,7 +197,7 @@ export default function CaseStudiesPage() {
                 <p className="text-xs font-semibold uppercase tracking-widest text-violet-400">Get similar results</p>
                 <h3 className="mt-3 text-2xl font-black text-white md:text-3xl">Ready to build your system?</h3>
                 <p className="mt-3 max-w-lg text-zinc-400">
-                  These results came from building the right infrastructure — not just spending more. Talk directly with Mohamed to see what's possible for your business.
+                  These results came from building the right infrastructure — not just spending more. Talk directly with Mohamed to see what&apos;s possible for your business.
                 </p>
               </div>
               <div className="flex flex-col gap-3 flex-shrink-0">
