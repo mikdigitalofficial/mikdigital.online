@@ -39,7 +39,7 @@ export default function ContactPage() {
             Contact
           </div>
           <h1 className="mt-8 max-w-3xl text-5xl font-black leading-[1.04] tracking-tight text-white md:text-6xl">
-            Let's build your acquisition system.
+            Let&apos;s build your acquisition system.
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-8 text-zinc-400">
             Work directly with Mohamed Ibrahim Khan on paid acquisition, tracking infrastructure, CRM automation, and full-funnel conversion systems.
@@ -135,7 +135,7 @@ export default function ContactPage() {
             <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-8">
               <p className="text-xs font-semibold uppercase tracking-widest text-violet-400">Send a message</p>
               <h3 className="mt-4 text-2xl font-black text-white">Get in touch</h3>
-              <p className="mt-2 text-sm text-zinc-500">Fill in your details and we'll follow up within 24 hours.</p>
+              <p className="mt-2 text-sm text-zinc-500">Fill in your details and we&apos;ll follow up within 24 hours.</p>
               <div className="mt-8">
                 <LeadForm />
               </div>
