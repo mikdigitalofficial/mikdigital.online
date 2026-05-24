@@ -1,26 +1,58 @@
-import type { Metadata } from "next";
-import Script from "next/script";
-import Nav from "@/components/Nav";
-import CookieBanner from "@/components/CookieBanner";
-import "./globals.css";
+import type { Metadata } from 'next'
+import Script from 'next/script'
+import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
+import CookieBanner from '@/components/CookieBanner'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "mikdigital",
+  title: {
+    default: 'mikdigital — AI-Powered Performance Marketing Dubai',
+    template: '%s — mikdigital',
+  },
   description:
-    "Technical performance marketing for companies that care about revenue, not vanity metrics.",
-};
+    'AI-powered performance marketing by Mohamed Ibrahim Khan. Meta Ads, Google Ads, server-side tracking, CRM automation, and full-funnel attribution for education and entertainment brands in UAE, India, and globally.',
+  keywords: [
+    'Performance Marketing Dubai',
+    'Meta Ads UAE',
+    'Google Ads Dubai',
+    'AI Marketing UAE',
+    'Lead Generation Dubai',
+    'CRM Automation',
+    'Conversion Tracking Setup',
+    'Server-side Tracking',
+    'Mohamed Ibrahim Khan',
+    'mikdigital',
+  ],
+  authors: [{ name: 'Mohamed Ibrahim Khan', url: 'https://mikdigital.online' }],
+  creator: 'Mohamed Ibrahim Khan',
+  metadataBase: new URL('https://mikdigital.online'),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://mikdigital.online',
+    siteName: 'mikdigital',
+    title: 'mikdigital — AI-Powered Performance Marketing Dubai',
+    description:
+      'AI-powered performance marketing for UAE, India, and global businesses. Meta Ads, Google Ads, server-side tracking, CRM automation, and full-funnel attribution.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'mikdigital — AI-Powered Performance Marketing Dubai',
+    description: 'Meta Ads, Google Ads, server-side tracking, CRM automation by Mohamed Ibrahim Khan.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
 
       <head>
-
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager — preserved exactly */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -31,7 +63,7 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Meta Pixel — production only */}
+        {/* Meta Pixel — production only, preserved exactly */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`
             if (window.location.hostname === 'mikdigital.online') {
@@ -50,27 +82,27 @@ export default function RootLayout({
             }
           `}
         </Script>
-
       </head>
 
-      <body>
+      <body className="bg-[#0a0a0a] text-white antialiased">
 
-        {/* Google Tag Manager (noscript) */}
+        {/* GTM noscript — preserved exactly */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MZJ3FNLG"
             height="0"
             width="0"
-            style={{ display: "none", visibility: "hidden" }}
+            style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
 
         <Nav />
-        {children}
+        <main>{children}</main>
+        <Footer />
         <CookieBanner />
 
       </body>
 
     </html>
-  );
+  )
 }
