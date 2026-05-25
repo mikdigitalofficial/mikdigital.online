@@ -3,7 +3,6 @@ import OperatorStory from '@/components/sections/operator-story';
 import CaseStudies from '@/components/sections/case-studies';
 import Systems from '@/components/sections/systems';
 import Process from '@/components/sections/process';
-import ContactFormSection from '@/components/ContactFormSection';
 import CTA from '@/components/sections/cta';
 import Footer from '@/components/Footer';
 
@@ -15,7 +14,6 @@ export default function Home() {
       <CaseStudies />
       <Systems />
       <Process />
-      <ContactFormSection />
       <CTA />
       <Footer />
     </main>

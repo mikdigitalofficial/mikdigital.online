@@ -295,12 +295,12 @@ export default function ContactFormSection() {
 
             {/* LEFT — Trust + Info */}
             <div className="md:pt-2">
-              <p className="text-xs font-semibold uppercase tracking-widest text-violet-400">Work With Mohamed</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-violet-400">Work with mikdigital</p>
               <h2 className="mt-5 text-4xl font-black leading-[1.1] text-white md:text-5xl">
-                Ready to scale your acquisition??
+                Ready to fix your acquisition?
               </h2>
               <p className="mt-6 text-base leading-8 text-zinc-400">
-                Work directly with Mohamed Ibrahim Khan — Solo Growth Operator. AED 462K+ ad spend managed. 14,000+ leads generated across UAE & Australia. No account managers. No black-box reporting.
+                Work directly with Mohamed Ibrahim Khan on performance marketing, AI-enhanced growth systems, and conversion infrastructure. No account managers. No black-box reporting.
               </p>
 
               <div className="mt-10 space-y-3">

@@ -1,164 +1,209 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import LeadForm from '@/components/LeadForm';
+import Footer from '@/components/Footer';
+import { ArrowUpRight, Linkedin, Instagram, Mail } from 'lucide-react';
 
 const services = [
-  "Meta Ads & Google Ads setup and management",
-  "Server-side tracking & Meta CAPI",
-  "GA4, GTM & attribution infrastructure",
-  "CRM automation & WhatsApp funnels",
-  "Full-funnel conversion systems",
-  "Performance audit & strategy",
+  'Meta Ads & Google Ads setup and management',
+  'Server-side tracking & Meta CAPI',
+  'GA4, GTM & attribution infrastructure',
+  'CRM automation & WhatsApp funnels',
+  'Full-funnel conversion systems',
+  'Performance audit & strategy',
 ];
+
+const revealY = (delay = 0) => ({
+  initial: { opacity: 0, y: 24, filter: 'blur(4px)' },
+  whileInView: { opacity: 1, y: 0, filter: 'blur(0px)' },
+  viewport: { once: true, margin: '-40px' },
+  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1], delay },
+});
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white">
+    <main className="min-h-screen bg-[#050505] text-white overflow-hidden">
 
-      {/* HERO */}
-      <section className="relative overflow-hidden border-b border-white/[0.06]">
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)`,
-            backgroundSize: '60px 60px',
-          }}
-        />
-        <div
-          className="pointer-events-none absolute right-0 top-0 h-[500px] w-[700px] opacity-[0.07]"
-          style={{ background: 'radial-gradient(ellipse, #7c3aed 0%, transparent 70%)' }}
-        />
-        <div
-          className="pointer-events-none absolute -bottom-20 left-0 h-[400px] w-[500px] opacity-[0.05]"
-          style={{ background: 'radial-gradient(ellipse, #a855f7 0%, transparent 70%)' }}
-        />
+      {/* ── HERO ───────────────────────────────────── */}
+      <section className="relative overflow-hidden border-b border-white/[0.05] py-24 md:py-36">
+        <div className="absolute inset-0 grid-bg" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_70%_30%,rgba(124,58,237,0.07),transparent)]" />
 
-        <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-20 md:pb-32 md:pt-28">
-          <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-violet-400">
-            <span className="h-1.5 w-1.5 rounded-full bg-violet-400" />
-            Contact
-          </div>
-          <h1 className="mt-8 max-w-3xl text-5xl font-black leading-[1.04] tracking-tight text-white md:text-6xl">
-            Let&apos;s build your acquisition system.
-          </h1>
-          <p className="mt-8 max-w-xl text-xl leading-9 text-zinc-400">
-            Work directly with Mohamed Ibrahim Khan — in-house performance marketer turned independent growth partner. No account managers, no layers, no handoffs. Just the operator who built and ran these systems personally.
-          </p>
+        <div className="relative mx-auto max-w-7xl px-6 md:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 mb-8"
+          >
+            <div className="h-px w-8 bg-violet-500/50" />
+            <span className="label-violet">Work With Me</span>
+          </motion.div>
 
-          <div className="mt-12 flex flex-wrap gap-8">
-            {[
-              { value: "2X ROAS", label: "minimum delivered" },
-              { value: "24h", label: "Response time" },
-              { value: "UAE + AU", label: "Markets served" },
-            ].map((stat) => (
-              <div key={stat.label} className="flex items-baseline gap-3">
-                <span className="text-3xl font-black text-white">{stat.value}</span>
-                <span className="text-base text-zinc-500">{stat.label}</span>
-              </div>
-            ))}
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 32, filter: 'blur(4px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="text-[clamp(2.4rem,6vw,5.5rem)] font-semibold tracking-tight leading-[1.04] max-w-4xl"
+          >
+            Let&apos;s build your<br />
+            <span className="text-zinc-500">acquisition system.</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="mt-8 max-w-xl text-[1.1rem] leading-[1.8] text-zinc-400"
+          >
+            Work directly with <strong className="text-white font-semibold">Mohamed Ibrahim Khan</strong> —
+            Solo Growth Operator. No account managers. No layers.
+            The operator who built and ran these systems personally.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.18 }}
+            className="mt-10 flex flex-wrap gap-3"
+          >
+            <a
+              href="https://calendly.com/mikdigitalofficial/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary"
+            >
+              Book Free Strategy Call <ArrowUpRight size={15} />
+            </a>
+            <a
+              href="https://wa.me/971506102836"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
+              WhatsApp Me
+            </a>
+          </motion.div>
         </div>
       </section>
 
-      {/* FORM + INFO */}
-      <section className="border-b border-white/[0.06] py-24">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-16 md:grid-cols-[1fr_480px] md:items-start">
+      {/* ── OPERATOR IDENTITY + FORM ────────────────── */}
+      <section className="py-24 md:py-32 border-b border-white/[0.05]">
+        <div className="mx-auto max-w-7xl px-6 md:px-8">
+          <div className="grid gap-16 md:grid-cols-2 md:items-start">
 
-            {/* LEFT */}
+            {/* LEFT — Who I am */}
             <div>
-              <p className="text-sm font-bold uppercase tracking-widest text-violet-400">What you get</p>
-              <h2 className="mt-6 text-4xl font-black leading-tight text-white md:text-5xl">
-                In-house ownership.<br />No layers.
-              </h2>
-              <p className="mt-6 text-xl leading-9 text-zinc-400">
-                Every project is handled directly by Mohamed Ibrahim Khan — the same in-house operator who built and ran these systems for real businesses. Not a remote account manager. The actual person who owns the campaigns, the tracking, the CRM, and the results.
-              </p>
 
-              <div className="mt-10 space-y-3">
+              {/* Identity card */}
+              <motion.div
+                {...revealY()}
+                className="flex items-center gap-5 mb-10 p-6 rounded-2xl border border-white/[0.07] bg-white/[0.02]"
+              >
+                <div className="h-14 w-14 rounded-full border border-violet-500/25 bg-violet-500/[0.12] flex items-center justify-center text-base font-bold text-violet-300 shrink-0">
+                  MIK
+                </div>
+                <div>
+                  <p className="text-[15px] font-semibold text-white">Mohamed Ibrahim Khan</p>
+                  <p className="text-[13px] text-zinc-500 mt-0.5">Solo Growth Operator · Dubai, UAE</p>
+                  <p className="text-[12px] text-zinc-700 mt-0.5">UAE & Australia · 5+ years in-house</p>
+                </div>
+              </motion.div>
+
+              <motion.h2 {...revealY(0.07)} className="heading-lg mb-6">
+                In-house ownership.<br />
+                <span className="text-zinc-500">No layers.</span>
+              </motion.h2>
+
+              <motion.p {...revealY(0.1)} className="body-lg mb-10">
+                Every project is handled directly by me — the same operator who built and ran
+                acquisition systems for JAZZROCKERS INC across UAE & Australia. AED 462K+ managed.
+                14,000+ leads generated. Not a theory. Execution.
+              </motion.p>
+
+              {/* Services */}
+              <motion.div {...revealY(0.12)} className="space-y-2.5 mb-10">
                 {services.map((item) => (
-                  <div key={item} className="flex items-start gap-3 rounded-xl border border-white/[0.05] bg-white/[0.02] px-5 py-4 transition hover:border-white/[0.08] hover:bg-white/[0.03]">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-violet-500/25 bg-violet-500/15 text-violet-400">
-                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
-                        <path d="M2 5l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <div
+                    key={item}
+                    className="flex items-start gap-3 rounded-xl border border-white/[0.05] bg-white/[0.02] px-5 py-4 transition-colors hover:border-white/[0.09]"
+                  >
+                    <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border border-violet-500/25 bg-violet-500/15 text-violet-400">
+                      <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                        <path d="M1.5 4l1.75 1.75L6.5 2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                     </span>
-                    <span className="text-base leading-relaxed text-zinc-300">{item}</span>
+                    <span className="text-[14px] leading-relaxed text-zinc-300">{item}</span>
                   </div>
                 ))}
-              </div>
-
-              {/* Operator card */}
-              <div className="mt-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-7">
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full border border-violet-500/20 bg-violet-500/10 flex items-center justify-center text-sm font-black text-violet-400">MK</div>
-                  <div>
-                    <p className="text-base font-bold text-white">Mohamed Ibrahim Khan</p>
-                    <p className="text-sm text-zinc-500">Dubai, UAE · 5+ years in-house · UAE &amp; Australia</p>
-                  </div>
-                </div>
-                <p className="mt-5 text-base leading-8 text-zinc-400">
-                  Former in-house performance marketer — now working independently. The same systems, the same operator, the same accountability. 2X ROAS minimum across every engagement.
-                </p>
-              </div>
+              </motion.div>
 
               {/* Contact options */}
-              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <motion.div {...revealY(0.15)} className="grid grid-cols-2 gap-3">
                 <a
                   href="https://calendly.com/mikdigitalofficial/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group rounded-2xl border border-white/[0.08] bg-white/[0.02] p-7 transition hover:border-violet-500/30 hover:bg-violet-500/[0.06]"
+                  className="group rounded-2xl border border-white/[0.07] bg-white/[0.02] p-6 transition-all hover:border-violet-500/25 hover:bg-violet-500/[0.05]"
                 >
-                  <p className="text-xs font-bold uppercase tracking-widest text-violet-400">Strategy Call</p>
-                  <p className="mt-3 text-xl font-black text-white">Free 30-min call</p>
-                  <p className="mt-2 text-base text-zinc-500">Walk through your acquisition challenges and what 2X+ ROAS looks like for your business.</p>
-                  <p className="mt-5 text-base font-bold text-violet-400 transition group-hover:underline">Schedule now →</p>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-violet-400 mb-3">Strategy Call</p>
+                  <p className="text-[15px] font-semibold text-white">Free 30-min</p>
+                  <p className="text-[12px] text-zinc-600 mt-1">Walk through your acquisition gaps</p>
+                  <p className="text-[12px] font-semibold text-violet-400 mt-4 group-hover:underline">Schedule →</p>
                 </a>
-
                 <a
                   href="https://wa.me/971506102836"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group rounded-2xl border border-white/[0.08] bg-white/[0.02] p-7 transition hover:border-green-500/20 hover:bg-green-500/[0.04]"
+                  className="group rounded-2xl border border-white/[0.07] bg-white/[0.02] p-6 transition-all hover:border-green-500/20 hover:bg-green-500/[0.04]"
                 >
-                  <p className="text-xs font-bold uppercase tracking-widest text-zinc-500">WhatsApp</p>
-                  <p className="mt-3 text-xl font-black text-white">Message directly</p>
-                  <p className="mt-2 text-base text-zinc-500">Fast direct communication for project inquiries and quick questions.</p>
-                  <p className="mt-5 text-base font-bold text-zinc-400 transition group-hover:text-green-400">Chat now →</p>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-zinc-600 mb-3">WhatsApp</p>
+                  <p className="text-[15px] font-semibold text-white">Message directly</p>
+                  <p className="text-[12px] text-zinc-600 mt-1">Fast direct response</p>
+                  <p className="text-[12px] font-semibold text-zinc-500 mt-4 group-hover:text-green-400 transition-colors">Chat now →</p>
                 </a>
-              </div>
+              </motion.div>
+
+              {/* Social links */}
+              <motion.div {...revealY(0.18)} className="flex items-center gap-2 mt-6">
+                <a href="https://www.linkedin.com/in/mohamedibrahimkhan/" target="_blank" rel="noopener noreferrer"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/[0.07] text-zinc-500 transition hover:border-white/20 hover:text-white">
+                  <Linkedin size={15} />
+                </a>
+                <a href="https://www.instagram.com/mikdigitalofficial/" target="_blank" rel="noopener noreferrer"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/[0.07] text-zinc-500 transition hover:border-white/20 hover:text-white">
+                  <Instagram size={15} />
+                </a>
+                <a href="mailto:alex@mikdigital.online"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/[0.07] text-zinc-500 transition hover:border-white/20 hover:text-white">
+                  <Mail size={15} />
+                </a>
+              </motion.div>
+
             </div>
 
             {/* RIGHT — Form */}
-            <div className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-8">
-              <p className="text-xs font-bold uppercase tracking-widest text-violet-400">Send a message</p>
-              <h3 className="mt-5 text-2xl font-black text-white">Get in touch</h3>
-              <p className="mt-2 text-base text-zinc-500">Fill in your details and Mohamed will follow up within 24 hours.</p>
-              <div className="mt-8">
-                <LeadForm />
+            <motion.div
+              {...revealY(0.1)}
+              className="rounded-2xl border border-white/[0.08] bg-white/[0.025] p-8 md:sticky md:top-8"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <div className="h-px w-6 bg-violet-500/50" />
+                <span className="label-violet">Send a message</span>
               </div>
-            </div>
+              <h3 className="text-2xl font-semibold text-white mt-3 mb-1">Get in touch</h3>
+              <p className="text-[13px] text-zinc-600 mb-8">
+                Mohamed replies within 24 hours — usually faster.
+              </p>
+              <LeadForm />
+            </motion.div>
 
           </div>
         </div>
       </section>
 
-      {/* FLOATING WHATSAPP (mobile) */}
-      <a
-        href="https://wa.me/971506102836"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-full border border-green-500/20 bg-green-600 px-5 py-3 text-sm font-bold text-white shadow-2xl transition hover:bg-green-500 md:hidden"
-        aria-label="Chat on WhatsApp"
-      >
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-          <path d="M9 1C4.6 1 1 4.6 1 9c0 1.4.4 2.7 1 3.8L1 17l4.3-1.1C6.4 16.6 7.7 17 9 17c4.4 0 8-3.6 8-8s-3.6-8-8-8z" fill="currentColor" opacity="0.3" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round"/>
-          <path d="M6.5 8.5c0-.3.2-.5.4-.5.5 0 1 .5 1.4.9.4.5.5 1.5 0 2-.4.4-.9.5-1.4.4-.4-.1-.9-.5-.9-1 0-.3.2-.5.5-.5" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" fill="none"/>
-        </svg>
-        WhatsApp
-      </a>
-
+      <Footer />
     </main>
   );
 }
