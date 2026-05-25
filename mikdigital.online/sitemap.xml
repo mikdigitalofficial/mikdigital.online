@@ -1,0 +1,28 @@
+/* Social icons chip row styling */
+.header-socials { display: inline-flex; gap: 10px; padding: 6px 10px; border-radius: 9999px; background-image: linear-gradient(90deg, var(--md-grad-from), var(--md-grad-to)); }
+.header-socials a { color: #000000 !important; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
+.header-socials .feather, .header-socials [data-feather] { color: #000000 !important; stroke: #000000 !important; }
+
+/* Blue-only gradient text utility */
+.text-gradient-blue { background-image: linear-gradient(90deg, var(--md-grad-from), var(--md-grad-from)); -webkit-background-clip: text; background-clip: text; color: transparent !important; -webkit-text-fill-color: transparent !important; }
+
+/* Service chips as bold buttons */
+.outline-grad { font-weight: 700; border: 2px solid transparent; border-radius: 12px; padding: 10px 12px; background-image: linear-gradient(#0000, #0000), linear-gradient(90deg, var(--md-grad-from), var(--md-grad-to)); background-origin: border-box; background-clip: padding-box, border-box; color: var(--md-text); text-align: center; display: inline-block; }
+.outline-grad:hover { filter: brightness(1.05); }
+
+/* Blue→Black gradient text utility */
+.text-gradient-blue-black { background-image: linear-gradient(90deg, var(--md-grad-from), var(--md-bg)); -webkit-background-clip: text; background-clip: text; color: transparent !important; -webkit-text-fill-color: transparent !important; }
+
+/* Case Studies hero background used site-wide */
+.hero-bg { background: linear-gradient(135deg, rgba(30, 64, 175, 0.1) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(29, 78, 216, 0.1) 100%); }
+
+/* Slightly rounded logo corners site-wide */
+img[alt="mikdigital"], img[alt*="mikdigital"], img[src$="logo.png"] { border-radius: 10px; }
+
+/* Footer navy blue gradient */
+.footer-pink { background: linear-gradient(90deg, #0a2342 0%, #0f3460 50%, #162a5f 100%); }
+.footer-pink .footer-title { color: #c7d2fe; }
+.footer-pink a:hover { color: #ffffff !important; }
+
+/* Site-wide subtle text size reduction */
+html { font-size: 15px; }
