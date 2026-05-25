@@ -105,7 +105,7 @@ export default function LeadForm() {
       if (typeof window.fbq === 'function') {
         window.fbq('track', 'Lead', {}, { eventID: eventId })
 
-      await new Promise(resolve =, 500))
+      await new Promise(resolve => setTimeout(resolve, 500))
       }
 
       fetch('/api/meta-event', {
