@@ -80,9 +80,9 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div variants={stagger.item} className="mt-10 flex flex-wrap gap-3">
-            <a href="/case-studies" className="btn-primary">
+            <Link href="/case-studies" className="btn-primary">
               View Case Studies <ArrowUpRight size={15} />
-            </a>
+            </Link>
             <a
               href="https://calendly.com/mikdigitalofficial/30min"
               target="_blank"
@@ -90,7 +90,7 @@ export default function Hero() {
               className="btn-secondary"
             >
               Book Strategy Call
-            </a>
+            </Link>
           </motion.div>
 
           {/* Stats grid */}
