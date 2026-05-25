@@ -1,0 +1,5 @@
+/thank-you.html   /thank-you.html   200
+/services        /               301!
+/services/       /               301!
+/services.html   /               301!
+/case-studies.html   /case-studies/   301!
