@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
@@ -90,7 +91,7 @@ export default function Hero() {
               className="btn-secondary"
             >
               Book Strategy Call
-            </Link>
+            </a>
           </motion.div>
 
           {/* Stats grid */}
