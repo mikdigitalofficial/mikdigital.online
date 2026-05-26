@@ -17,6 +17,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </head>
+      <script
+  dangerouslySetInnerHTML={{
+    __html: `
+      (function() {
+        const params = new URLSearchParams(window.location.search);
+        const fbclid = params.get('fbclid');
+
+        if (fbclid) {
+          const fbc = 'fb.1.' + Date.now() + '.' + fbclid;
+          document.cookie = '_fbc=' + fbc + '; path=/; max-age=7776000';
+        }
+      })();
+    `,
+  }}
+/>
       <body>
         <MouseGlow />
         <SmoothScroll>
