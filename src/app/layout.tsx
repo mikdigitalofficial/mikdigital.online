@@ -1,3 +1,4 @@
+import Script from 'next/script'
 import type { Metadata } from 'next';
 import './globals.css';
 import MouseGlow from '@/components/ui/mouse-glow';
@@ -13,6 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="antialiased">
       <head>
+        <Script
+  src="https://www.googletagmanager.com/gtm.js?id=GTM-MZJ3FNLG"
+  strategy="afterInteractive"
+/>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -33,6 +38,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }}
 />
       <body>
+
+        <noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-MZJ3FNLG"
+    height="0"
+    width="0"
+    style={{ display: 'none', visibility: 'hidden' }}
+  />
+</noscript>
+
         <MouseGlow />
         <SmoothScroll>
           <Nav />
